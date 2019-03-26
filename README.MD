@@ -11,7 +11,7 @@
 | RAM | 16GB (2 x 8GB) Corsair Vengeance @ 3200MHz |
 | OS Disk (NVMe) | Samsung 960 Evo 250GB |
 | Wifi & Bluetooth | Broadcom BCM94331CD |
-
+| Clover theme | MaterialBox |
 ## Patches & Kexts
  - [[Patch] AMD_Vanilla](https://github.com/AMD-OSX/AMD_Vanilla)
  - [[Patch] Native USB](https://github.com/XLNCs/ryzenusbfix/blob/master/ManualGuide.md)
@@ -27,5 +27,5 @@
 
 ## Known Issues
  - Not working Handoff (I haven't idea to fix it)
- - Power Management (TODO)
+ - Power Management
  - Small GPU issues (Kernel patch issue or WebDrivers problem)
