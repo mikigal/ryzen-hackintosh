@@ -52,7 +52,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>npci=0x2000 alcid=11 -bt4lefxbeta</string>
+		<string>npci=0x2000 alcid=11</string>
 		<key>DefaultLoader</key>
 		<string>boot.efi</string>
 		<key>DefaultVolume</key>
