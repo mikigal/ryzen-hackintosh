@@ -15,7 +15,6 @@
 ## Patches & Kexts
  - [[Patch] AMD_Vanilla](https://github.com/AMD-OSX/AMD_Vanilla)
  - [[Patch] Native USB](https://github.com/XLNCs/ryzenusbfix/blob/master/ManualGuide.md)
- - [[Patch] Continuity Activation Tool](https://github.com/dokterdok/Continuity-Activation-Tool/tree/beta)
  - [[Kext] Nvidia WebDrivers](https://www.insanelymac.com/forum/topic/324195-nvidia-web-driver-updates-for-macos-high-sierra-update-feb-28-2019/)
  - [[Kext] FakeSMC](https://bitbucket.org/RehabMan/os-x-fakesmc-kozlek/downloads/)
  - [[Kext] Lilu](https://github.com/acidanthera/Lilu)
@@ -26,6 +25,5 @@
  - [[Kext] NullCPUPowerManagement](https://www.tonymacx86.com/resources/nullcpupowermanagement.268/)
 
 ## Known Issues
- - Not working Handoff (I haven't idea to fix it)
  - Power Management
  - Small GPU issues (Kernel patch issue or WebDrivers problem)
