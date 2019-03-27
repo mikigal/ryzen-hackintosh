@@ -874,7 +874,7 @@
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>D25338609GUF8YL1H</string>
+		<string>D25531104J9F8YL1M</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
@@ -904,16 +904,16 @@
 		<key>ProductName</key>
 		<string>iMac14,2</string>
 		<key>SerialNumber</key>
-		<string>D25LFCZMF8JC</string>
+		<string>D25Q50NXF8JC</string>
 		<key>SmUUID</key>
-		<string>0C1B0443-FEF6-46A1-9922-E3A77207C480</string>
+		<string>732D28C0-4123-48DE-A735-A65352FE8292</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
 		<key>CustomUUID</key>
-		<string>78E95CA3-CA0A-4849-A896-12700FF0308E</string>
+		<string>59532067-9122-453F-A92C-08CDF429D869</string>
 		<key>InjectKexts</key>
 		<string>Yes</string>
 		<key>InjectSystemID</key>
