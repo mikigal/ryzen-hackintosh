@@ -31,3 +31,5 @@
 ## Known Issues
  - Power Management
  - Small GPU issues (Kernel patch issue or WebDrivers problem)
+
+![Screenshot](/screenshot.png?raw=true)
