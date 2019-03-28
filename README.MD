@@ -3,7 +3,6 @@
 ## Specification
 | **Component** | **Model** |
 | ------------- | --------- |
-| OS | 10.13.6 (17G5019) |
 | CPU | AMD Ryzen 7 1700 @ 3.4GHz |
 | Motherboard | ASUS B350 Plus |
 | Audio Chipset | ALC-887 |
@@ -11,7 +10,11 @@
 | RAM | 16GB (2 x 8GB) Corsair Vengeance @ 3200MHz |
 | OS Disk (NVMe) | Samsung 960 Evo 250GB |
 | Wifi & Bluetooth | Broadcom BCM94331CD |
-| Clover theme | MaterialBox |
+
+**macOS version**: 10.13.6 (17G5019)  
+**Clover version**: r4895  
+**Clover theme**: MaterialBox
+
 ## Patches & Kexts
  - [[Patch] AMD_Vanilla](https://github.com/AMD-OSX/AMD_Vanilla)
  - [[Patch] Native USB](https://github.com/XLNCs/ryzenusbfix/blob/master/ManualGuide.md)
