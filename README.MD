@@ -12,7 +12,7 @@
 | Wifi & Bluetooth | Broadcom BCM94331CD |
 
 **macOS version**: 10.13.6 (17G5019)  
-**Clover version**: r4895  
+**Clover version**: r4910  
 **Clover theme**: MaterialBox
 
 ## Patches & Kexts
