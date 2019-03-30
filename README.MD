@@ -29,7 +29,6 @@
  - [[Kext] NullCPUPowerManagement](https://www.tonymacx86.com/resources/nullcpupowermanagement.268/)
 
 ## Not working
- - Sleep (Unfixable, it's AMD)
  - 32-bit apps (AMD_Vanilla does not support OPEMU, it's not real problem)
  - Rare issues with animations (AMD_Vanilla or WebDrivers problem)
 
