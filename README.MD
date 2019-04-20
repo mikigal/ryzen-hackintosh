@@ -13,7 +13,7 @@
 
 **macOS version**: 10.13.6 (17G6030)  
 **Clover version**: r4910  
-**Clover theme**: MaterialBox
+**Clover theme**: MaterialBox  
 
 ## Patches & Kexts
  - [[Patch] AMD_Vanilla](https://github.com/AMD-OSX/AMD_Vanilla)
@@ -26,7 +26,9 @@
  - [[Kext] BT4LEContinuityFixup](https://github.com/acidanthera/BT4LEContiunityFixup)
  - [[Kext] AirportBrcmFixup](https://github.com/acidanthera/AirportBrcmFixup)
  - [[Kext] RealtekRTL8111](https://bitbucket.org/RehabMan/os-x-realtek-network/downloads/)
- - [[Kext] NullCPUPowerManagement](https://www.tonymacx86.com/resources/nullcpupowermanagement.268/)
+ - [[Kext] NullCPUPowerManagement](https://www.tonymacx86.com/resources/nullcpupowermanagement.268/)  
+ 
+**Remember to path DSDT yourself before use! ACPI from this repo will not work on your PC** 
 
 ## Not working
  - 32-bit apps (AMD_Vanilla does not support OPEMU, it's not real problem)
