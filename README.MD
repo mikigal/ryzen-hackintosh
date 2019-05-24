@@ -13,7 +13,7 @@
 
 **macOS version**: 10.13.6 (17G6030)  
 **WebDrivers version**: 387.10.10.10.40.127  
-**Clover version**: r4920  
+**Clover version**: r4934  
 **Clover theme**: MaterialBox  
 
 ## Patches & Kexts
