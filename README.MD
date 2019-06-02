@@ -3,24 +3,21 @@
 ## Specification
 | **Component** | **Model** |
 | ------------- | --------- |
-| CPU | AMD Ryzen 7 1700 @ 3.4GHz |
+| CPU | AMD Ryzen 7 1700 @ 3.8GHz |
 | Motherboard | ASUS B350 Plus |
 | Audio Chipset | ALC-887 |
-| GPU | MSI GTX 1080 Gaming X |
+| GPU | MSI RX Vega 64 |
 | RAM | 16GB (2 x 8GB) Corsair Vengeance @ 3200MHz |
 | OS Disk (NVMe) | Samsung 960 Evo 250GB |
 | Wifi & Bluetooth | Broadcom BCM94331CD |
 
-**macOS version**: 10.13.6 (17G6030)  
-**WebDrivers version**: 387.10.10.10.40.127  
+**macOS version**: 10.14.5 (18F132)  
 **Clover version**: r4934  
 **Clover theme**: MaterialBox  
 
 ## Patches & Kexts
  - [[Patch] AMD_Vanilla](https://github.com/AMD-OSX/AMD_Vanilla)
- - [[Patch] Native USB](https://github.com/XLNCs/ryzenusbfix/blob/master/ManualGuide.md)
- - [[Kext] Nvidia WebDrivers](https://www.insanelymac.com/forum/topic/324195-nvidia-web-driver-updates-for-macos-high-sierra-update-feb-28-2019/)
- - [[Kext] FakeSMC](https://bitbucket.org/RehabMan/os-x-fakesmc-kozlek/downloads/)
+ - [[Kext] VirtualSMC](https://github.com/acidanthera/VirtualSMC)
  - [[Kext] Lilu](https://github.com/acidanthera/Lilu)
  - [[Kext] WhateverGreen](https://github.com/acidanthera/WhateverGreen)
  - [[Kext] AppleALC](https://github.com/acidanthera/AppleALC)
@@ -29,10 +26,8 @@
  - [[Kext] RealtekRTL8111](https://bitbucket.org/RehabMan/os-x-realtek-network/downloads/)
  - [[Kext] NullCPUPowerManagement](https://www.tonymacx86.com/resources/nullcpupowermanagement.268/)  
 
-**Remember to path DSDT yourself before use! ACPI from this repo will not work on your PC**
-
 ## Not working
  - 32-bit apps (AMD_Vanilla does not support OPEMU, it's not real problem)
- - Rare issues with animations (AMD_Vanilla or WebDrivers problem)
+ - Hypervisor.framework (Parallels Desktop uses it, you must use VMware Fusion)
 
 ![Screenshot](/screenshot.png?raw=true)

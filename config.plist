@@ -1165,25 +1165,6 @@
 				</data>
 			</dict>
 		</array>
-		<key>KextsToPatch</key>
-		<array>
-			<dict>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				yAAAAIP7Ag==
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>Name</key>
-				<string>AppleUSBXHCI</string>
-				<key>Replace</key>
-				<data>
-				yAAAAIP7EQ==
-				</data>
-			</dict>
-		</array>
 	</dict>
 	<key>RtVariables</key>
 	<dict>
@@ -1252,7 +1233,7 @@
 		<key>InjectSystemID</key>
 		<true/>
 		<key>NvidiaWeb</key>
-		<true/>
+		<false/>
 	</dict>
 </dict>
 </plist>
