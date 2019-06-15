@@ -32,4 +32,9 @@
  - 32-bit apps (AMD_Vanilla does not support OPEMU, it's not real problem)
  - Hypervisor.framework (Parallels Desktop uses it, you must use VMware Fusion)
 
+## Steam crash workaround
+ - Download and copy to /Applications modified 64-bit Steam bootstrapper: [*Click*](/Steam_64bit.zip?raw=true)  
+ - Run `xattr -cr /Applications/Steam.app` in Terminal  
+ - Play games!  
+
 ![Screenshot](/screenshot.png?raw=true)
