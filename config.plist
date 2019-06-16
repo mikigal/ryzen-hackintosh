@@ -86,7 +86,7 @@
 		<key>Language</key>
 		<string>en:0</string>
 		<key>Theme</key>
-		<string>MaterialBox</string>
+		<string>clover-theme-minimal-dark</string>
 	</dict>
 	<key>Graphics</key>
 	<dict>
@@ -1340,8 +1340,6 @@
 		<string>Yes</string>
 		<key>InjectSystemID</key>
 		<true/>
-		<key>NvidiaWeb</key>
-		<false/>
 	</dict>
 </dict>
 </plist>

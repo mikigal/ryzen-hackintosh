@@ -5,15 +5,15 @@
 | ------------- | --------- |
 | CPU | AMD Ryzen 7 1700 @ 3.8GHz |
 | Motherboard | ASUS B350 Plus |
+| RAM | 16GB (2 x 8GB) Corsair Vengeance @ 3000MHz |
 | Audio Chipset | ALC-887 |
 | GPU | MSI RX Vega 64 |
-| RAM | 16GB (2 x 8GB) Corsair Vengeance @ 3200MHz |
+| WiFi & Bluetooth | Broadcom BCM94331CD |
 | OS Disk (NVMe) | Samsung 960 Evo 250GB |
-| Wifi & Bluetooth | Broadcom BCM94331CD |
 
 **macOS version**: 10.14.5 (18F132)  
 **Clover version**: r4961  
-**Clover theme**: MaterialBox  
+**Clover theme**: Minimal Dark  
 
 ## Patches & Kexts
  - [[Patch] AMD_Vanilla](https://github.com/AMD-OSX/AMD_Vanilla)
@@ -30,7 +30,7 @@
 
 ## Not working
  - 32-bit apps (AMD_Vanilla does not support OPEMU, it's not real problem)
- - Hypervisor.framework (Parallels Desktop uses it, you must use VMware Fusion)
+ - Hypervisor.framework (Parallels Desktop uses it, VMware Fusion and Xcode iOS emulator works)
 
 ## Steam crash workaround
  - Download and copy to /Applications modified 64-bit Steam bootstrapper: [*Click*](/Steam_64bit.zip?raw=true)  
