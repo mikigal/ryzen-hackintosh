@@ -1286,17 +1286,17 @@
 	<key>SMBIOS</key>
 	<dict>
 		<key>BiosReleaseDate</key>
-		<string>09/17/2018</string>
+		<string>12/19/2018</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>BiosVersion</key>
-		<string>IM142.88Z.0131.B00.1809171347</string>
+		<string>IM183.88Z.F000.B00.1812191143</string>
 		<key>Board-ID</key>
-		<string>Mac-27ADBB7B4CEE8E61</string>
+		<string>Mac-7BA5B2D9E42DDD94</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>D25531104J9F8YL1M</string>
+		<string>C02728501GUJ0PG1M</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
@@ -1306,13 +1306,13 @@
 		<key>ChassisManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>ChassisType</key>
-		<string>0x0D</string>
+		<string>0x09</string>
 		<key>EfiVersion</key>
-		<string>133.0.0.0.0</string>
+		<string>167.0.0.0.0</string>
 		<key>Family</key>
 		<string>iMac</string>
 		<key>FirmwareFeatures</key>
-		<string>0xE00FE137</string>
+		<string>0xFC0FE137</string>
 		<key>FirmwareFeaturesMask</key>
 		<string>0xFF1FFF3F</string>
 		<key>LocationInChassis</key>
@@ -1322,13 +1322,13 @@
 		<key>Mobile</key>
 		<false/>
 		<key>PlatformFeature</key>
-		<string>0x01</string>
+		<string>0x00</string>
 		<key>ProductName</key>
-		<string>iMac14,2</string>
+		<string>iMac18,3</string>
 		<key>SerialNumber</key>
-		<string>D25Q50NXF8JC</string>
+		<string>C02V2CYLJ1GJ</string>
 		<key>SmUUID</key>
-		<string>732D28C0-4123-48DE-A735-A65352FE8292</string>
+		<string>DAD44BD2-9EDC-4682-B2D8-4D831DDEEA7B</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>

@@ -23,7 +23,6 @@
  - [[Kext] AppleALC](https://github.com/acidanthera/AppleALC)
  - [[Kext] BT4LEContinuityFixup](https://github.com/acidanthera/BT4LEContiunityFixup)
  - [[Kext] AirportBrcmFixup](https://github.com/acidanthera/AirportBrcmFixup)
- - [[Kext] NoVPAJpeg](https://github.com/vulgo/NoVPAJpeg)
  - [[Kext] HibernationFixup](https://github.com/acidanthera/HibernationFixup)
  - [[Kext] RealtekRTL8111](https://bitbucket.org/RehabMan/os-x-realtek-network/downloads/)
  - [[Kext] NullCPUPowerManagement](https://www.tonymacx86.com/resources/nullcpupowermanagement.268/)  
