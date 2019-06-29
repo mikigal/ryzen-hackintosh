@@ -30,6 +30,7 @@
 ## Not working
  - 32-bit apps (AMD_Vanilla does not support OPEMU, it's not real problem)
  - Hypervisor.framework (Parallels Desktop uses it, VMware Fusion and Xcode iOS emulator works)
+ - Microphone
 
 ## Steam crash workaround
  - Download and copy to /Applications modified 64-bit Steam bootstrapper: [*Click*](/Steam_64bit.zip?raw=true)  
