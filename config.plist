@@ -10,8 +10,6 @@
 			<dict>
 				<key>DeleteUnused</key>
 				<true/>
-				<key>FixUSB</key>
-				<false/>
 			</dict>
 			<key>Name</key>
 			<string>DSDT.aml</string>
