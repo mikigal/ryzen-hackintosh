@@ -95,7 +95,7 @@
 				<key>Comment</key>
 				<string>Disable panic kext logging on 10.13.x Release kernel</string>
 				<key>Disabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>
 				igKEwHRE
@@ -111,13 +111,13 @@
 				<key>Comment</key>
 				<string>Disable panic kext logging on 10.14.4+ Release kernel</string>
 				<key>Disabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>
 				AIoChMB0
 				</data>
 				<key>MatchOS</key>
-				<string>10.14.x</string>
+				<string>10.14.x,10.15.x</string>
 				<key>Replace</key>
 				<data>
 				AIoChMDr
@@ -133,7 +133,7 @@
 				uaABAAAPMg==
 				</data>
 				<key>MatchOS</key>
-				<string>10.13.x,10.14.x</string>
+				<string>10.13.x,10.14.x,10.15.x</string>
 				<key>Replace</key>
 				<data>
 				Dx+AAAAAAA==
@@ -169,6 +169,22 @@
 				<key>Replace</key>
 				<data>
 				Dx9EAAA=
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>xlnc - cpu_topology_sort -disable _x86_validate_topology</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				6PT1//+c
+				</data>
+				<key>MatchOS</key>
+				<string>10.15.x</string>
+				<key>Replace</key>
+				<data>
+				Dx9EAACc
 				</data>
 			</dict>
 			<dict>
@@ -259,6 +275,22 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>xlnc - cpuid_set_cache_info - cpuid 0x8000001D instead 0</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				McAx2zHJMdIPokGJxoM95AygAAB0
+				</data>
+				<key>MatchOS</key>
+				<string>10.15.0</string>
+				<key>Replace</key>
+				<data>
+				uB0AAIAx2zHJMdIPokGJxg8fQADr
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>algrey - cpuid_set_cache_info - cpuid 0x8000001D instead 4</string>
 				<key>Disabled</key>
 				<false/>
@@ -267,7 +299,7 @@
 				uAQAAABEifFEiQ==
 				</data>
 				<key>MatchOS</key>
-				<string>10.13.x,10.14.x</string>
+				<string>10.13.x,10.14.x,10.15.x</string>
 				<key>Replace</key>
 				<data>
 				uB0AAIBEifFEiQ==
@@ -291,6 +323,38 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>xlnc - cpuid_set_cache_info - don't set cpuid_cores_per_package</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				weoa/8I=
+				</data>
+				<key>MatchOS</key>
+				<string>10.15.x</string>
+				<key>Replace</key>
+				<data>
+				Dx8A6wY=
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>xlnc - cpuid_set_cache_info - skip cpuid_cores_per_package test</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				gz1rC6AAAA+EpgEAAItdvA==
+				</data>
+				<key>MatchOS</key>
+				<string>10.15.x</string>
+				<key>Replace</key>
+				<data>
+				gz1rC6AAAQ+EpgEAAItdvA==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>algrey - cpuid_set_generic_info - remove wrmsr</string>
 				<key>Disabled</key>
 				<false/>
@@ -299,7 +363,7 @@
 				uYsAAAAxwDHSDzA=
 				</data>
 				<key>MatchOS</key>
-				<string>10.13.x,10.14.x</string>
+				<string>10.13.x,10.14.x,10.15.x</string>
 				<key>Replace</key>
 				<data>
 				Zg8fhAAAAAAAZpA=
@@ -315,7 +379,7 @@
 				uYsAAAAPMg==
 				</data>
 				<key>MatchOS</key>
-				<string>10.13.x,10.14.x</string>
+				<string>10.13.x,10.14.x,10.15.x</string>
 				<key>Replace</key>
 				<data>
 				uroAAABmkA==
@@ -331,7 +395,7 @@
 				uRcAAAAPMsHqEoDiBw==
 				</data>
 				<key>MatchOS</key>
-				<string>10.13.x,10.14.x</string>
+				<string>10.13.x,10.14.x,10.15.x</string>
 				<key>Replace</key>
 				<data>
 				sgFmDx+EAAAAAABmkA==
@@ -347,7 +411,7 @@
 				ADoPgg==
 				</data>
 				<key>MatchOS</key>
-				<string>10.13.x,10.14.x</string>
+				<string>10.13.x,10.14.x,10.15.x</string>
 				<key>Replace</key>
 				<data>
 				AAAPgg==
@@ -355,7 +419,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>algrey - cpuid_set_info - GenuineIntel to AuthenticAMD </string>
+				<string>algrey - cpuid_set_info - GenuineIntel to AuthenticAMD</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
@@ -363,7 +427,7 @@
 				R2VudWluZUludGVsAA==
 				</data>
 				<key>MatchOS</key>
-				<string>10.13.x,10.14.x</string>
+				<string>10.13.x,10.14.x,10.15.x</string>
 				<key>Replace</key>
 				<data>
 				QXV0aGVudGljQU1EAA==
@@ -441,16 +505,28 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>algrey - cpuid_set_info - ryzen cores and logicals count</string>
+				<string>xlnc - cpuid_set_cpufamily - force CPUFAMILY_INTEL_PENRYN</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
 				<data>
-				PexeO1d0Gz28T+p4dTaLBcgKjQCJBYoLjQCLDcAKjQDr
-				Frk1AAAADzIPt8jB6BCD4A+JBWwLjQCJDWoLjQCFwHVK
-				6zC5NQAAAA8ySMHiIInBSAnRuQEAAQAPRcgPt9GJyMHo
-				EIkFOguNAIkVOAuNAIXAdRiLBWIKjQCJBSQLjQCLBVoK
-				jQCJBRwLjQA=
+				MduAPWkWoAAGdVw=
+				</data>
+				<key>MatchOS</key>
+				<string>10.15.0</string>
+				<key>Replace</key>
+				<data>
+				u7xP6njpXQAAAJA=
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>xlnc - cpuid_set_info - grab cores and logicals count from MSR</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				PbxP6nh1NosFyAqNAIkFiguNAIsNwAqNAOsW
 				</data>
 				<key>MatchBuild</key>
 				<string>17G65,17G66</string>
@@ -458,25 +534,17 @@
 				<string>10.13.6</string>
 				<key>Replace</key>
 				<data>
-				uAgAAIAx2zHJMdIPokGJwEGJzkGJ0YM97wuNAAB0G2YP
-				H4QAAAAAAGYPH4QAAAAAAGYPH4QAAAAAAEUPtvZB/8a4
-				HgAAgDHbMckx0g+iQYnAQYnRZg8fhAAAAAAAD7bP/8Ex
-				0kSJ8PfxiQVtCo0ARIk1agqNAIM9JwuNAAB1DYkFHwuN
-				AESJNRwLjQA=
+				uAgAAIAx2zHJMdIPokGJzkEPtsb/wA8fAOtS
 				</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>algrey - cpuid_set_info - ryzen cores and logicals count</string>
+				<string>xlnc - cpuid_set_info - grab cores and logicals count from MSR</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
 				<data>
-				PexeO1d0Gz28T+p4dTaLBbgLjQCJBXoMjQCLDbALjQDr
-				Frk1AAAADzIPt8jB6BCD4A+JBVwMjQCJDVoMjQCFwHVK
-				6zC5NQAAAA8ySMHiIInBSAnRuQEAAQAPRcgPt9GJyMHo
-				EIkFKgyNAIkVKAyNAIXAdRiLBVILjQCJBRQMjQCLBUoL
-				jQCJBQwMjQA=
+				PbxP6nh1NosFuAuNAIkFegyNAIsNsAuNAOsW
 				</data>
 				<key>MatchBuild</key>
 				<string>17G8030,17G8037</string>
@@ -484,46 +552,33 @@
 				<string>10.13.6</string>
 				<key>Replace</key>
 				<data>
-				uAgAAIAx2zHJMdIPokGJwEGJzkGJ0WYPH4QAAAAAAGYP
-				H4QAAAAAAGYPH4QAAAAAAGYPH4QAAAAAAEUPtvZB/8a4
-				HgAAgDHbMckx0g+iQYnAQYnRZg8fhAAAAAAAD7bP/8Ex
-				0kSJ8PfxiQVdC40ARIk1WguNAIM9FwyNAAB1DYkFDwyN
-				AESJNQwMjQA=
+				uAgAAIAx2zHJMdIPokGJzkEPtsb/wA8fAOtS
 				</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>algrey - cpuid_set_info - ryzen cores and logicals count</string>
+				<string>xlnc - cpuid_set_info - grab cores and logicals count from MSR</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
 				<data>
-				PexeO1d0Gz28T+p4dSaLBVd4mACJBRl5mACLDU94mADr
-				OLk1AAAADzIPt8jB6BCD4A/rILk1AAAADzJIweIgicFI
-				CdG6AQABAA9F0A+3yonQwegQiQXZeJgAiQ3XeJgAhcB0
-				Gg==
+				PbxP6nh1JosFV3iYAIkFGXmYAIsNT3iYAOs4
 				</data>
 				<key>MatchOS</key>
 				<string>10.14.6</string>
 				<key>Replace</key>
 				<data>
-				uAgAAIAx2zHJMdIPokGJwEGJzkGJ0UUPtvZB/8a4HgAA
-				gDHbMckx0g+iQYnAQYnRDx9EAAAPts//wTHSRInw9/GJ
-				BSR4mABEiTUheJgAgz3eeJgAAHUNiQXWeJgARIk103iY
-				AA==
+				uAgAAIAx2zHJMdIPokGJzkEPtsb/wA8fAOtc
 				</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>xlnc - cpuid_set_info - ryzen cores and logicals count</string>
+				<string>xlnc - cpuid_set_info - grab cores and logicals count from MSR</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
 				<data>
-				PexeO1d0Gz28T+p4dSaLBVdomACJBRlpmACLDU9omADr
-				OLk1AAAADzIPt8jB6BCD4A/rILk1AAAADzJIweIgicFI
-				CdG6AQABAA9F0A+3yonQwegQiQXZaJgAiQ3XaJgAhcB0
-				Gg==
+				PbxP6nh1JosFV2iYAIkFGWmYAIsNT2iYAOs4
 				</data>
 				<key>MatchBuild</key>
 				<string>18G95,18G103</string>
@@ -531,10 +586,111 @@
 				<string>10.14.6</string>
 				<key>Replace</key>
 				<data>
-				uAgAAIAx2zHJMdIPokGJwEGJzkGJ0UUPtvZB/8a4HgAA
-				gDHbMckx0g+iQYnAQYnRDx9EAAAPts//wTHSRInw9/GJ
-				BSRomABEiTUhaJgAgz3eaJgAAHUNiQXWaJgARIk102iY
-				AA==
+				uAgAAIAx2zHJMdIPokGJzkEPtsb/wA8fAOtc
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>xlnc - cpuid_set_info - set cores and logicals count</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				iwViCo0AiQUkC40AiwVaCo0AiQUcC40A
+				</data>
+				<key>MatchBuild</key>
+				<string>17G65,17G66</string>
+				<key>MatchOS</key>
+				<string>10.13.6</string>
+				<key>Replace</key>
+				<data>
+				iQViCo0AiQUkC40AiQVaCo0AiQUcC40A
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>xlnc - cpuid_set_info - set cores and logicals count</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				iwVSC40AiQUUDI0AiwVKC40AiQUMDI0A
+				</data>
+				<key>MatchBuild</key>
+				<string>17G8030,17G8037</string>
+				<key>MatchOS</key>
+				<string>10.13.6</string>
+				<key>Replace</key>
+				<data>
+				iQVSC40AiQUUDI0AiQVKC40AiQUMDI0A
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>xlnc - cpuid_set_info - set cores and logicals count</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				SIsF5neYAEiJBad4mACBPa14mAC8T+p4
+				</data>
+				<key>MatchOS</key>
+				<string>10.14.6</string>
+				<key>Replace</key>
+				<data>
+				iQXnd5gAiQWpeJgAiQXfd5gAiQWheJgA
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>xlnc - cpuid_set_info - set cores and logicals count</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				SIsF5meYAEiJBadomACBPa1omAC8T+p4
+				</data>
+				<key>MatchBuild</key>
+				<string>18G95,18G103</string>
+				<key>MatchOS</key>
+				<string>10.14.6</string>
+				<key>Replace</key>
+				<data>
+				iQXnZ5gAiQWpaJgAiQXfZ5gAiQWhaJgA
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>xlnc - cpuid_set_info - jmp to calculations and set cpuid_cores_per_package</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				dXHoRQYAAEiLBYYVoABIiQVHFqAA
+				</data>
+				<key>MatchOS</key>
+				<string>10.15.0</string>
+				<key>Replace</key>
+				<data>
+				dE7oRQYAAJCJDYYVoADpfgAAAGaQ
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>xlnc - cpuid_set_info - cores and threads calculations</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				uTUAAAAPMkjB4iCJwUgJ0bkBAAEAD0XID7fBwekQg+EP
+				6x65NQAAAA8ySMHiIInBSAnRuQEAAQAPRcgPt8HB6RA=
+				</data>
+				<key>MatchOS</key>
+				<string>10.15.0</string>
+				<key>Replace</key>
+				<data>
+				uAgAAIAx2zHJMdIPokGJzkUPtvZB/8ZEifFEifBmDx+E
+				AAAAAABmDx+EAAAAAAAPH4QAAAAAAOl8////Dx9EAAA=
 				</data>
 			</dict>
 			<dict>
@@ -548,7 +704,7 @@
 				WAIxBTHJRTHA
 				</data>
 				<key>MatchOS</key>
-				<string>10.13.x,10.14.x</string>
+				<string>10.13.x,10.14.x,10.15.x</string>
 				<key>Replace</key>
 				<data>
 				Zg8fhAAAAAAAZg8fhAAAAAAAZg8fhAAAAAAAZg8fhAAA
@@ -589,7 +745,23 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>algrey - tsc_init - grab DID and VID from MSR</string>
+				<string>xlnc - tsc_init - remove Penryn check to execute default case</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				PbxP6ngPhNkBAAA=
+				</data>
+				<key>MatchOS</key>
+				<string>10.15.0</string>
+				<key>Replace</key>
+				<data>
+				ZmZmDx+EAAAAAAA=
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>xlnc - tsc_init - grab DID and FID from MSR</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
@@ -603,13 +775,13 @@
 				<string>10.13.6</string>
 				<key>Replace</key>
 				<data>
-				uWQAAcAPMg+2yInGwe4Ig+Y/RTH/MdJIichI9/ZIAcBm
+				uXEAAcAPMonASInBSMHpBoPgP0iDwBCA4QdI0+hI0ehm
 				kA==
 				</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>algrey - tsc_init - grab DID and VID from MSR</string>
+				<string>xlnc - tsc_init - grab DID and FID from MSR</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
@@ -623,13 +795,13 @@
 				<string>10.13.6</string>
 				<key>Replace</key>
 				<data>
-				uWQAAcAPMg+2yInGwe4Ig+Y/RTH/MdJIichI9/ZIAcBm
+				uXEAAcAPMonASInBSMHpBoPgP0iDwBCA4QdI0+hI0ehm
 				kA==
 				</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>algrey - tsc_init - grab DID and VID from MSR</string>
+				<string>algrey - tsc_init - grab DID and FID from MSR</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
@@ -641,13 +813,13 @@
 				<string>10.14.6</string>
 				<key>Replace</key>
 				<data>
-				uWQAAcAPMg+2yInGwe4Ig+Y/RTH/MdJIichI9/ZIAcBm
+				uXEAAcAPMonASInBSMHpBoPgP0iDwBCA4QdI0+hI0ehm
 				kA==
 				</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>xlnc - tsc_init - grab DID and VID from MSR</string>
+				<string>xlnc - tsc_init - grab DID and FID from MSR</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
@@ -661,7 +833,25 @@
 				<string>10.14.6</string>
 				<key>Replace</key>
 				<data>
-				uWQAAcAPMg+2yInGwe4Ig+Y/RTH/MdJIichI9/ZIAcBm
+				uXEAAcAPMonASInBSMHpBoPgP0iDwBCA4QdI0+hI0ehm
+				kA==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>xlnc - tsc_init - grab DID and FID from MSR</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				uZQBAAAPMonDuc4AAAAPMg+2zokNYxiYAA+2xIkFXhiY
+				AA==
+				</data>
+				<key>MatchOS</key>
+				<string>10.15.0</string>
+				<key>Replace</key>
+				<data>
+				uXEAAcAPMonASInBSMHpBoPgP0iDwBCA4QdI0+hI0ehm
 				kA==
 				</data>
 			</dict>
@@ -737,6 +927,22 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>xlnc - tsc_init - skip test and go get FSBFrequency</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				98MAAAEAdA==
+				</data>
+				<key>MatchOS</key>
+				<string>10.15.0</string>
+				<key>Replace</key>
+				<data>
+				Zg8fRAAA6w==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>algrey - lapic_init - remove version check and panic</string>
 				<key>Disabled</key>
 				<false/>
@@ -749,6 +955,22 @@
 				<key>Replace</key>
 				<data>
 				JfAAAADrI5A=
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>xlnc - lapic_init - remove version check and panic</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				g/gTdl4=
+				</data>
+				<key>MatchOS</key>
+				<string>10.15.x</string>
+				<key>Replace</key>
+				<data>
+				Dx9EAAA=
 				</data>
 			</dict>
 			<dict>
@@ -823,7 +1045,23 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>algrey - mtrr_update_action - fix PAT</string>
+				<string>xlnc - lapic_interrupt - skip checks and prevent panic</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				gz0I3Z8AAHQO
+				</data>
+				<key>MatchOS</key>
+				<string>10.15.0</string>
+				<key>Replace</key>
+				<data>
+				6zkPH4AAAAAA
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>algrey - mtrr_update_action - fix PAT (x2)</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
@@ -847,7 +1085,7 @@
 				icCB4v//AP+BygAAAQC5dwIAAA==
 				</data>
 				<key>MatchOS</key>
-				<string>10.14.x</string>
+				<string>10.14.x,10.15.x</string>
 				<key>Replace</key>
 				<data>
 				uXcCAAC4BgEHALoGAQcADx9AAA==
