@@ -419,7 +419,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>algrey - cpuid_set_info - GenuineIntel to AuthenticAMD</string>
+				<string>algrey - cpuid_set_info - GenuineIntel to AuthenticAMD </string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
@@ -521,12 +521,16 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>xlnc - cpuid_set_info - grab cores and logicals count from MSR</string>
+				<string>algrey - cpuid_set_info - ryzen cores and logicals count</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
 				<data>
-				PbxP6nh1NosFyAqNAIkFiguNAIsNwAqNAOsW
+				PexeO1d0Gz28T+p4dTaLBcgKjQCJBYoLjQCLDcAKjQDr
+				Frk1AAAADzIPt8jB6BCD4A+JBWwLjQCJDWoLjQCFwHVK
+				6zC5NQAAAA8ySMHiIInBSAnRuQEAAQAPRcgPt9GJyMHo
+				EIkFOguNAIkVOAuNAIXAdRiLBWIKjQCJBSQLjQCLBVoK
+				jQCJBRwLjQA=
 				</data>
 				<key>MatchBuild</key>
 				<string>17G65,17G66</string>
@@ -534,17 +538,25 @@
 				<string>10.13.6</string>
 				<key>Replace</key>
 				<data>
-				uAgAAIAx2zHJMdIPokGJzkEPtsb/wA8fAOtS
+				uAgAAIAx2zHJMdIPokGJwEGJzkGJ0YM97wuNAAB0G2YP
+				H4QAAAAAAGYPH4QAAAAAAGYPH4QAAAAAAEUPtvZB/8a4
+				HgAAgDHbMckx0g+iQYnAQYnRZg8fhAAAAAAAD7bP/8Ex
+				0kSJ8PfxiQVtCo0ARIk1agqNAIM9JwuNAAB1DYkFHwuN
+				AESJNRwLjQA=
 				</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>xlnc - cpuid_set_info - grab cores and logicals count from MSR</string>
+				<string>algrey - cpuid_set_info - ryzen cores and logicals count</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
 				<data>
-				PbxP6nh1NosFuAuNAIkFegyNAIsNsAuNAOsW
+				PexeO1d0Gz28T+p4dTaLBbgLjQCJBXoMjQCLDbALjQDr
+				Frk1AAAADzIPt8jB6BCD4A+JBVwMjQCJDVoMjQCFwHVK
+				6zC5NQAAAA8ySMHiIInBSAnRuQEAAQAPRcgPt9GJyMHo
+				EIkFKgyNAIkVKAyNAIXAdRiLBVILjQCJBRQMjQCLBUoL
+				jQCJBQwMjQA=
 				</data>
 				<key>MatchBuild</key>
 				<string>17G8030,17G8037</string>
@@ -552,33 +564,46 @@
 				<string>10.13.6</string>
 				<key>Replace</key>
 				<data>
-				uAgAAIAx2zHJMdIPokGJzkEPtsb/wA8fAOtS
+				uAgAAIAx2zHJMdIPokGJwEGJzkGJ0WYPH4QAAAAAAGYP
+				H4QAAAAAAGYPH4QAAAAAAGYPH4QAAAAAAEUPtvZB/8a4
+				HgAAgDHbMckx0g+iQYnAQYnRZg8fhAAAAAAAD7bP/8Ex
+				0kSJ8PfxiQVdC40ARIk1WguNAIM9FwyNAAB1DYkFDwyN
+				AESJNQwMjQA=
 				</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>xlnc - cpuid_set_info - grab cores and logicals count from MSR</string>
+				<string>algrey - cpuid_set_info - ryzen cores and logicals count</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
 				<data>
-				PbxP6nh1JosFV3iYAIkFGXmYAIsNT3iYAOs4
+				PexeO1d0Gz28T+p4dSaLBVd4mACJBRl5mACLDU94mADr
+				OLk1AAAADzIPt8jB6BCD4A/rILk1AAAADzJIweIgicFI
+				CdG6AQABAA9F0A+3yonQwegQiQXZeJgAiQ3XeJgAhcB0
+				Gg==
 				</data>
 				<key>MatchOS</key>
 				<string>10.14.6</string>
 				<key>Replace</key>
 				<data>
-				uAgAAIAx2zHJMdIPokGJzkEPtsb/wA8fAOtc
+				uAgAAIAx2zHJMdIPokGJwEGJzkGJ0UUPtvZB/8a4HgAA
+				gDHbMckx0g+iQYnAQYnRDx9EAAAPts//wTHSRInw9/GJ
+				BSR4mABEiTUheJgAgz3eeJgAAHUNiQXWeJgARIk103iY
+				AA==
 				</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>xlnc - cpuid_set_info - grab cores and logicals count from MSR</string>
+				<string>xlnc - cpuid_set_info - ryzen cores and logicals count</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
 				<data>
-				PbxP6nh1JosFV2iYAIkFGWmYAIsNT2iYAOs4
+				PexeO1d0Gz28T+p4dSaLBVdomACJBRlpmACLDU9omADr
+				OLk1AAAADzIPt8jB6BCD4A/rILk1AAAADzJIweIgicFI
+				CdG6AQABAA9F0A+3yonQwegQiQXZaJgAiQ3XaJgAhcB0
+				Gg==
 				</data>
 				<key>MatchBuild</key>
 				<string>18G95,18G103</string>
@@ -586,77 +611,10 @@
 				<string>10.14.6</string>
 				<key>Replace</key>
 				<data>
-				uAgAAIAx2zHJMdIPokGJzkEPtsb/wA8fAOtc
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>xlnc - cpuid_set_info - set cores and logicals count</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				iwViCo0AiQUkC40AiwVaCo0AiQUcC40A
-				</data>
-				<key>MatchBuild</key>
-				<string>17G65,17G66</string>
-				<key>MatchOS</key>
-				<string>10.13.6</string>
-				<key>Replace</key>
-				<data>
-				iQViCo0AiQUkC40AiQVaCo0AiQUcC40A
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>xlnc - cpuid_set_info - set cores and logicals count</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				iwVSC40AiQUUDI0AiwVKC40AiQUMDI0A
-				</data>
-				<key>MatchBuild</key>
-				<string>17G8030,17G8037</string>
-				<key>MatchOS</key>
-				<string>10.13.6</string>
-				<key>Replace</key>
-				<data>
-				iQVSC40AiQUUDI0AiQVKC40AiQUMDI0A
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>xlnc - cpuid_set_info - set cores and logicals count</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				SIsF5neYAEiJBad4mACBPa14mAC8T+p4
-				</data>
-				<key>MatchOS</key>
-				<string>10.14.6</string>
-				<key>Replace</key>
-				<data>
-				iQXnd5gAiQWpeJgAiQXfd5gAiQWheJgA
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>xlnc - cpuid_set_info - set cores and logicals count</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				SIsF5meYAEiJBadomACBPa1omAC8T+p4
-				</data>
-				<key>MatchBuild</key>
-				<string>18G95,18G103</string>
-				<key>MatchOS</key>
-				<string>10.14.6</string>
-				<key>Replace</key>
-				<data>
-				iQXnZ5gAiQWpaJgAiQXfZ5gAiQWhaJgA
+				uAgAAIAx2zHJMdIPokGJwEGJzkGJ0UUPtvZB/8a4HgAA
+				gDHbMckx0g+iQYnAQYnRDx9EAAAPts//wTHSRInw9/GJ
+				BSRomABEiTUhaJgAgz3eaJgAAHUNiQXWaJgARIk102iY
+				AA==
 				</data>
 			</dict>
 			<dict>
@@ -689,8 +647,8 @@
 				<string>10.15.0</string>
 				<key>Replace</key>
 				<data>
-				uAgAAIAx2zHJMdIPokGJzkUPtvZB/8ZEifFEifBmDx+E
-				AAAAAABmDx+EAAAAAAAPH4QAAAAAAOl8////Dx9EAAA=
+				uAgAAIAx2zHJMdIPokGJzkUPtvZB/8a4HgAAgDHbMckx
+				0g+iD7b3/8ZEifEx0onI9/aJwUSJ8Ol8////Dx9EAAA=
 				</data>
 			</dict>
 			<dict>
@@ -761,7 +719,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>xlnc - tsc_init - grab DID and FID from MSR</string>
+				<string>algrey - tsc_init - grab DID and VID from MSR</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
@@ -775,13 +733,13 @@
 				<string>10.13.6</string>
 				<key>Replace</key>
 				<data>
-				uXEAAcAPMonASInBSMHpBoPgP0iDwBCA4QdI0+hI0ehm
+				uWQAAcAPMg+2yInGwe4Ig+Y/RTH/MdJIichI9/ZIAcBm
 				kA==
 				</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>xlnc - tsc_init - grab DID and FID from MSR</string>
+				<string>algrey - tsc_init - grab DID and VID from MSR</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
@@ -795,13 +753,13 @@
 				<string>10.13.6</string>
 				<key>Replace</key>
 				<data>
-				uXEAAcAPMonASInBSMHpBoPgP0iDwBCA4QdI0+hI0ehm
+				uWQAAcAPMg+2yInGwe4Ig+Y/RTH/MdJIichI9/ZIAcBm
 				kA==
 				</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>algrey - tsc_init - grab DID and FID from MSR</string>
+				<string>algrey - tsc_init - grab DID and VID from MSR</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
@@ -813,13 +771,13 @@
 				<string>10.14.6</string>
 				<key>Replace</key>
 				<data>
-				uXEAAcAPMonASInBSMHpBoPgP0iDwBCA4QdI0+hI0ehm
+				uWQAAcAPMg+2yInGwe4Ig+Y/RTH/MdJIichI9/ZIAcBm
 				kA==
 				</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>xlnc - tsc_init - grab DID and FID from MSR</string>
+				<string>xlnc - tsc_init - grab DID and VID from MSR</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
@@ -833,13 +791,13 @@
 				<string>10.14.6</string>
 				<key>Replace</key>
 				<data>
-				uXEAAcAPMonASInBSMHpBoPgP0iDwBCA4QdI0+hI0ehm
+				uWQAAcAPMg+2yInGwe4Ig+Y/RTH/MdJIichI9/ZIAcBm
 				kA==
 				</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>xlnc - tsc_init - grab DID and FID from MSR</string>
+				<string>xlnc - tsc_init - grab DID and VID from MSR</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
@@ -851,7 +809,7 @@
 				<string>10.15.0</string>
 				<key>Replace</key>
 				<data>
-				uXEAAcAPMonASInBSMHpBoPgP0iDwBCA4QdI0+hI0ehm
+				uWQAAcAPMg+2yInGwe4Ig+Y/RTH/MdJIichI9/ZIAcBm
 				kA==
 				</data>
 			</dict>
@@ -1061,7 +1019,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>algrey - mtrr_update_action - fix PAT (x2)</string>
+				<string>algrey - mtrr_update_action - fix PAT</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
@@ -1092,6 +1050,8 @@
 				</data>
 			</dict>
 		</array>
+		<key>PanicNoKextDump</key>
+		<true/>
 	</dict>
 	<key>RtVariables</key>
 	<dict>

@@ -11,8 +11,8 @@
 | WiFi & Bluetooth | Broadcom BCM94331CD |
 | OS Disk (NVMe) | Samsung 960 Evo 250GB |
 
-**macOS version**: 10.14.6 (18G103)  
-**Clover version**: r5070  
+**macOS version**: 10.15.0 (19A583)  
+**Clover version**: r5092  
 **Clover theme**: Minimal Dark  
 
 ## Patches & Kexts
@@ -25,10 +25,10 @@
  - [[Kext] AirportBrcmFixup](https://github.com/acidanthera/AirportBrcmFixup)
  - [[Kext] HibernationFixup](https://github.com/acidanthera/HibernationFixup)
  - [[Kext] RealtekRTL8111](https://bitbucket.org/RehabMan/os-x-realtek-network/downloads/)
+ - [[Kext] AppleIntelMCEReporter](https://github.com/AMD-OSX/AMD_Vanilla/blob/master/Extra/AppleMCEReporterDisabler.kext.zip)
  - [[Kext] NullCPUPowerManagement](https://www.tonymacx86.com/resources/nullcpupowermanagement.268/)  
 
 ## Not working
- - 32-bit apps (AMD_Vanilla does not support OPEMU, it's not real problem)
  - Hypervisor.framework (Parallels Desktop uses it, VMware Fusion and Xcode iOS emulator works)
  - Microphone
 
@@ -36,5 +36,7 @@
  - Download and copy to /Applications modified 64-bit Steam bootstrapper: [*Click*](/Steam_64bit.zip?raw=true)  
  - Run `xattr -cr /Applications/Steam.app` in Terminal  
  - Play games!  
+
+## Remember to generate your own Serial Number before use!  
 
 ![Screenshot](/screenshot.png?raw=true)
