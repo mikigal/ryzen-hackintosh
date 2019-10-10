@@ -32,11 +32,6 @@
  - Hypervisor.framework (Parallels Desktop uses it, VMware Fusion and Xcode iOS emulator works)
  - Microphone
 
-## Steam crash workaround
- - Download and copy to /Applications modified 64-bit Steam bootstrapper: [*Click*](/Steam_64bit.zip?raw=true)  
- - Run `xattr -cr /Applications/Steam.app` in Terminal  
- - Play games!  
-
 ## Remember to generate your own Serial Number before use!  
 
 ![Screenshot](/screenshot.png?raw=true)
