@@ -12,7 +12,7 @@
 | OS Disk (NVMe) | Samsung 960 Evo 250GB |
 
 **macOS version**: 10.15.0 (19A602)  
-**Clover version**: r5092  
+**Clover version**: r5098  
 **Clover theme**: Minimal Dark  
 
 ## Patches & Kexts
