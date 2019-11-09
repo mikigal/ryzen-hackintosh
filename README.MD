@@ -29,7 +29,7 @@
  - [[Kext] NullCPUPowerManagement](https://www.tonymacx86.com/resources/nullcpupowermanagement.268/)  
 
 ## Not working
- - Hypervisor.framework (Parallels Desktop uses it, VMware Fusion and Xcode iOS emulator works)
+ - Hypervisor.framework (Parallels Desktop uses it, VirtualBox and Xcode iOS emulator works)
  - Microphone
 
 ## Remember to generate your own Serial Number before use!  
