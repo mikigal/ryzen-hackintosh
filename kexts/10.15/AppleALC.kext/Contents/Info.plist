@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.4.3</string>
+	<string>1.4.4</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
@@ -25,7 +25,7 @@
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1.4.3</string>
+	<string>1.4.4</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
@@ -791,7 +791,7 @@
 					<data>
 					AhccEAIXHRACFx4rAhcfBAFHHCABRx0BAUce
 					FwFHH5ABJxwwAScdAQEnHqABJx+QAZccQAGX
-					HRABlx6LAZcfBA==
+					HRABlx6LAZcfBAFHDAI=
 					</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
@@ -2667,6 +2667,36 @@
 					AwAAAA==
 					</data>
 					<key>Codec</key>
+					<string>Asus Vivobook S200CE - Realtek ALC269VB</string>
+					<key>CodecID</key>
+					<integer>283902569</integer>
+					<key>ConfigData</key>
+					<data>
+					ASccMAEnHQEBJx6mAScfkAFHHBABRx0BAUce
+					FwFHH5ABdxzwAXcdAAF3HgABdx9AAYcc8AGH
+					HQABhx4AAYcfQAGXHPABlx0AAZceAAGXH0AB
+					pxwgAacdEAGnHisBpx8AAbcc8AG3HQABtx4A
+					AbcfQAHXHPAB1x0AAdceAAHXH0AB5xzwAecd
+					AAHnHgAB5x9AAhcc8AIXHQACFx4AAhcfQAFH
+					DAI=
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>12</integer>
+					<key>WakeConfigData</key>
+					<data>
+					AUcMAg==
+					</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>Codec</key>
 					<string>InsanelyDeepak - Realtek ALC269VC for Samsung NP350V5C-S08IT</string>
 					<key>CodecID</key>
 					<integer>283902569</integer>
@@ -2813,9 +2843,13 @@
 					<integer>283902569</integer>
 					<key>ConfigData</key>
 					<data>
-					ASccEAEnHQEBJx6mAScfkAFHHCABRx0BAUce
-					FwFHH5AB1xwwAdcdkAHXHgcB1x9AAhccQAIX
-					HRACFx4hAhcfBAFHDAI=
+					ASccMAEnHQEBJx6mAScfkAFHHBABRx0BAUce
+					FwFHH5ABdxzwAXcdAAF3HgABdx9AAYcc8AGH
+					HQABhx4AAYcfQAGXHPABlx0AAZceAAGXH0AB
+					pxzwAacdAAGnHgABpx9AAbcc8AG3HQABtx4A
+					AbcfQAHXHPAB1x0AAdceAAHXH0AB5xzwAecd
+					AAHnHgAB5x9AAhccIAIXHRACFx4rAhcfAAFH
+					DAI=
 					</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
@@ -4502,18 +4536,22 @@
 					<string>Flymin - Realtek ALC285 for  Thinkpad X1E</string>
 					<key>ConfigData</key>
 					<data>
-					ASccIAEnHQEBJx6mAScfkAE3HPABNx0AATce
-					AAE3H0ABRxwwAUcdAQFHHhcBRx+QAUcMAgFn
+					ASccEAEnHQEBJx6mAScfkAE3HPABNx0AATce
+					AAE3H0ABRxxAAUcdAQFHHhcBRx+QAUcMAgFn
 					HPABZx0AAWceAAFnH0ABdxzwAXcdAAF3HgAB
 					dx9AAYcc8AGHHQABhx4AAYcfQAGXHCABlx0Q
 					AZceiwGXHwQBpxzwAacdAAGnHgABpx9AAdcc
 					8AHXHQAB1x4AAdcfQAHnHPAB5x0AAeceAAHn
-					H0ACFxwgAhcdEAIXHisCFx8EAhcMAg==
+					H0ACFxxQAhcdEAIXHisCFx8EAhcMAg==
 					</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>31</integer>
+					<key>WakeConfigData</key>
+					<data>
+					AUcMAg==
+					</data>
 					<key>WakeVerbReinit</key>
 					<true/>
 				</dict>
@@ -9015,6 +9053,26 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>21</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>Codec</key>
+					<string>ASUS VivoBook S405UA-EB906T - CX8150 by Andres ZeroCross</string>
+					<key>CodecID</key>
+					<integer>351346646</integer>
+					<key>ConfigData</key>
+					<data>
+					AWccQAFnHRABZx4hAWcfBAGXHDABlx0QAZce
+					gQGXHwQBpxwgAacdAQGnHqABpx+QAXccEAF3
+					HQEBdx4XAXcfkAFnDAIBdwwC
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>22</integer>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
