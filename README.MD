@@ -1,5 +1,7 @@
 # AMD Ryzen Hackintosh Build
 
+# EFI was moved to OpenCore. Clover branch is archive and won't be updated
+
 ## Specification
 | **Component** | **Model** |
 | ------------- | --------- |
