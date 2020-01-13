@@ -11,9 +11,8 @@
 | WiFi & Bluetooth | Broadcom BCM94331CD |
 | OS Disk (NVMe) | Samsung 960 Evo 250GB |
 
-**macOS version**: 10.15.1 (19B88)  
-**Clover version**: r5098  
-**Clover theme**: Minimal Dark  
+**macOS version**: 10.15.2 (19C57)  
+**OpenCore version**: 0.5.3  
 
 ## Patches & Kexts
  - [[Patch] AMD_Vanilla](https://github.com/AMD-OSX/AMD_Vanilla)
@@ -25,7 +24,6 @@
  - [[Kext] AirportBrcmFixup](https://github.com/acidanthera/AirportBrcmFixup)
  - [[Kext] HibernationFixup](https://github.com/acidanthera/HibernationFixup)
  - [[Kext] RealtekRTL8111](https://bitbucket.org/RehabMan/os-x-realtek-network/downloads/)
- - [[Kext] AppleIntelMCEReporter](https://github.com/AMD-OSX/AMD_Vanilla/blob/master/Extra/AppleMCEReporterDisabler.kext.zip)
  - [[Kext] NullCPUPowerManagement](https://www.tonymacx86.com/resources/nullcpupowermanagement.268/)  
 
 ## Not working
@@ -33,5 +31,10 @@
  - Microphone
 
 ## Remember to generate your own Serial Number before use!  
+
+## How to use
+  1. Create directory "EFI" in your EFI partition (e.g. pendrive or hard drive)
+  2. Paste directiories "BOOT" and "OC" into created directory
+  3. Boot it!
 
 ![Screenshot](/screenshot.png?raw=true)
