@@ -12,15 +12,7 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
-				<string>SSDT-EC-AMD.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-USBX-AMD.aml</string>
+				<string>SSDT-EC-USBX-AMD.aml</string>
 			</dict>
 		</array>
 		<key>Block</key>

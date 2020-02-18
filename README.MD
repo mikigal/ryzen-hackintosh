@@ -23,8 +23,7 @@
  - [[Kext] BT4LEContinuityFixup](https://github.com/acidanthera/BT4LEContiunityFixup)
  - [[Kext] AirportBrcmFixup](https://github.com/acidanthera/AirportBrcmFixup)
  - [[Kext] HibernationFixup](https://github.com/acidanthera/HibernationFixup)
- - [[Kext] RealtekRTL8111](https://bitbucket.org/RehabMan/os-x-realtek-network/downloads/)
- - [[Kext] NullCPUPowerManagement](https://cdn.discordapp.com/attachments/263757191608139779/643751774666358794/NullCPUPowerManagement.kext.zip)  
+ - [[Kext] RealtekRTL8111](https://bitbucket.org/RehabMan/os-x-realtek-network/downloads/) 
 
 ## Not working
  - Hypervisor.framework (VirtualBox and XCode iOS emulator works)
