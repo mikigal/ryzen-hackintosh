@@ -27,7 +27,8 @@
  - [[Kext] NullCPUPowerManagement](https://cdn.discordapp.com/attachments/263757191608139779/643751774666358794/NullCPUPowerManagement.kext.zip)  
 
 ## Not working
- - Hypervisor.framework (Parallels Desktop uses it, VMWare Fusion and Xcode iOS emulator works)
+ - Hypervisor.framework (VirtualBox and XCode iOS emulator works)
+ - Recovery
  - Microphone
 
 ## How to use
