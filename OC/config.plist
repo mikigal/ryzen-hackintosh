@@ -1352,6 +1352,7 @@
 			<string>ApfsDriverLoader.efi</string>
 			<string>FwRuntimeServices.efi</string>
 			<string>VBoxHfs.efi</string>
+			<string>UsbKbDxe.efi</string>
 		</array>
 		<key>Input</key>
 		<dict>
