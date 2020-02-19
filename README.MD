@@ -31,12 +31,18 @@
 
 ## How to use
   1. Create directory "EFI" in your EFI partition (e.g. pendrive or hard drive)
-  2. Paste directiories "BOOT" and "OC" onto created directory
+  2. Clone this repo and paste directiories "BOOT" and "OC" onto created directory
   3. Download [**macserial**](https://github.com/acidanthera/MacInfoPkg/releases) to generate unique SMBIOS information, generate it with command **macserial --model iMac18,3**. Order of generated values: SystemSerialNumber | MLB
   4. Type **uuidgen** in Terminal (for Windows, use [this website](https://www.uuidgenerator.net/)), to generate SystemUUID for your SMBIOS
   5. Use any plist editor (e.g ProperTree), open config.plist and go to PlatformInfo > Generic. Set MLB, SystemSerialNumber and SystemUUID to generated values.
-  6. Boot it!
+  6. Boot it!  
 
 ## You CAN NOT use SMBIOS from this repository, it MUST be unique for every macOS installation
+
+**If you have problems with EFI, you may need to apply some more patches for you PC specification.**  
+**Check these guides!**
+ - General OpenCore configuration: [**\*click\***](https://khronokernel-2.gitbook.io/opencore-vanilla-desktop-guide/amd-config.plist/amd-config)  
+ - ACPI Patching (e.g. problems with EC): [**\*click\***](https://khronokernel.github.io/Getting-Started-With-ACPI/)  
+ - USB Mapping (not working USB ports): [**\*click\***](https://usb-map.gitbook.io/project/)  
 
 ![Screenshot](/screenshot.png?raw=true)
