@@ -1,4 +1,4 @@
-# AMD Ryzen Hackintosh Build
+# OpenCore EFI for AMD Ryzen Hackintosh
 
 ## Specification
 | **Component** | **Model** |
@@ -22,7 +22,7 @@
  - [[Kext] AppleALC](https://github.com/acidanthera/AppleALC)
  - [[Kext] BT4LEContinuityFixup](https://github.com/acidanthera/BT4LEContiunityFixup)
  - [[Kext] AirportBrcmFixup](https://github.com/acidanthera/AirportBrcmFixup)
- - [[Kext] RealtekRTL8111](https://bitbucket.org/RehabMan/os-x-realtek-network/downloads/) 
+ - [[Kext] RealtekRTL8111](https://bitbucket.org/RehabMan/os-x-realtek-network/downloads/)
 
 ## Not working
  - Hypervisor.framework (VirtualBox and XCode iOS emulator works)
@@ -32,17 +32,19 @@
 ## How to use
   1. Create directory "EFI" in your EFI partition (e.g. pendrive or hard drive)
   2. Clone this repo and paste directiories "BOOT" and "OC" onto created directory
-  3. Download [**macserial**](https://github.com/acidanthera/MacInfoPkg/releases) to generate unique SMBIOS information, generate it with command **macserial --model iMac18,3**. Order of generated values: SystemSerialNumber | MLB
-  4. Type **uuidgen** in Terminal (for Windows, use [this website](https://www.uuidgenerator.net/)), to generate SystemUUID for your SMBIOS
-  5. Use any plist editor (e.g ProperTree), open config.plist and go to PlatformInfo > Generic. Set MLB, SystemSerialNumber and SystemUUID to generated values.
-  6. Boot it!  
+  3. Download [**GenSMBIOS**](https://github.com/corpnewt/GenSMBIOS) to generate unique SMBIOS information. Run it, and select **Generate SMBIOS**, as model select **iMac18,3**.
+  4. Open config.plist with [**ProperTree**](https://github.com/corpnewt/ProperTree) and go to PlatformInfo > Generic. Set MLB (Board Serial), SystemSerialNumber (Serial) and SystemUUID (SmUUID) to generated values.
+  5. Boot it!  
 
-## You CAN NOT use SMBIOS from this repository, it MUST be unique for every macOS installation
+**You CAN NOT use SMBIOS from this repository, it MUST be unique for every macOS installation**
 
-**If you have problems with EFI, you may need to apply some more patches for you PC specification.**  
-**Check these guides!**
- - General OpenCore configuration: [**\*click\***](https://khronokernel-2.gitbook.io/opencore-vanilla-desktop-guide/amd-config.plist/amd-config)  
- - ACPI Patching (e.g. problems with EC): [**\*click\***](https://khronokernel.github.io/Getting-Started-With-ACPI/)  
- - USB Mapping (not working USB ports): [**\*click\***](https://usb-map.gitbook.io/project/)  
+## Additional guides
+**If you have problems with EFI, you may need to apply some more patches for you PC specification. Check these guides!**
+ - OpenCore configuration + extra fixes: [**\*click\***](https://khronokernel-2.gitbook.io/opencore-vanilla-desktop-guide/amd-config.plist/amd-config)
+ - iServices: [**\*click\***](https://khronokernel-2.gitbook.io/opencore-vanilla-desktop-guide/extras/iservices)
+ - ACPI Patching (e.g. problems with EC): [**\*click\***](https://khronokernel.github.io/Getting-Started-With-ACPI/)
+ - USB Mapping (not working USB ports): [**\*click\***](https://usb-map.gitbook.io/project/)
+
+If you can't solve your problems by yourself, feel free to ask on [**AMD-OSX Discord**](https://discord.gg/zh7f7X) or [**Forum**](https://forum.amd-osx.com)  
 
 ![Screenshot](/screenshot.png?raw=true)
