@@ -44,6 +44,6 @@
  - ACPI Patching (e.g. problems with EC): [**\*click\***](https://khronokernel.github.io/Getting-Started-With-ACPI/)
  - USB Mapping (not working USB ports): [**\*click\***](https://usb-map.gitbook.io/project/)
 
-If you can't solve your problems by yourself, feel free to ask on [**AMD-OSX Discord**](https://discord.gg/zh7f7X) or [**Forum**](https://forum.amd-osx.com)  
+If you can't solve your problems by yourself, feel free to ask on [**AMD-OSX Discord**](https://discord.gg/EfCYAJW) or [**Forum**](https://forum.amd-osx.com)  
 
 ![Screenshot](/screenshot.png?raw=true)
