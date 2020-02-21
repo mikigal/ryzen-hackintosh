@@ -1230,7 +1230,7 @@
 				<key>boot-args</key>
 				<string>npci=0x2000 alcid=11</string>
 				<key>csr-active-config</key>
-				<data>MAAAAA==</data>
+				<data>AAAAAA==</data>
 				<key>nvda_drv</key>
 				<data></data>
 				<key>prev-lang:kbd</key>
