@@ -16,11 +16,10 @@
 
 ## Patches & Kexts
  - [[Patch] AMD_Vanilla](https://github.com/AMD-OSX/AMD_Vanilla)
- - [[Kext] VirtualSMC](https://github.com/acidanthera/VirtualSMC)
  - [[Kext] Lilu](https://github.com/acidanthera/Lilu)
+ - [[Kext] VirtualSMC](https://github.com/acidanthera/VirtualSMC)
  - [[Kext] WhateverGreen](https://github.com/acidanthera/WhateverGreen)
  - [[Kext] AppleALC](https://github.com/acidanthera/AppleALC)
- - [[Kext] BT4LEContinuityFixup](https://github.com/acidanthera/BT4LEContiunityFixup)
  - [[Kext] AirportBrcmFixup](https://github.com/acidanthera/AirportBrcmFixup)
  - [[Kext] RealtekRTL8111](https://bitbucket.org/RehabMan/os-x-realtek-network/downloads/)
 
@@ -32,7 +31,7 @@
 ## How to use
   1. Create directory "EFI" in your EFI partition (e.g. pendrive or hard drive)
   2. Clone this repo and paste directiories "BOOT" and "OC" onto created directory
-  3. Download [**GenSMBIOS**](https://github.com/corpnewt/GenSMBIOS) to generate unique SMBIOS information. Run it, and select **Generate SMBIOS**, as model select **iMac18,3**.
+  3. Download [**GenSMBIOS**](https://github.com/corpnewt/GenSMBIOS) to generate unique SMBIOS information. Run it and select **Generate SMBIOS**, as model select **iMac18,3**.
   4. Open config.plist with [**ProperTree**](https://github.com/corpnewt/ProperTree) and go to PlatformInfo > Generic. Set MLB (Board Serial), SystemSerialNumber (Serial) and SystemUUID (SmUUID) to generated values.
   5. Boot it!  
 
