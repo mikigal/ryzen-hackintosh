@@ -14,8 +14,11 @@
 **macOS version**: 10.15.3 (19D76)  
 **OpenCore version**: 0.5.6  
 
-## Patches & Kexts
+## Drivers & Kexts
  - [[Patch] AMD_Vanilla](https://github.com/AMD-OSX/AMD_Vanilla)
+ - [[Driver] FwRuntimeServices](https://github.com/acidanthera/OpenCorePkg)
+ - [[Driver] ApfsDriverLoader](https://github.com/acidanthera/AppleSupportPkg)
+ - [[Driver] HfsPlus](https://github.com/acidanthera/OcBinaryData/blob/master/Drivers/HfsPlus.efi)
  - [[Kext] Lilu](https://github.com/acidanthera/Lilu)
  - [[Kext] VirtualSMC](https://github.com/acidanthera/VirtualSMC)
  - [[Kext] WhateverGreen](https://github.com/acidanthera/WhateverGreen)
