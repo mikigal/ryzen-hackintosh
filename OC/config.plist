@@ -60,6 +60,8 @@
 			<false/>
 			<key>ProtectCsmRegion</key>
 			<false/>
+			<key>ProtectSecureBoot</key>		
+			<false/>
 			<key>ProvideCustomSlide</key>
 			<true/>
 			<key>SetupVirtualMap</key>
@@ -1132,7 +1134,7 @@
 			<key>DummyPowerManagement</key>
 			<true/>
 			<key>ExternalDiskIcons</key>
-			<true/>
+			<false/>
 			<key>IncreasePciBarSize</key>
 			<false/>
 			<key>LapicKernelPanic</key>
@@ -1154,30 +1156,26 @@
 		</array>
 		<key>Boot</key>
 		<dict>
-			<key>BuiltinTextRenderer</key>
-			<false/>
-			<key>ConsoleBehaviourOs</key>
-			<string>Graphics</string>
-			<key>ConsoleBehaviourUi</key>
-			<string>Text</string>
-			<key>ConsoleMode</key>
-			<string>Max</string>
 			<key>HibernateMode</key>
 			<string>None</string>
+			<key>PickerMode</key>		
+			<string>Builtin</string>		
+			<key>HideAuxiliary</key>		
+			<false/>
 			<key>HideSelf</key>
 			<true/>
+			<key>PickerAttributes</key>		
+			<integer>0</integer>		
+			<key>PickerAudioAssist</key>		
+			<false/>
 			<key>PollAppleHotKeys</key>
 			<false/>
-			<key>Resolution</key>
-			<string></string>
 			<key>ShowPicker</key>
 			<true/>
 			<key>TakeoffDelay</key>
 			<integer>0</integer>
 			<key>Timeout</key>
 			<integer>3</integer>
-			<key>UsePicker</key>
-			<true/>
 		</dict>
 		<key>Debug</key>
 		<dict>
@@ -1205,10 +1203,8 @@
 			<integer>6</integer>
 			<key>HaltLevel</key>
 			<integer>2147483648</integer>
-			<key>RequireSignature</key>
-			<false/>
-			<key>RequireVault</key>
-			<false/>
+			<key>Vault</key>
+			<string>Optional</string>
 			<key>ScanPolicy</key>
 			<integer>0</integer>
 		</dict>
@@ -1232,7 +1228,7 @@
 				<key>csr-active-config</key>
 				<data>AAAAAA==</data>
 				<key>nvda_drv</key>
-				<data></data>
+				<data>00</data>
 				<key>prev-lang:kbd</key>
 				<data>ZW4tVVM6MA==</data>
 			</dict>
@@ -1297,6 +1293,23 @@
 			<string>FwRuntimeServices.efi</string>
 			<string>HFSPlus.efi</string>
 		</array>
+		<key>Audio</key>		
+		<dict>		
+			<key>AudioSupport</key>		
+			<false/>		
+			<key>AudioDevice</key>		
+			<string>0</string>		
+			<key>AudioCodec</key>		
+			<integer>0</integer>		
+			<key>AudioOut</key>		
+			<integer>0</integer>		
+			<key>MinimumVolume</key>		
+			<integer>20</integer>		
+			<key>PlayChime</key>		
+			<false/>		
+			<key>VolumeAmplifier</key>		
+			<integer>0</integer>		
+		</dict>
 		<key>Input</key>
 		<dict>
 			<key>KeyForgetThreshold</key>
@@ -1316,8 +1329,33 @@
 			<key>TimerResolution</key>
 			<integer>50000</integer>
 		</dict>
+		<key>Output</key>		
+		<dict>
+			<key>TextRenderer</key>		
+			<string>BuiltinGraphics</string>		
+			<key>ConsoleMode</key>		
+			<string></string>		
+			<key>Resolution</key>		
+			<string>Max</string>		
+			<key>ClearScreenOnModeSwitch</key>		
+			<false/>		
+			<key>IgnoreTextInGraphics</key>		
+			<false/>		
+			<key>ProvideConsoleGop</key>		
+			<true/>		
+			<key>DirectGopRendering</key>		
+			<false/>		
+			<key>ReconnectOnResChange</key>		
+			<false/>		
+			<key>ReplaceTabWithSpace</key>		
+			<false/>		
+			<key>SanitiseClearScreen</key>		
+			<false/>		
+		</dict>
 		<key>Protocols</key>
 		<dict>
+			<key>AppleAudio</key>		
+			<false/>
 			<key>AppleBootPolicy</key>
 			<false/>
 			<key>AppleEvent</key>
@@ -1330,8 +1368,6 @@
 			<false/>
 			<key>AppleUserInterfaceTheme</key>
 			<false/>
-			<key>ConsoleControl</key>
-			<true/>
 			<key>DataHub</key>
 			<false/>
 			<key>DeviceProperties</key>
@@ -1347,30 +1383,16 @@
 		</dict>
 		<key>Quirks</key>
 		<dict>
-			<key>AvoidHighAlloc</key>
-			<false/>
-			<key>ClearScreenOnModeSwitch</key>
-			<false/>
 			<key>ExitBootServicesDelay</key>
 			<integer>0</integer>
 			<key>IgnoreInvalidFlexRatio</key>
 			<false/>
-			<key>IgnoreTextInGraphics</key>
-			<false/>
-			<key>ProvideConsoleGop</key>
-			<true/>
-			<key>ReconnectOnResChange</key>
-			<false/>
 			<key>ReleaseUsbOwnership</key>
-			<false/>
-			<key>ReplaceTabWithSpace</key>
 			<false/>
 			<key>RequestBootVarFallback</key>
 			<true/>
 			<key>RequestBootVarRouting</key>
 			<true/>
-			<key>SanitiseClearScreen</key>
-			<false/>
 			<key>UnblockFsConnect</key>
 			<false/>
 		</dict>
