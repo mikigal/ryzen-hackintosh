@@ -566,13 +566,13 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
-				<data>MduAPQAAAAAGdVw=</data>
+				<data>MduAPQAAAAAGdQA=</data>
 				<key>Identifier</key>
 				<string>kernel</string>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
-				<data>/////wAAAP////8=</data>
+				<data>/////wAAAP///wA=</data>
 				<key>MaxKernel</key>
 				<string>19.99.99</string>
 				<key>MinKernel</key>
