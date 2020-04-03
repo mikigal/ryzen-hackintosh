@@ -15,6 +15,7 @@
 **OpenCore version**: 0.5.6  
 
 ## Drivers & Kexts
+ - [[Bootloader] OpenCore](https://github.com/acidanthera/OpenCorePkg)
  - [[Patch] AMD_Vanilla](https://github.com/AMD-OSX/AMD_Vanilla)
  - [[Driver] FwRuntimeServices](https://github.com/acidanthera/OpenCorePkg)
  - [[Driver] ApfsDriverLoader](https://github.com/acidanthera/AppleSupportPkg)
@@ -33,7 +34,7 @@
 ## How to use
   1. Create directory "EFI" in your EFI partition (e.g. pendrive or hard drive)
   2. Clone this repo and paste directiories "BOOT" and "OC" onto created directory
-  3. Download [**GenSMBIOS**](https://github.com/corpnewt/GenSMBIOS) to generate unique SMBIOS information. Run it and select **Generate SMBIOS**, as model select **iMac18,3**.
+  3. Download [**GenSMBIOS**](https://github.com/corpnewt/GenSMBIOS) to generate unique SMBIOS information. Run it and select **Generate SMBIOS**, as model select **iMacPro1,1**.
   4. Open config.plist with [**ProperTree**](https://github.com/corpnewt/ProperTree) and go to PlatformInfo > Generic. Set MLB (Board Serial), SystemSerialNumber (Serial) and SystemUUID (SmUUID) to generated values.
   5. Boot it!  
 
