@@ -12,12 +12,12 @@
 | OS Disk (NVMe) | Samsung 960 Evo 250GB |
 
 **macOS version**: 10.15.4 (19E266)  
-**OpenCore version**: 0.5.6  
+**OpenCore version**: 0.5.7  
 
 ## Drivers & Kexts
  - [[Bootloader] OpenCore](https://github.com/acidanthera/OpenCorePkg)
  - [[Patch] AMD_Vanilla](https://github.com/AMD-OSX/AMD_Vanilla)
- - [[Driver] FwRuntimeServices](https://github.com/acidanthera/OpenCorePkg)
+ - [[Driver] OpenRuntime](https://github.com/acidanthera/OpenCorePkg)
  - [[Driver] ApfsDriverLoader](https://github.com/acidanthera/AppleSupportPkg)
  - [[Driver] HfsPlus](https://github.com/acidanthera/OcBinaryData/blob/master/Drivers/HfsPlus.efi)
  - [[Kext] Lilu](https://github.com/acidanthera/Lilu)
