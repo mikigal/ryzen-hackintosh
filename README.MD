@@ -16,8 +16,10 @@
 
 ## Drivers & Kexts
  - [[Bootloader] OpenCore](https://github.com/acidanthera/OpenCorePkg)
+ - [[Resources] Picker GUI](https://github.com/acidanthera/OcBinaryData/tree/master/Resources)
  - [[Patch] AMD_Vanilla](https://github.com/AMD-OSX/AMD_Vanilla)
  - [[Driver] OpenRuntime](https://github.com/acidanthera/OpenCorePkg)
+ - [[Driver] OpenCanopy](https://github.com/acidanthera/OpenCorePkg)
  - [[Driver] ApfsDriverLoader](https://github.com/acidanthera/AppleSupportPkg)
  - [[Driver] HfsPlus](https://github.com/acidanthera/OcBinaryData/blob/master/Drivers/HfsPlus.efi)
  - [[Kext] Lilu](https://github.com/acidanthera/Lilu)
