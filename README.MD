@@ -43,11 +43,10 @@
 **You CAN NOT use SMBIOS from this repository, it MUST be unique for every macOS installation**
 
 ## Additional guides
-**If you have problems with EFI, you may need to apply some more patches for you PC specification. Check these guides!**
- - OpenCore configuration + extra fixes: [**\*click\***](https://khronokernel-2.gitbook.io/opencore-vanilla-desktop-guide/amd-config.plist/amd-config)
- - iServices: [**\*click\***](https://khronokernel-2.gitbook.io/opencore-vanilla-desktop-guide/extras/iservices)
- - ACPI Patching (e.g. problems with EC): [**\*click\***](https://khronokernel.github.io/Getting-Started-With-ACPI/)
- - USB Mapping (not working USB ports): [**\*click\***](https://usb-map.gitbook.io/project/)
+**If you have problems with install/boot macOS, kernel panic or another system related issues check OC configuration guide**  
+**If something additional does not work (USB ports, iServices, DRM/Netflix) check Post-Install guide**
+ - OpenCore configuration: [**\*click\***](https://khronokernel-2.gitbook.io/opencore-vanilla-desktop-guide/amd-config.plist/zen)
+ - Post-Install: [**\*click\***](https://khronokernel-2.gitbook.io/opencore-vanilla-desktop-guide/post-install/post-install)
 
 If you can't solve your problems by yourself, feel free to ask on [**AMD-OSX Discord**](https://discord.gg/EfCYAJW) or [**Forum**](https://forum.amd-osx.com)  
 
