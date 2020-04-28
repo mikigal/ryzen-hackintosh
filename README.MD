@@ -45,8 +45,8 @@
 ## Additional guides
 **If you have problems with install/boot macOS, kernel panic or another system related issues check OC configuration guide**  
 **If something additional does not work (USB ports, iServices, DRM/Netflix) check Post-Install guide**
- - OpenCore configuration: [**\*click\***](https://khronokernel-2.gitbook.io/opencore-vanilla-desktop-guide/amd-config.plist/zen)
- - Post-Install: [**\*click\***](https://khronokernel-2.gitbook.io/opencore-vanilla-desktop-guide/post-install/post-install)
+ - OpenCore configuration: [**\*click\***](https://dortania.github.io/OpenCore-Desktop-Guide/AMD/zen.html)
+ - Post-Install: [**\*click\***](https://dortania.github.io/OpenCore-Desktop-Guide/post-install/)
 
 If you can't solve your problems by yourself, feel free to ask on [**AMD-OSX Discord**](https://discord.gg/EfCYAJW) or [**Forum**](https://forum.amd-osx.com)  
 
