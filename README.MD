@@ -37,7 +37,7 @@
   2. Clone this repo and paste directiories "BOOT" and "OC" onto created directory
   3. Download [**GenSMBIOS**](https://github.com/corpnewt/GenSMBIOS) to generate unique SMBIOS information. Run it and select **Generate SMBIOS**, as model select **iMacPro1,1**.
   4. Open config.plist with [**ProperTree**](https://github.com/corpnewt/ProperTree) and go to PlatformInfo > Generic. Set MLB (Board Serial), SystemSerialNumber (Serial) and SystemUUID (SmUUID) to generated values.
-  5. Make USB installer with guide ([**\*click\***](https://dortania.github.io/OpenCore-Desktop-Guide/installer-guide/))
+  5. Make USB installer with [**this guide**](https://dortania.github.io/OpenCore-Desktop-Guide/installer-guide/)
   6. Boot it!  
 
 **You CAN NOT use SMBIOS from this repository, it MUST be unique for every macOS installation**
