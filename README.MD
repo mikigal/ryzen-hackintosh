@@ -11,7 +11,7 @@
 | WiFi & Bluetooth | Broadcom BCM94331CD |
 | OS Disk (NVMe) | Samsung 960 Evo 250GB |
 
-**macOS version**: 10.15.5 (19F96)  
+**macOS version**: 10.15.5 (19F101)  
 **OpenCore version**: 0.5.9  
 
 ## Drivers & Kexts
