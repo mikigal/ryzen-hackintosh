@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.4.9</string>
+	<string>1.5.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
@@ -25,7 +25,7 @@
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1.4.9</string>
+	<string>1.5.0</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
@@ -1646,7 +1646,7 @@
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
-					<integer>7</integer>
+					<integer>86</integer>
 					<key>WakeConfigData</key>
 					<data>
 					AUcMAg==
@@ -1779,6 +1779,33 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>18</integer>
+					<key>WakeConfigData</key>
+					<data>
+					AUcMAg==
+					</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>Codec</key>
+					<string>Realtek ALC255 for Dell 7447 by Ike</string>
+					<key>CodecID</key>
+					<integer>283902549</integer>
+					<key>ConfigData</key>
+					<data>
+					ASccEAEnHQEBJx6mAScfkAFHHEABRx0BAUce
+					FwFHH5ABdxxBAXcdAQF3HhcBdx+QAZccIAGX
+					HRABlx6LAZcfAQIXHFACFx0QAhceKwIXHwEB
+					RwwC
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>20</integer>
 					<key>WakeConfigData</key>
 					<data>
 					AUcMAg==
@@ -2404,6 +2431,66 @@
 					AwAAAA==
 					</data>
 					<key>Codec</key>
+					<string>Durian - Realtek ALC256 (3246) for MateBook X Pro 2019（4CH）</string>
+					<key>CodecID</key>
+					<integer>283902550</integer>
+					<key>ConfigData</key>
+					<data>
+					AbccEAG3HQEBtx4XAbcfkAG3DAIBRxwRAUcd
+					AQFHHhcBRx+QAUcMAgIXHCACFx0QAhceIQIX
+					HwICFwwCASccMAEnHQEBJx6mAScfkAGXHPAB
+					lx0AAZceAAGXH0AB1xzwAdcdAAHXHgAB1x9A
+					AYcc8AGHHQABhx4AAYcfQAE3HPABNx0AATce
+					AAE3H0ABpxzwAacdAAGnHgABpx9AAecc8AHn
+					HQAB5x4AAecfQA==
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>76</integer>
+					<key>WakeConfigData</key>
+					<data>
+					AbcMAgFHDAI=
+					</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>Codec</key>
+					<string>Wanwu - Realtek ALC256 (3246) for MateBook X Pro 2019</string>
+					<key>CodecID</key>
+					<integer>283902550</integer>
+					<key>ConfigData</key>
+					<data>
+					ASccIAEnHQEBJx6mAScfkAE3HPABNx0AATce
+					AAE3H0ABRxzwAUcdAAFHHgABRx9AAYcc8AGH
+					HQABhx4AAYcfQAGXHEABlx0QAZceqwGXHwQB
+					pxzwAacdAAGnHgABpx9AAbccEAG3HQEBtx4X
+					AbcfkAG3DAIB1xzwAdcdAAHXHgAB1x9AAecc
+					8AHnHQAB5x4AAecfQAIXHDACFx0QAhceKwIX
+					HwQCFwwC
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>19</integer>
+					<key>WakeConfigData</key>
+					<data>
+					AbcMAgIXDAI=
+					</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>Codec</key>
 					<string>DalianSky - Realtek ALC256 (3246) for MateBook X Pro 2019</string>
 					<key>CodecID</key>
 					<integer>283902550</integer>
@@ -2447,6 +2534,32 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>11</integer>
+					<key>WakeConfigData</key>
+					<data>
+					AUcMAg==
+					</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>Codec</key>
+					<string>Armênio - Realtek ALC257 - Lenovo T480</string>
+					<key>CodecID</key>
+					<integer>283902551</integer>
+					<key>ConfigData</key>
+					<data>
+					ASccEAEnHQEBJx6gAScfkAGXHCABlx0wAZce
+					gQGXHwEBRxwwAUcdYQFHHhABRx+QAUcMAgIX
+					HEACFx1wAhceIQIXHwECFwwC
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>86</integer>
 					<key>WakeConfigData</key>
 					<data>
 					AUcMAg==
@@ -4851,7 +4964,7 @@
 					AwAAAA==
 					</data>
 					<key>Codec</key>
-					<string>Realtek ALC283 for DELL R14 3437 by Zoran</string>
+					<string>Realtek ALC283 for DELL R14 3437 by xiaoleGun(zoran)</string>
 					<key>CodecID</key>
 					<integer>283902595</integer>
 					<key>ConfigData</key>
@@ -6468,6 +6581,25 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>17</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>Codec</key>
+					<string>Custom ALC662 by ryahpalma for MP67-DI/Esprimo Q900</string>
+					<key>CodecID</key>
+					<integer>283903586</integer>
+					<key>ConfigData</key>
+					<data>
+					AUccEAFHHUEBRx4hAUcfAQGHHCABhx2RAYce
+					gQGHHwEBpxw/AacdMQGnHoEBpx8B
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>18</integer>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
