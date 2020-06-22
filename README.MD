@@ -29,7 +29,6 @@
  - [[Kext] RealtekRTL8111](https://bitbucket.org/RehabMan/os-x-realtek-network/downloads/)
 
 ## Not working
- - Hypervisor.framework (VirtualBox and XCode iOS emulator works)
  - Microphone
 
 ## How to use
@@ -41,6 +40,14 @@
   6. Boot it!  
 
 **You CAN NOT use SMBIOS from this repository, it MUST be unique for every macOS installation**
+
+## VMware Fusion
+  1. Enable SVM (Virtualization) in UEFI
+  2. Download and install VMWare Fusion **10.1.5** (exacly this version)
+  3. Disable SIP (boot into Recovery, open Terminal and type `csrutil disable`)
+  4. Execute with root privileges [**fixfusion.sh**](/fixfusion.sh) (`sudo sh path/to/fixfusion.sh` in Terminal)
+  5. Enable SIP again (boot into Recovery, open Terminal and type `csrutil enable`)
+  6. Done!
 
 ## Additional guides
 **If you have problems with install/boot macOS, kernel panic or another system related issues check OC configuration guide**  
