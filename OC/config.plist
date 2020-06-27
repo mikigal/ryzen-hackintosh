@@ -648,7 +648,7 @@
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
-				<string>algrey - cpuid_set_info - ryzen cores and logicals count - part 1 - 10.13</string>
+				<string>algrey - cpuid_set_info - cores and logicals count - part 1 - 10.13</string>
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
@@ -676,7 +676,7 @@
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
-				<string>algrey - cpuid_set_info - ryzen cores and logicals count - part 1 - 10.14</string>
+				<string>algrey - cpuid_set_info - cores and logicals count - part 1 - 10.14</string>
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
@@ -704,7 +704,7 @@
 				<key>Base</key>
 				<string>_cpuid_set_info</string>
 				<key>Comment</key>
-				<string>algrey - cpuid_set_info - ryzen cores and logicals count - part 2</string>
+				<string>algrey - cpuid_set_info - cores and logicals count - part 2</string>
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
@@ -732,7 +732,7 @@
 				<key>Base</key>
 				<string>_cpuid_set_info</string>
 				<key>Comment</key>
-				<string>algrey - cpuid_set_info - ryzen cores and logicals count - part 3 - 10.13</string>
+				<string>algrey - cpuid_set_info - cores and logicals count - part 3 - 10.13</string>
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
@@ -760,7 +760,7 @@
 				<key>Base</key>
 				<string>_cpuid_set_info</string>
 				<key>Comment</key>
-				<string>algrey - cpuid_set_info - ryzen cores and logicals count - part 3 - 10.14</string>
+				<string>algrey - cpuid_set_info - cores and logicals count - part 3 - 10.14</string>
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
@@ -788,7 +788,7 @@
 				<key>Base</key>
 				<string>_cpuid_set_info</string>
 				<key>Comment</key>
-				<string>algrey - cpuid_set_info - ryzen cores and logicals count - part 4 - 10.13</string>
+				<string>algrey - cpuid_set_info - cores and logicals count - part 4 - 10.13</string>
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
@@ -816,7 +816,7 @@
 				<key>Base</key>
 				<string>_cpuid_set_info</string>
 				<key>Comment</key>
-				<string>algrey - cpuid_set_info - ryzen cores and logicals count - part 4 - 10.14</string>
+				<string>algrey - cpuid_set_info - cores and logicals count - part 4 - 10.14</string>
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
@@ -863,34 +863,6 @@
 				<string>17.0.0</string>
 				<key>Replace</key>
 				<data>Zg8fhAAAAAAAZg8fhAAAAAAAZg8fhAAAAAAAZg8fhAAAAAAAZg8fRAAA</data>
-				<key>ReplaceMask</key>
-				<data></data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
-				<string>algrey - tsc_init - remove Penryn check to execute default case 10.14.1-.3</string>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>gfm8T+p4D4TFAQAA</data>
-				<key>Identifier</key>
-				<string>kernel</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data></data>
-				<key>MaxKernel</key>
-				<string>18.99.99</string>
-				<key>MinKernel</key>
-				<string>18.0.0</string>
-				<key>Replace</key>
-				<data>ZmZmDx+EAAAAAACQ</data>
 				<key>ReplaceMask</key>
 				<data></data>
 				<key>Skip</key>
