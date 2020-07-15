@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>16D32</string>
+	<string>16G1114</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>
@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.2.1</string>
+	<string>2.2.2</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
@@ -25,21 +25,21 @@
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>2.2.1</string>
+	<string>2.2.2</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
-	<string>8C1002</string>
+	<string>8E3004b</string>
 	<key>DTPlatformVersion</key>
 	<string>GM</string>
 	<key>DTSDKBuild</key>
-	<string>15E60</string>
+	<string>16E185</string>
 	<key>DTSDKName</key>
-	<string>macosx10.11</string>
+	<string>macosx10.12</string>
 	<key>DTXcode</key>
-	<string>0821</string>
+	<string>0833</string>
 	<key>DTXcodeBuild</key>
-	<string>8C1002</string>
+	<string>8E3004b</string>
 	<key>IOKitPersonalities</key>
 	<dict>
 		<key>RTL8111 PCIe Adapter</key>
@@ -47,7 +47,7 @@
 			<key>CFBundleIdentifier</key>
 			<string>com.insanelymac.RealtekRTL8111</string>
 			<key>Driver_Version</key>
-			<string>2.2.1</string>
+			<string>2.2.2</string>
 			<key>IOClass</key>
 			<string>RTL8111</string>
 			<key>IOPCIMatch</key>
@@ -71,7 +71,7 @@
 			<key>enableTSO6</key>
 			<true/>
 			<key>intrMitigate</key>
-			<integer>24401</integer>
+			<integer>53080</integer>
 			<key>rxPolling</key>
 			<true/>
 		</dict>
@@ -81,7 +81,7 @@
 	<key>OSBundleLibraries</key>
 	<dict>
 		<key>com.apple.iokit.IONetworkingFamily</key>
-		<string>1.1.0</string>
+		<string>1.5.0</string>
 		<key>com.apple.iokit.IOPCIFamily</key>
 		<string>1.7</string>
 		<key>com.apple.kpi.bsd</key>
