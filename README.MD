@@ -8,7 +8,7 @@
 | RAM | 16GB (2 x 8GB) Corsair Vengeance @ 3000MHz |
 | Audio Chipset | ALC-887 |
 | GPU | MSI RX Vega 64 |
-| WiFi & Bluetooth | Broadcom BCM94331CD |
+| WiFi & Bluetooth | Fenvi T919 (BCM94360CD) |
 | OS Disk (NVMe) | Samsung 960 Evo 250GB |
 
 **macOS version**: 10.15.5 (19F101)  
@@ -25,7 +25,6 @@
  - [[Kext] VirtualSMC](https://github.com/acidanthera/VirtualSMC)
  - [[Kext] WhateverGreen](https://github.com/acidanthera/WhateverGreen)
  - [[Kext] AppleALC](https://github.com/acidanthera/AppleALC)
- - [[Kext] AirportBrcmFixup](https://github.com/acidanthera/AirportBrcmFixup)
  - [[Kext] RealtekRTL8111](https://bitbucket.org/RehabMan/os-x-realtek-network/downloads/)
 
 ## Not working
