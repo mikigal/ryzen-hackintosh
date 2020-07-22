@@ -28,7 +28,7 @@
  - [[Kext] RealtekRTL8111](https://github.com/Mieze/RTL8111_driver_for_OS_X)
 
 ## Not working
- - Microphone
+ - 3.5mm Jack microphone (only microphone with USB works)
 
 ## How to use
   1. Create directory "EFI" in your EFI partition (e.g. pendrive or hard drive)
@@ -43,7 +43,7 @@
 ## Big Sur
 EFI is generally compatible with Big Sur, but need few small changes.
 1. Get new AMD kernel patches from opencore-experimental branch
-2. Update OpenCore and kexts to latest build (you can get it from AMD-OSX Discord or built it manually). Remember to update config.plist too (read Differences.pdf from OpenCore package)
+2. Update OpenCore, drivers and kexts to latest build (you can get it from AMD-OSX Discord or build it manually). Remember to update config.plist too (read Differences.pdf from OpenCore package)
 3. Set NVRAM variable `booter-fileset-kernel` to `0` under `7C436110-AB2A-4BBB-A880-FE41995C9F82` key
 4. Clean NVRAM
 
