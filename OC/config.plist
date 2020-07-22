@@ -102,13 +102,13 @@
 			</dict>
 			<dict>
 				<key>BundlePath</key>
-				<string>VirtualSMC.kext</string>
+				<string>FakeSMC.kext</string>
 				<key>Comment</key>
 				<string></string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
-				<string>Contents/MacOS/VirtualSMC</string>
+				<string>Contents/MacOS/FakeSMC</string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
