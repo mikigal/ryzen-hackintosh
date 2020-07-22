@@ -40,6 +40,18 @@
 
 **You CAN NOT use SMBIOS from this repository, it MUST be unique for every macOS installation**
 
+## Big Sur
+EFI is generally compatible with Big Sur, but need few small changes.
+1. Get new AMD kernel patches from opencore-experimental branch
+2. Update OpenCore and kexts to latest build (you can get it from AMD-OSX Discord or built it manually). Remember to update config.plist too (read Differences.pdf from OpenCore package)
+3. Set NVRAM variable `booter-fileset-kernel` to `0` under `7C436110-AB2A-4BBB-A880-FE41995C9F82` key
+4. Clean NVRAM
+
+Click [**here**](https://dortania.github.io/OpenCore-Install-Guide/extras/big-sur/#backstory) to get more informations
+
+Before updating OS I recommed to check, does installer of Big Sur work.
+If you are not advanced I don't recommend updating until release, due to no support on AMD-OSX Discord.
+
 ## VMware Fusion
   1. Enable SVM (Virtualization) in UEFI
   2. Download and install VMWare Fusion **10.1.5** (exacly this version)
