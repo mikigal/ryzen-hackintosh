@@ -22,7 +22,7 @@
  - [[Driver] OpenCanopy](https://github.com/acidanthera/OpenCorePkg)
  - [[Driver] HFSPlus](https://github.com/acidanthera/OcBinaryData/blob/master/Drivers/HfsPlus.efi)
  - [[Kext] Lilu](https://github.com/acidanthera/Lilu)
- - [[Kext] VirtualSMC](https://github.com/acidanthera/VirtualSMC)
+ - [[Kext] FakeSMC](https://bitbucket.org/RehabMan/os-x-fakesmc-kozlek/downloads/)
  - [[Kext] WhateverGreen](https://github.com/acidanthera/WhateverGreen)
  - [[Kext] AppleALC](https://github.com/acidanthera/AppleALC)
  - [[Kext] RealtekRTL8111](https://github.com/Mieze/RTL8111_driver_for_OS_X)
