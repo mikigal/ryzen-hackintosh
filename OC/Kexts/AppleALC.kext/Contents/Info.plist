@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.5.0</string>
+	<string>1.5.1</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
@@ -25,7 +25,7 @@
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1.5.0</string>
+	<string>1.5.1</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
@@ -48,6 +48,28 @@
 			<string>com.apple.driver.AppleHDAHardwareConfigDriver</string>
 			<key>HDAConfigDefault</key>
 			<array>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>CodecID</key>
+					<integer>287143573</integer>
+					<key>Comment</key>
+					<string>Toshiba Satellite Pro C50</string>
+					<key>ConfigData</key>
+					<data>
+					AKccQACnHRAApx4hAKcfAQC3HCAAtx0QALce
+					gQC3HwEAxxzwAMcdAADHHgAAxx9AANccMADX
+					HQEA1x4QANcfkADnHBAA5x0BAOceoADnH5AA
+					9xzwAPcdAAD3HgAA9x9AAYcc8AGHHQABhx4A
+					AYcfQA==
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>11</integer>
+				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
 					<data>
@@ -131,14 +153,16 @@
 					AwAAAA==
 					</data>
 					<key>Codec</key>
-					<string>Creative CA0132, Alienware 15 R2</string>
+					<string>Creative CA0132: Alienware 15 R2</string>
 					<key>CodecID</key>
 					<integer>285343761</integer>
 					<key>ConfigData</key>
 					<data>
-					AVcKAQFnAwAAtxwQALcdQQC3HhAAtx+QANcc
-					8ADXHQAA1x4AANcfQAD3HCABFxxAARcegQEn
-					HDABJx+Q
+					AVcKAQFXDwEAFxceABcWHwAXFRABVxcNAVcY
+					IAC3HhAAtx+QANcc8ADXHQAA1x4AANcfQADn
+					HPAA5x0AAOceAADnH0AA9xwgAPcfAQEHHPAB
+					Bx0AAQceAAEHH0ABFxxAARcegQEXHwEBJxwA
+					AScfkAE3HPABNx0AATceAAE3H0A=
 					</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
@@ -151,14 +175,16 @@
 					AwAAAA==
 					</data>
 					<key>Codec</key>
-					<string>Creative CA0132, 2.0 + front HP</string>
+					<string>Creative CA0132: Alienware 17, Desktop 2xIn 3xOut</string>
 					<key>CodecID</key>
 					<integer>285343761</integer>
 					<key>ConfigData</key>
 					<data>
-					ABcXHgAXFRABVwoBAScIgQFnCIABVxcNAVcY
-					JADXHPAA1x0AANceAADXH0ABBx4hAScfkAE3
-					HPABNx0AATceAAE3H0A=
+					AVcKAQFXDwEAFxceABcWHwAXFRABVxcNAVcY
+					JAC3HhAAtx+QANcc8ADXHQAA1x4AANcfQADn
+					HPAA5x0AAOceAADnH0AA9xwgAPcfAQEHHDAB
+					Bx4hAQcfAQEXHEABFx6BARcfAQEnHAABJx+Q
+					ATcc8AE3HQABNx4AATcfQA==
 					</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
@@ -191,15 +217,17 @@
 					AwAAAA==
 					</data>
 					<key>Codec</key>
-					<string>Creative CA0132, 5.1 with C/Sub</string>
+					<string>Creative CA0132: R3Di default</string>
 					<key>CodecID</key>
 					<integer>285343761</integer>
 					<key>ConfigData</key>
 					<data>
-					ABcWHwAXFx4AFxUUAVcKAQEnCIEBZwiAAVcX
-					DQFXGCQA1xzwANcdAADXHgAA1x9AAOcc8ADn
-					HQAA5x4AAOcfQAEHHgEBJx+QATcc8AE3HQAB
-					Nx4AATcfQAGHHPABhx0AAYceAAGHH0A=
+					AVcKAQFXDwEAFxceABcWHwAXFRQBVxcNAVcY
+					JAC3HUEA1xzwANcdAADXHgAA1x9AAOcc8ADn
+					HQAA5x4AAOcfQAD3HCAA9x8BAQccMAEHHgEB
+					Bx8BARccQAEXHgEBFx8BASccAAEnH5ABNxzw
+					ATcdAAE3HgABNx9AAYcc8AGHHQABhx4AAYcf
+					QA==
 					</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
@@ -244,6 +272,30 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>6</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>Codec</key>
+					<string>Creative CA0132: ZxRi</string>
+					<key>CodecID</key>
+					<integer>285343761</integer>
+					<key>ConfigData</key>
+					<data>
+					AVcKAQFXDwEAF5AzABcXDwAXFg8AFxUNAVcX
+					GAFXGBQBVxcaAVcYkQFQoCABUQAYAV8BAAFT
+					AIMBVAAAAVcXDQFXGCQAtx1BANcc8ADXHQAA
+					1x4AANcfQADnHPAA5x0AAOceAADnH0AA9xwg
+					APcfAQEHHDABBx4BAQcfAQEXHEABFx4BARcf
+					AQEnH5ABNxzwATcdAAE3HgABNx9AAYcc8AGH
+					HQABhx4AAYcfQA==
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>7</integer>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
@@ -328,6 +380,29 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>12</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>Codec</key>
+					<string>Creative CA0132 5.1 channel for Alienware-M17X-R4 by DalianSky</string>
+					<key>CodecID</key>
+					<integer>285343761</integer>
+					<key>ConfigData</key>
+					<data>
+					ALccEAC3HUEAtx4QALcfkADHHCAAxx0gAMce
+					RQDHHwEA1xzwANcdAADXHgAA1x9AAOcc8ADn
+					HQAA5x4AAOcfQAD3HFAA9x1AAPceIQD3HwEB
+					BxzwAQcdAAEHHgABBx9AARcccAEXHRABFx4B
+					ARcfAQEnHIABJx2RASceoAEnH5ABNxzwATcd
+					AAE3HgABNx9AAYcc8AGHHQABhx4AAYcfQA==
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>99</integer>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
@@ -1792,15 +1867,15 @@
 					AwAAAA==
 					</data>
 					<key>Codec</key>
-					<string>Realtek ALC255 for Dell 7447 by Ike</string>
+					<string>Realtek ALC255 for Dell 7447 by was3912734</string>
 					<key>CodecID</key>
 					<integer>283902549</integer>
 					<key>ConfigData</key>
 					<data>
 					ASccEAEnHQEBJx6mAScfkAFHHEABRx0BAUce
-					FwFHH5ABdxxBAXcdAQF3HhcBdx+QAZccIAGX
-					HRABlx6LAZcfAQIXHFACFx0QAhceKwIXHwEB
-					RwwC
+					FwFHH5ABRwwCAXccQQF3HQEBdx4XAXcfkAGX
+					HCABlx0RAZceiwGXHwIB5xxgAecdEQHnHkUB
+					5x8CAhccUAIXHRACFx4rAhcfAgIXDAI=
 					</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
@@ -5103,6 +5178,32 @@
 					<data>
 					AwAAAA==
 					</data>
+					<key>Codec</key>
+					<string>Realtek ALC285 for Yoga C740 by fewtarius</string>
+					<key>CodecID</key>
+					<integer>283902597</integer>
+					<key>ConfigData</key>
+					<data>
+					AUccEAFHHQEBRx4TAUcfmQFHDAICFxwgAhcd
+					EAIXHiECFx8TAhcMAgGXHEABlx0RAZceoQGX
+					H5M=
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>61</integer>
+					<key>WakeConfigData</key>
+					<data>
+					AUcMAgIXDAIBlwcl
+					</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
 					<key>CodecID</key>
 					<integer>283902598</integer>
 					<key>CodecName</key>
@@ -5243,6 +5344,37 @@
 					AwAAAA==
 					</data>
 					<key>Codec</key>
+					<string>leeoem - Realtek ALC289 for alienware m17r2</string>
+					<key>CodecID</key>
+					<integer>283902601</integer>
+					<key>ConfigData</key>
+					<data>
+					ASccIAEnHQEBJx6mAScfkAE3HPABNx0AATce
+					AAE3H0ABRxxAAUcdAQFHHhcBRx+QAUcMAgFn
+					HPABZx0AAWceAAFnH0ABdxzwAXcdAAF3HgAB
+					dx9AAYcc8AGHHQABhx4AAYcfQAGXHHABlx0Q
+					AZceiwGXHwIBpxzwAacdAAGnHgABpx9AAbcc
+					8AG3HQABtx4AAbcfQAHXHPAB1x0AAdceAAHX
+					H0AB5xzwAecdAAHnHgAB5x9AAhccMAIXHRAC
+					Fx4rAhcfAgIXDAI=
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>11</integer>
+					<key>WakeConfigData</key>
+					<data>
+					AUcMAgG3DAICFwwC
+					</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>Codec</key>
 					<string>Realtek ALC289 for Acer PT515-51 By Bugprogrammer and Rover</string>
 					<key>CodecID</key>
 					<integer>283902601</integer>
@@ -5311,6 +5443,32 @@
 					<key>WakeConfigData</key>
 					<data>
 					AUcMAg==
+					</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>CodecID</key>
+					<integer>283902608</integer>
+					<key>Comment</key>
+					<string>MacPeet - ALC290 for HP m6 n015dx</string>
+					<key>ConfigData</key>
+					<data>
+					AaccIAGnHRABpx6BAacfAAEnHDABJx0AASce
+					owEnH5ABVxxAAVcdEAFXHiEBVx8AAYccUAGH
+					HQEBhx4XAYcfkAGHDAI=
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>15</integer>
+					<key>WakeConfigData</key>
+					<data>
+					AYcMAg==
 					</data>
 					<key>WakeVerbReinit</key>
 					<true/>
@@ -11594,6 +11752,32 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>77</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>Codec</key>
+					<string>zty199 - ALC295 for HP Pavilion / OMEN-2</string>
+					<key>CodecID</key>
+					<integer>283902613</integer>
+					<key>ConfigData</key>
+					<data>
+					ASccAAEnHQEBJx6mAScfmQFHHEABRx0BAUce
+					FwFHH5kBRwwCAZccgAGXHRABlx6LAZcfAAIX
+					HMACFx0QAhceKwIXHwACFwwC
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>24</integer>
+					<key>WakeConfigData</key>
+					<data>
+					AUcMAgIXDAI=
+					</data>
+					<key>WakeVerbReinit</key>
+					<true/>
 				</dict>
 			</array>
 			<key>IOClass</key>
