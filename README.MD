@@ -28,7 +28,8 @@
  - [[Kext] RealtekRTL8111](https://github.com/Mieze/RTL8111_driver_for_OS_X)
 
 ## Not working
- - 3.5mm Jack microphone (only microphone with USB works)
+ - Virtualization (only VirtualBox and Parallels Dekstop 13.1.0 or below works)
+ - 3.5mm Jack microphone (only USB/Bluetooth microphones work)
 
 ## How to use
   1. Create directory "EFI" in your EFI partition (e.g. pendrive or hard drive)
@@ -43,10 +44,13 @@
 ## Additional guides
 **If you have problems with install/boot macOS, kernel panic or another system related issues check OC configuration guide**  
 **If something additional does not work (USB ports, iServices, DRM/Netflix) check Post-Install guide**
- - Creating USB installer: [**\*click\***](https://dortania.github.io/OpenCore-Desktop-Guide/installer-guide/)
- - OpenCore configuration: [**\*click\***](https://dortania.github.io/OpenCore-Desktop-Guide/AMD/zen.html)
- - Post-Install: [**\*click\***](https://dortania.github.io/OpenCore-Desktop-Guide/post-install/)
- - Troubleshooting: [**\*click\***](https://dortania.github.io/OpenCore-Desktop-Guide/troubleshooting/troubleshooting.html)
+ - Creating USB installer: [**\*click\***](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/)
+ - OpenCore configuration: [**\*click\***](https://dortania.github.io/OpenCore-Install-Guide/AMD/zen.html)
+ - Post-Install: [**\*click\***](https://dortania.github.io/OpenCore-Post-Install/)
+ - Troubleshooting: [**\*click\***](https://dortania.github.io/OpenCore-Post-Install/)
+ - ACPI patching: [**\*click\***](https://dortania.github.io/Getting-Started-With-ACPI/)
+ - USB mapping: [**\*click\***](https://dortania.github.io/OpenCore-Post-Install/usb/)
+
 
 If you can't solve your problems by yourself, feel free to ask on [**AMD-OSX Discord**](https://discord.gg/EfCYAJW) or [**Forum**](https://forum.amd-osx.com)  
 
