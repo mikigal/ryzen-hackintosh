@@ -34,7 +34,6 @@
  - Big Sur (10.16/11.0)
 
 ## Not working
- - Sleep (only on Big Sur)
  - Virtualization (only VirtualBox and Parallels Dekstop 13.1.0 or below works)
  - 3.5mm Jack microphone (only USB/Bluetooth microphones work)
 
