@@ -33,23 +33,23 @@
  - Catalina (10.15.x)
  - Big Sur (10.16/11.0)
 
-## Not working
- - Virtualization (only VirtualBox and Parallels Dekstop 13.1.0 or below works)
- - 3.5mm Jack microphone (only USB/Bluetooth microphones work)
+## Issues
+ - Partially-working virtualization (only VirtualBox & Parallels Dekstop 13.1.0 or below)
+ - Not working 3.5mm Jack microphone (only USB/Bluetooth microphones)
 
 ## How to use
-  1. Create directory "EFI" in your EFI partition (e.g. pendrive or hard drive)
-  2. Clone this repo and paste directiories "BOOT" and "OC" onto created directory
-  3. Download [**GenSMBIOS**](https://github.com/corpnewt/GenSMBIOS) to generate unique SMBIOS information. Run it and select **Generate SMBIOS**, as model select **iMacPro1,1**.
-  4. Open config.plist with [**ProperTree**](https://github.com/corpnewt/ProperTree) and go to PlatformInfo > Generic. Set MLB (Board Serial), SystemSerialNumber (Serial) and SystemUUID (SmUUID) to generated values. Change ROM to your network card's MAC address without `:` character. [**How to get MAC Address?**](https://www.wikihow.com/Find-the-MAC-Address-of-Your-Computer)
-  5. Make USB installer with [**this guide**](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/)
+  1. Create "EFI" directory in your EFI partition (e.g. flash drive or hard drive)
+  2. Clone the repository and paste "BOOT" and "OC" directories in your "EFI" folder
+  3. Download [**GenSMBIOS**](https://github.com/corpnewt/GenSMBIOS) to generate unique SMBIOS information. Run it and select **Generate SMBIOS**, as the  model select **iMacPro1,1**.
+  4. Open config.plist with [**ProperTree**](https://github.com/corpnewt/ProperTree) and go to PlatformInfo > Generic. Set MLB (Board Serial), SystemSerialNumber (Serial) and SystemUUID (SmUUID) to generated values. Change ROM to your network card's MAC address without the `:` character. [**How to get MAC Address?**](https://www.wikihow.com/Find-the-MAC-Address-of-Your-Computer)
+  5. Make your USB installer with [**this guide**](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/)
   6. Boot it!  
 
 **You CAN NOT use SMBIOS from this repository, it MUST be unique for every macOS installation**
 
-## Additional guides
-**If you have problems with install/boot macOS, kernel panic or another system related issues check OC configuration guide**  
-**If something additional does not work (USB ports, iServices, DRM/Netflix) check Post-Install guide**
+## Other guides
+**If you have any problems with installation or booting your macOS, kernel panics or another system related issue check OC configuration guide**  
+**If something else isn't working properly (for example USB ports, iServices, DRM/Netflix) check Post-Install guide**
  - Creating USB installer: [**\*click\***](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/)
  - OpenCore configuration: [**\*click\***](https://dortania.github.io/OpenCore-Install-Guide/AMD/zen.html)
  - Post-Install: [**\*click\***](https://dortania.github.io/OpenCore-Post-Install/)
@@ -58,6 +58,6 @@
  - USB mapping: [**\*click\***](https://dortania.github.io/OpenCore-Post-Install/usb/)
 
 
-If you can't solve your problems by yourself, feel free to ask on [**AMD-OSX Discord**](https://discord.gg/EfCYAJW) or [**Forum**](https://forum.amd-osx.com)  
+If you have any other questions or issues, feel free to ask on [**AMD-OSX Discord**](https://discord.gg/EfCYAJW) or [**Forum**](https://forum.amd-osx.com)  
 
 ![Screenshot](/screenshot.png?raw=true)
