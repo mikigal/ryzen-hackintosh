@@ -38,12 +38,11 @@
  - Not working 3.5mm Jack microphone (only USB/Bluetooth microphones)
 
 ## How to use
-  1. Create "EFI" directory in your EFI partition (e.g. flash drive or hard drive)
-  2. Clone the repository and paste "BOOT" and "OC" directories in your "EFI" folder
-  3. Download [**GenSMBIOS**](https://github.com/corpnewt/GenSMBIOS) to generate unique SMBIOS information. Run it and select **Generate SMBIOS**, as the  model select **iMacPro1,1**.
+  1. Make your USB installer with [**this guide**](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/)
+  2. Clone the repository and paste "BOOT" and "OC" directories into your's pendrive "EFI" folder
+  3. Download [**GenSMBIOS**](https://github.com/corpnewt/GenSMBIOS) to generate unique SMBIOS information. Run it and select **Generate SMBIOS**, as the model select **iMacPro1,1**.
   4. Open config.plist with [**ProperTree**](https://github.com/corpnewt/ProperTree) and go to PlatformInfo > Generic. Set MLB (Board Serial), SystemSerialNumber (Serial) and SystemUUID (SmUUID) to generated values. Change ROM to your network card's MAC address without the `:` character. [**How to get MAC Address?**](https://www.wikihow.com/Find-the-MAC-Address-of-Your-Computer)
-  5. Make your USB installer with [**this guide**](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/)
-  6. Boot it!  
+  5. Boot it!  
 
 **You CAN NOT use SMBIOS from this repository, it MUST be unique for every macOS installation**
 
