@@ -1,4 +1,4 @@
-# OpenCore EFI for AMD Ryzen Hackintosh
+# OpenCore EFI for AMD Ryzen Hackintosh (macOS 10.13 - 10.16)
 
 ## Specification
 | **Component** | **Model** |
@@ -27,7 +27,14 @@
  - [[Kext] AppleALC](https://github.com/acidanthera/AppleALC)
  - [[Kext] RealtekRTL8111](https://github.com/Mieze/RTL8111_driver_for_OS_X)
 
+## Compatible macOS versions
+ - High Sierra (10.13.x)
+ - Mojave (10.14.x)
+ - Catalina (10.15.x)
+ - Big Sur (10.16/11.0)
+
 ## Not working
+ - Sleep (only on Big Sur)
  - Virtualization (only VirtualBox and Parallels Dekstop 13.1.0 or below works)
  - 3.5mm Jack microphone (only USB/Bluetooth microphones work)
 
