@@ -28,6 +28,7 @@
  - [[Kext] WhateverGreen](https://github.com/acidanthera/WhateverGreen)
  - [[Kext] AppleALC](https://github.com/acidanthera/AppleALC)
  - [[Kext] RealtekRTL8111](https://github.com/Mieze/RTL8111_driver_for_OS_X)
+ - [[Kext] AppleMCEReporterDisabler](https://github.com/AMD-OSX/AMD_Vanilla/blob/experimental-opencore/Extra/AppleMCEReporterDisabler.kext.zip)
 
 ## Compatible macOS versions
  - High Sierra (10.13.x)
