@@ -14,7 +14,7 @@
 **macOS version**: 11.0 Beta 6 (20A5364e)  
 **OpenCore version**: 0.6.0  
 
-## Drivers & Kexts
+## Credits
  - [[Bootloader] OpenCore](https://github.com/acidanthera/OpenCorePkg)
  - [[Resources] Picker GUI](https://github.com/acidanthera/OcBinaryData/tree/master/Resources)
  - [[Patch] AMD_Vanilla](https://github.com/AMD-OSX/AMD_Vanilla)
@@ -28,6 +28,8 @@
  - [[Kext] WhateverGreen](https://github.com/acidanthera/WhateverGreen)
  - [[Kext] AppleALC](https://github.com/acidanthera/AppleALC)
  - [[Kext] RealtekRTL8111](https://github.com/Mieze/RTL8111_driver_for_OS_X)
+ - [[Kext] AMDRyzenCPUPowerManagement](https://github.com/trulyspinach/SMCAMDProcessor)
+ - [[Kext] SMCAMDProcessor](https://github.com/trulyspinach/SMCAMDProcessor)
  - [[Kext] AppleMCEReporterDisabler](https://github.com/AMD-OSX/AMD_Vanilla/blob/experimental-opencore/Extra/AppleMCEReporterDisabler.kext.zip)
 
 ## Compatible macOS versions
