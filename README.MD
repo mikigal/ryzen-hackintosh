@@ -12,7 +12,7 @@
 | OS Disk (NVMe) | Samsung 960 Evo 250GB |
 
 **macOS version**: 11.0 Beta 6 (20A5364e)  
-**OpenCore version**: 0.6.0  
+**OpenCore version**: 0.6.1  
 
 ## Credits
  - [[Bootloader] OpenCore](https://github.com/acidanthera/OpenCorePkg)
