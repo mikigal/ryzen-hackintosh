@@ -251,6 +251,126 @@
 		<key>Patch</key>
 		<array>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
+				<key>Base</key>
+				<string>_i386_switch_lbrs</string>
+				<key>Comment</key>
+				<string>algrey - Disable _i386_switch_lbrs</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data></data>
+				<key>Identifier</key>
+				<string>kernel</string>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data></data>
+				<key>MaxKernel</key>
+				<string>20.99.99</string>
+				<key>MinKernel</key>
+				<string>20.1.0</string>
+				<key>Replace</key>
+				<data>ww==</data>
+				<key>ReplaceMask</key>
+				<data></data>
+				<key>Skip</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
+				<key>Base</key>
+				<string>_i386_lbr_init</string>
+				<key>Comment</key>
+				<string>algrey - Disable _i386_lbr_init</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data></data>
+				<key>Identifier</key>
+				<string>kernel</string>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data></data>
+				<key>MaxKernel</key>
+				<string>20.99.99</string>
+				<key>MinKernel</key>
+				<string>20.1.0</string>
+				<key>Replace</key>
+				<data>ww==</data>
+				<key>ReplaceMask</key>
+				<data></data>
+				<key>Skip</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
+				<key>Base</key>
+				<string></string>
+				<key>Comment</key>
+				<string>algrey - _i386_init_slave - Remove wrmsr 0x1c8</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>uAEAAAC5yAEAADHSDzA=</data>
+				<key>Identifier</key>
+				<string>kernel</string>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data></data>
+				<key>MaxKernel</key>
+				<string>20.99.99</string>
+				<key>MinKernel</key>
+				<string>20.1.0</string>
+				<key>Replace</key>
+				<data>Zg8fhAAAAAAADx9EAAA=</data>
+				<key>ReplaceMask</key>
+				<data></data>
+				<key>Skip</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
+				<key>Base</key>
+				<string>_i386_lbr_native_state_to_mach_thread_state</string>
+				<key>Comment</key>
+				<string>algrey - Disable _i386_lbr_native_state_to_mach_thread_state</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data></data>
+				<key>Identifier</key>
+				<string>kernel</string>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data></data>
+				<key>MaxKernel</key>
+				<string>20.99.99</string>
+				<key>MinKernel</key>
+				<string>20.1.0</string>
+				<key>Replace</key>
+				<data>ww==</data>
+				<key>ReplaceMask</key>
+				<data></data>
+				<key>Skip</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
@@ -310,7 +430,7 @@
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
-				<string>algrey - cpuid_set_cache_info - cpuid 0x8000001D instead 0 - 10.15</string>
+				<string>algrey - cpuid_set_cache_info - cpuid 0x8000001D instead 0 - 10.15/10.16</string>
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
@@ -338,7 +458,7 @@
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
-				<string>algrey - cpuid_set_cache_info - cpuid 0x8000001D instead 0</string>
+				<string>algrey - cpuid_set_cache_info - cpuid 0x8000001D instead 0 - 10.13/10.14</string>
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
@@ -422,35 +542,7 @@
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
-				<string>algrey - - skip cpuid_cores_per_package test -10.15</string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>gz0AAAAAAA8AAAAAAItdvA==</data>
-				<key>Identifier</key>
-				<string>kernel</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>//8AAAD///8AAAAA/////w==</data>
-				<key>MaxKernel</key>
-				<string>19.99.99</string>
-				<key>MinKernel</key>
-				<string>19.0.0</string>
-				<key>Replace</key>
-				<data>AAAAAAAAAQAAAAAAAAAAAA==</data>
-				<key>ReplaceMask</key>
-				<data>AAAAAAAADwAAAAAAAAAAAA==</data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
-				<string>algrey - - skip cpuid_cores_per_package test -10.16</string>
+				<string>NoOne - skip cpuid_cores_per_package test - 10.15/10.16</string>
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
@@ -464,9 +556,9 @@
 				<key>Mask</key>
 				<data>//8AAAD///8AAAAA//8A/w==</data>
 				<key>MaxKernel</key>
-				<string>20.99.9</string>
+				<string>20.99.99</string>
 				<key>MinKernel</key>
-				<string>20.0.0</string>
+				<string>19.0.0</string>
 				<key>Replace</key>
 				<data>AAAAAAAAAQAAAAAAAAAAAA==</data>
 				<key>ReplaceMask</key>
@@ -478,7 +570,7 @@
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
-				<string>algrey - - skip cpuid_cores_per_package test</string>
+				<string>algrey - skip cpuid_cores_per_package test - 10.13/10.14</string>
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
@@ -618,7 +710,7 @@
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
-				<string>algrey - cpuid_set_info - GenuineIntel to AuthenticAMD </string>
+				<string>algrey - cpuid_set_info - GenuineIntel to AuthenticAMD</string>
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
@@ -674,7 +766,7 @@
 				<key>Base</key>
 				<string>_cpuid_set_info</string>
 				<key>Comment</key>
-				<string>algrey - cpuid_set_info - jmp to calculations and set cpuid_cores_per_package - 10.15</string>
+				<string>algrey - cpuid_set_info - jmp to calculations and set cpuid_cores_per_package - 10.15/10.16</string>
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
@@ -702,7 +794,7 @@
 				<key>Base</key>
 				<string>_cpuid_set_info</string>
 				<key>Comment</key>
-				<string>algrey - cpuid_set_info - cores and threads calculations - 10.15</string>
+				<string>algrey - cpuid_set_info - cores and threads calculations - 10.15/10.16</string>
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
@@ -786,7 +878,7 @@
 				<key>Base</key>
 				<string>_cpuid_set_info</string>
 				<key>Comment</key>
-				<string>algrey - cpuid_set_info - ryzen cores and logicals count - part 2</string>
+				<string>algrey - cpuid_set_info - ryzen cores and logicals count - part 2 - 10.13/10.14</string>
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
@@ -954,7 +1046,7 @@
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
-				<string>algrey - tsc_init - remove Penryn check to execute default case 10.14.1-.3</string>
+				<string>algrey - tsc_init - remove Penryn check to execute default case 10.14</string>
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
@@ -1094,7 +1186,7 @@
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
-				<string>algrey - lapic_init - remove version check and panic - 10.16</string>
+				<string>NoOne - lapic_init - remove version check and panic - 10.16</string>
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
@@ -1122,7 +1214,7 @@
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
-				<string>algrey - lapic_init - remove version check and panic</string>
+				<string>algrey - lapic_init - remove version check and panic - 10.13/10.14</string>
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
@@ -1150,7 +1242,7 @@
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
-				<string>algrey - lapic_interrupt - skip checks and prevent panic - 10.15</string>
+				<string>algrey - lapic_interrupt - skip checks and prevent panic - 10.15/10.16</string>
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
@@ -1178,7 +1270,7 @@
 				<key>Base</key>
 				<string>_lapic_interrupt</string>
 				<key>Comment</key>
-				<string>algrey - lapic_interrupt - skip checks and prevent panic</string>
+				<string>algrey - lapic_interrupt - skip checks and prevent panic - 10.13/10.14</string>
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
