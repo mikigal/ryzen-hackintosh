@@ -65,7 +65,17 @@ If Photoshop still crashes when selecting font, you have to delete `/Application
  - ACPI patching: [**\*click\***](https://dortania.github.io/Getting-Started-With-ACPI/)
  - USB mapping: [**\*click\***](https://dortania.github.io/OpenCore-Post-Install/usb/)
 
-
 If you have any other questions or issues, feel free to ask on [**AMD-OSX Discord**](https://discord.gg/EfCYAJW) or [**Forum**](https://forum.amd-osx.com)  
+
+## Credits
+ - [Apple](https://apple.com) for macOS
+ - [AMD-OSX Developers](https://github.com/AMD-OSX) for kernel patches for AMD CPUs
+ - [Acidanthera](https://github.com/acidanthera) for OpenCore and most of used kexts
+ - [Trulyspinach](https://github.com/trulyspinach) for Ryzen power management and monitoring kexts
+ - [Mieze](https://github.com/Mieze) for RealtekRTL8111 kext
+ - [Dortania](https://github.com/dortania) for OpenCore configuration guides
+ - [XLNC](https://github.com/naveenkrdy) for Adobe patches for AMD CPUs
+ - [AMD-OSX Community](https://amd-osx.com) for support while making my Hackintosh
+<br>
 
 ![Screenshot](/screenshot.png?raw=true)
