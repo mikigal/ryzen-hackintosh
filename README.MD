@@ -1,4 +1,4 @@
-# OpenCore EFI for AMD Ryzen Hackintosh (macOS 10.13 - 10.16)
+# OpenCore EFI for AMD Ryzen Hackintosh (macOS 10.13 - 11.0)
 
 ## Specification
 | **Component** | **Model** |
@@ -11,7 +11,7 @@
 | WiFi & Bluetooth | Fenvi T919 (BCM94360CD) |
 | OS Disk (NVMe) | Samsung 960 Evo 250GB |
 
-**macOS version**: 11.0.1 Release Candidate 2 (20B28)  
+**macOS version**: 11.0.1 (20B29)  
 **OpenCore version**: 0.6.3  
 
 ## Credits
