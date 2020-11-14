@@ -55,6 +55,17 @@
 Adobe applications crash on AMD Hackintoshes due to missing intel_fast_memset instructions.  Follow [guide](https://gist.github.com/naveenkrdy/26760ac5135deed6d0bb8902f6ceb6bd) made by XLNC to get it working!  
 If Photoshop still crashes when selecting font, you have to delete `/Applications/Adobe\ Photoshop\ 2020/Adobe\ Photoshop\ 2020.app/Contents/Required/Deep_Font`
 
+## PAT patch
+| **Shaneee's** | **Algrey's** |
+| ------------- | --------- |
+| Much better GPU performance | Worse GPU performance |
+| May not work with NVidia GPUs | Compatible with all GPUs | 
+| HDMI/DP audio may not work | HDMI/DP audio works | 
+| Enabled by default | Disabled by default |
+
+To switch to another patch search for `mtrr_update_action` in `config.plist`. Then set `Enabled` to `true` for patch which you want to use. Remember to set `Enabled` to `false` for second PAT patch.  
+Don't try to use them both at the same time, it won't work.
+
 ## Other guides
 **If you have any problems with installation or booting your macOS, kernel panics or another system related issue check OC configuration guide**  
 **If something else isn't working properly (for example USB ports, iServices, DRM/Netflix) check Post-Install guide**
