@@ -15,10 +15,10 @@
 **OpenCore version**: 0.6.3  
 
 ## Table of content
- - [Compatible macOS versions](#Compatible%20macOS%20versions)
+ - [Compatible macOS versions](#Compatible-macOS-versions)
  - [Issues](#Issues)
- - [How to use](#How%20to%20use)
- - [PAT patch information](#PAT%20patch%20information)
+ - [How to use](#How-to-use)
+ - [PAT patch information](#PAT-patch-information)
  - [Guides](#Guides)
  - [Credits](#Credits)
 
