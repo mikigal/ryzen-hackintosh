@@ -16,11 +16,11 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Patch for PTXH USB controller, sleep fix</string>
+				<string>Patch for USB controllers, fixes sleep and instant wake</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
-				<string>SSDT-SLEEP-PTXH.aml</string>
+				<string>SSDT-SLEEP.aml</string>
 			</dict>
 		</array>
 		<key>Delete</key>
