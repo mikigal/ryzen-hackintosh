@@ -43,11 +43,11 @@
 **You CAN NOT use SMBIOS from this repository, it MUST be unique for every macOS installation**
 
 ## Sleep informations
-In `SSDT-SLEEP.aml` there are patches for 2 methods (_STA and _PRW) . They are applied to `_SB.PCI0.GPP2.PTXH` and `_SB.PCI0.GP17.XHC0` USB controllers. _STA method fixes kernel panic while going to sleep, it's applied only for PTXH controller (it's enought for my build). _PRW method are applied to both controllers, it fixes instant wake issue. _PRW method disallow USB controllers to wake up computer, so you have to use power button to wake it up. Both patches are applied only for macOS, so sleep on other systems will work normally.  
+In `SSDT-SLEEP.aml` there are patches for _STA method. They are applied to `_SB.PCI0.GPP2.PTXH` and `_SB.PCI0.GP17.XHC0` USB controllers. Both patches are applied only for macOS, so sleep on other systems will work normally.
 
-Firstly, you can try to disable this SSDT in config.plist and check your luck. If sleep works without it or with umodified SSDT, it's done. When you get sleep working you can try to remove _PRW method from SSDT and check do you have instant wake issue without it.
+Firstly, check does sleep works for your build with default disabled SSDT. If it works, you don't have to do anything. If not, try to enable `SSDT-SLEEP` in `config.plist`. If you have same USB controllers adresses as me, SSDT should work. If it still does not work you have to find addresses of USB controllers, and modify `SSDT-SLEEP`.  
 
-If not, probably you have another USB controllers or there's another sleep issues. Firstly, try to modify SSDT for your computer, change USB controllers and it's addresses. To modify SSDT use [**MaciASL**](https://github.com/acidanthera/MaciASL). If it does not help read [**Dortania's guide about sleep**](https://dortania.github.io/OpenCore-Post-Install/universal/sleep.html). Remember to try USB mapping.
+To modify SSDT use [**MaciASL**](https://github.com/acidanthera/MaciASL). If SSDT does not help read [**Dortania's guide about sleep**](https://dortania.github.io/OpenCore-Post-Install/universal/sleep.html). Remember to try USB mapping.
 
 ## PAT patch information
 | **Shaneee's** | **Algrey's** |

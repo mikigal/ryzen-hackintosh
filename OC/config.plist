@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
+<plist version="1.0s">
 <dict>
 	<key>ACPI</key>
 	<dict>
@@ -18,7 +18,7 @@
 				<key>Comment</key>
 				<string>Patch for USB controllers, fixes sleep and instant wake</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>SSDT-SLEEP.aml</string>
 			</dict>
