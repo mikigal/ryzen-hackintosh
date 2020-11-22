@@ -20,6 +20,7 @@
  - [How to use](#How-to-use)
  - [Sleep informations](#Sleep-informations)
  - [PAT patch information](#PAT-patch-information)
+ - [Adobe applications fix](#Adobe-applications-fix)
  - [Guides](#Guides)
  - [Credits](#Credits)
 
@@ -61,8 +62,7 @@ To switch to another patch search for `mtrr_update_action` in `config.plist`. Th
 Don't try to use them both at the same time, it won't work.
 
 ## Adobe applications fix
-Adobe applications crash on AMD Hackintoshes due to missing intel_fast_memset instructions.  Follow [guide](https://gist.github.com/naveenkrdy/26760ac5135deed6d0bb8902f6ceb6bd) made by XLNC to get it working!  
-If Photoshop still crashes when selecting font, you have to delete `/Applications/Adobe\ Photoshop\ 2020/Adobe\ Photoshop\ 2020.app/Contents/Required/Deep_Font`
+Adobe applications crash on AMD Hackintoshes due to missing intel_fast_memset instructions. Follow [**this guide**](https://gist.github.com/mikigal/8e1f804fcd7dbafbded2f236653be7c8) to get it working!  
 
 ## Guides
 **If you have any problems with installation or booting your macOS, kernel panics or another system related issue check OC configuration guide**  
