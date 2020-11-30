@@ -11,7 +11,7 @@
 | WiFi & Bluetooth | Fenvi T919 (BCM94360CD) |
 | OS Disk (NVMe) | Samsung 960 Evo 250GB |
 
-**macOS version**: 11.0.1 (20B29)  
+**macOS version**: 11.0.1 (20B50)  
 **OpenCore version**: 0.6.3  
 
 ## Table of content
