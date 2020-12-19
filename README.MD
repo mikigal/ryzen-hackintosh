@@ -28,7 +28,7 @@
  - High Sierra (10.13.x)
  - Mojave (10.14.x)
  - Catalina (10.15.x)
- - Big Sur (10.16/11.0)
+ - Big Sur (11.x)
 
 ## Issues
  - Partially-working virtualization (only VirtualBox & Parallels Dekstop 13.1.0 or below)
