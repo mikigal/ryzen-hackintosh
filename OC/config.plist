@@ -265,12 +265,12 @@
 		<array/>
 		<key>Emulate</key>
 		<dict>
-			<key>DummyPowerManagement</key>
-			<true/>
 			<key>Cpuid1Data</key>
 			<data></data>
 			<key>Cpuid1Mask</key>
 			<data></data>
+			<key>DummyPowerManagement</key>
+			<true/>
 			<key>MaxKernel</key>
 			<string></string>
 			<key>MinKernel</key>
@@ -1777,6 +1777,8 @@
 			<false/>
 			<key>PickerMode</key>
 			<string>External</string>
+			<key>PickerVariant</key>
+			<string>Auto</string>
 			<key>PollAppleHotKeys</key>
 			<false/>
 			<key>ShowPicker</key>
@@ -1892,8 +1894,6 @@
 		<dict>
 			<key>AdviseWindows</key>
 			<false/>
-			<key>SystemMemoryStatus</key>
-			<string>Auto</string>
 			<key>MLB</key>
 			<string>C02937403CDJG36JC</string>
 			<key>ProcessorType</key>
@@ -1902,6 +1902,8 @@
 			<data>VSJEiHdm</data>
 			<key>SpoofVendor</key>
 			<true/>
+			<key>SystemMemoryStatus</key>
+			<string>Auto</string>
 			<key>SystemProductName</key>
 			<string>iMacPro1,1</string>
 			<key>SystemSerialNumber</key>
@@ -1949,6 +1951,8 @@
 			<integer>20</integer>
 			<key>PlayChime</key>
 			<string>Auto</string>
+			<key>SetupDelay</key>
+			<integer>0</integer>
 			<key>VolumeAmplifier</key>
 			<integer>0</integer>
 		</dict>
@@ -2049,8 +2053,6 @@
 		</dict>
 		<key>Quirks</key>
 		<dict>
-			<key>DeduplicateBootOrder</key>
-			<true/>
 			<key>ExitBootServicesDelay</key>
 			<integer>0</integer>
 			<key>IgnoreInvalidFlexRatio</key>
