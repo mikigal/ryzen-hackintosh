@@ -12,7 +12,7 @@
 | OS Disk (NVMe) | ADATA SX8200 Pro 1TB |
 
 **macOS version**: 11.2 (20D64)  
-**OpenCore version**: 0.6.5  
+**OpenCore version**: 0.6.6  
 
 ## Table of content
  - [Compatible macOS versions](#Compatible-macOS-versions)
@@ -87,7 +87,7 @@ If you have any other questions or issues, feel free to ask on [**AMD-OSX Discor
  - [[SSDT] SLEEP-PTXH](./OC/ACPI/SSDT-SLEEP-PTXH.aml)
  - [[Driver] OpenRuntime](https://github.com/acidanthera/OpenCorePkg)
  - [[Driver] OpenCanopy](https://github.com/acidanthera/OpenCorePkg)
- - [[Driver] HFSPlus](https://github.com/acidanthera/OcBinaryData/blob/master/Drivers/HfsPlus.efi)
+ - [[Driver] OpenHfsPlus](https://github.com/acidanthera/OpenCorePkg)
  - [[Kext] Lilu](https://github.com/acidanthera/Lilu)
  - [[Kext] VirtualSMC](https://github.com/acidanthera/VirtualSMC)
  - [[Kext] WhateverGreen](https://github.com/acidanthera/WhateverGreen)
