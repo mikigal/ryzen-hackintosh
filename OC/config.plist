@@ -278,7 +278,7 @@
 		</dict>
 		<key>Patch</key>
 		<array>
-<dict>
+			<dict>
 				<key>Arch</key>
 				<string>x86_64</string>
 				<key>Base</key>
