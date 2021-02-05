@@ -18,6 +18,7 @@
  - [Compatible macOS versions](#Compatible-macOS-versions)
  - [Issues](#Issues)
  - [How to use](#How-to-use)
+ - [RX 5600 GPU fix](#RX-5600-GPU-fix)
  - [Sleep informations](#Sleep-informations)
  - [PAT patch information](#PAT-patch-information)
  - [Adobe applications fix](#Adobe-applications-fix)
@@ -44,6 +45,9 @@
 If audio does not work for you you have to change layout-id for your audio chipset. Find your codec [**here**](https://github.com/acidanthera/applealc/wiki/supported-codecs) and try setting `alcid` in `boot-args` parameter to every layout-id values from AppleALC wiki  until you get layout-id correct for your motherboard.  
 
 **You CAN NOT use SMBIOS from this repository, it MUST be unique for every macOS installation**
+
+## RX 5600 GPU fix
+for RX 5600 and RX 5700 GPUs you have to add `agdpmod=pikera` to fix black screen issue
 
 ## Sleep informations
 In `SSDT-SLEEP.aml` there are patches for _STA method. They are applied to `_SB.PCI0.GPP2.PTXH` and `_SB.PCI0.GP17.XHC0` USB controllers. Both patches are applied only for macOS, so sleep on other systems will work normally.
