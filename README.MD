@@ -47,7 +47,7 @@ If audio does not work for you you have to change layout-id for your audio chips
 **You CAN NOT use SMBIOS from this repository, it MUST be unique for every macOS installation**
 
 ## RX 5600 GPU fix
-for RX 5600 and RX 5700 GPUs you have to add `agdpmod=pikera` to fix black screen issue
+For AMD RX 5600 and RX 5700 GPUs you have to add `agdpmod=pikera` to boot-args to fix black screen issue.
 
 ## Sleep informations
 In `SSDT-SLEEP.aml` there are patches for _STA method. They are applied to `_SB.PCI0.GPP2.PTXH` and `_SB.PCI0.GP17.XHC0` USB controllers. Both patches are applied only for macOS, so sleep on other systems will work normally.
