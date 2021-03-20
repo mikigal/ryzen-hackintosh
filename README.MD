@@ -100,7 +100,7 @@ If you have any other questions or issues, feel free to ask on [**AMD-OSX Discor
  - [[Kext] AMDRyzenCPUPowerManagement](https://github.com/trulyspinach/SMCAMDProcessor)
  - [[Kext] SMCAMDProcessor](https://github.com/trulyspinach/SMCAMDProcessor)
  - [[Kext] NVMeFix](https://github.com/acidanthera/NVMeFix)
- - [[Kext] AppleMCEReporterDisabler](https://github.com/AMD-OSX/AMD_Vanilla/blob/experimental-opencore/Extra/AppleMCEReporterDisabler.kext.zip)  
+ - [[Kext] AppleMCEReporterDisabler](https://github.com/AMD-OSX/AMD_Vanilla/blob/opencore/Extra/AppleMCEReporterDisabler.kext.zip)  
 
  **People:**
  - [Apple](https://apple.com) for macOS
