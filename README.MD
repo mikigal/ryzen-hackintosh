@@ -16,6 +16,7 @@
 
 ## Table of content
  - [Compatible macOS versions](#Compatible-macOS-versions)
+ - [Compatible hadware](#Compatible-hardware)
  - [Issues](#Issues)
  - [How to use](#How-to-use)
  - [BIOS Settings](#BIOS-Settings)
@@ -31,6 +32,20 @@
  - Catalina (10.15.x)
  - Mojave (10.14.x)
  - High Sierra (10.13.x)
+
+## Compatible hardware
+Most builds with **17h and 19h (Ryzens, Athlon 2xxGE)** CPUs with [**macOS compatible peripherals**](https://dortania.github.io/Anti-Hackintosh-Buyers-Guide/CPU.html) should work with EFI from this repository. \
+Integrated GPUs **DOES NOT WORK**, for NVIDIA check details [**here**](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/nvidia-gpu.html). \
+Support for NVIDIA GPUs and Threadripper CPUs is not covered here.
+
+Motherboards with **B550** and **A520** chipsets require additional **SSDT-CPUR** to boot macOS. \
+You have to [**download it**](https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-CPUR.aml) and put under `OC/ACPI` directory. Then you have to add it to your config. Open it with ProperTree or your favourite text editor and add it under `ACPI -> Add`. Do it the same as `SSDT-EC-USBX-DESKTOP`, just change name of file.
+
+For **B550, A520 and B450, X470, X570 with newer BIOS** versions `SetupVirtualMap` must be disabled. Go to `Booter -> Quirks -> SetupVirtualMap` in tour config and changed it to `false`
+
+If audio does not work for you you have to change layout-id for your audio chipset. Find your codec [**here**](https://github.com/acidanthera/applealc/wiki/supported-codecs) and try setting `alcid` in `boot-args` parameter to every layout-id values from AppleALC wiki until you get layout-id correct for your motherboard.
+
+If network does not work for you check [**kexts for other ethernet cards**](https://dortania.github.io/OpenCore-Install-Guide/ktext.html#ethernet). Remember to remove `RealtekRTL8111.kext` if you have other network card.
 ## Issues
  - Partially-working virtualization (only VirtualBox & Parallels Dekstop 13.1.0 or below)
  - Not working 3.5mm Jack microphone (only USB/Bluetooth microphones)
@@ -41,9 +56,8 @@
   3. Download [**GenSMBIOS**](https://github.com/corpnewt/GenSMBIOS) to generate unique SMBIOS information. Run it and select **Generate SMBIOS**, as the model select **iMacPro1,1**.
   4. Open config.plist with [**ProperTree**](https://github.com/corpnewt/ProperTree) and go to PlatformInfo > Generic. Set MLB (Board Serial), SystemSerialNumber (Serial) and SystemUUID (SmUUID) to generated values. Change ROM to your network card's MAC address without the `:` character. [**How to get MAC Address?**](https://www.wikihow.com/Find-the-MAC-Address-of-Your-Computer)
   5. Update your BIOS to latest version and set it's settings to [**required values**](#BIOS-Settings)
-  6. Boot it!
-
-If audio does not work for you you have to change layout-id for your audio chipset. Find your codec [**here**](https://github.com/acidanthera/applealc/wiki/supported-codecs) and try setting `alcid` in `boot-args` parameter to every layout-id values from AppleALC wiki until you get layout-id correct for your motherboard.
+  6. Read [**informations**](#Compatible-hardware) about required changes for some hardware
+  7. Boot it!
 
 **You CAN NOT use SMBIOS from this repository, it MUST be unique for every macOS installation**
 
