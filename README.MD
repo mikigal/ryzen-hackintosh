@@ -35,17 +35,18 @@
 
 ## Compatible hardware
 Most builds with **17h and 19h (Ryzens, Athlon 2xxGE)** CPUs with [**macOS compatible peripherals**](https://dortania.github.io/Anti-Hackintosh-Buyers-Guide/CPU.html) should work with EFI from this repository. \
-Integrated GPUs **DOES NOT WORK**, for NVIDIA check details [**here**](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/nvidia-gpu.html). \
+Integrated GPUs **DO NOT WORK**, for NVIDIA check details [**here**](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/nvidia-gpu.html). \
 Support for NVIDIA GPUs and Threadripper CPUs is not covered here.
 
 Motherboards with **B550** and **A520** chipsets require additional **SSDT-CPUR** to boot macOS. \
-You have to [**download it**](https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-CPUR.aml) and put under `OC/ACPI` directory. Then you have to add it to your config. Open it with ProperTree or your favourite text editor and add it under `ACPI -> Add`. Do it the same as `SSDT-EC-USBX-DESKTOP`, just change name of file.
+You have to [**download it**](https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-CPUR.aml) and put it under `OC/ACPI` directory. Then you have to add it to your config. Open it with ProperTree or your favourite text editor and add it under `ACPI -> Add`. You should do this in the same way as you did `SSDT-EC-USBX-DESKTOP`, just change the name of the file.
 
-For **B550, A520 and B450, X470, X570 with newer BIOS** versions `SetupVirtualMap` must be disabled. Go to `Booter -> Quirks -> SetupVirtualMap` in tour config and changed it to `false`
+For **B550, A520 and B450, X470, X570 with newer BIOS** versions `SetupVirtualMap` must be disabled. Go to `Booter -> Quirks -> SetupVirtualMap` in your config and change it to `false`
 
-If audio does not work for you you have to change layout-id for your audio chipset. Find your codec [**here**](https://github.com/acidanthera/applealc/wiki/supported-codecs) and try setting `alcid` in `boot-args` parameter to every layout-id values from AppleALC wiki until you get layout-id correct for your motherboard.
+If you experience issues with your audio, then you have to change `alcid` proper for your audio chipset. Find your chipset [**here**](https://github.com/acidanthera/applealc/wiki/supported-codecs) and try setting `alcid` in `boot-args` parameter to every layout-id values from AppleALC wiki until you get correct value (working audio inputs and outputs) for your motherboard.
 
-If network does not work for you check [**kexts for other ethernet cards**](https://dortania.github.io/OpenCore-Install-Guide/ktext.html#ethernet). Remember to remove `RealtekRTL8111.kext` if you have other network card.
+If you experience issues with network connection, then you probably have another ethernet chipset. Click [**here**](https://dortania.github.io/OpenCore-Install-Guide/ktext.html#ethernet) for informations about kexts for ethernet cards. \
+Remember to remove `RealtekRTL8111.kext` before use another kext.
 ## Issues
  - Partially-working virtualization (only VirtualBox & Parallels Dekstop 13.1.0 or below)
  - Not working 3.5mm Jack microphone (only USB/Bluetooth microphones)
