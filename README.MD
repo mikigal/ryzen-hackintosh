@@ -18,6 +18,7 @@
  - [Compatible macOS versions](#Compatible-macOS-versions)
  - [Issues](#Issues)
  - [How to use](#How-to-use)
+ - [BIOS Settings](#BIOS-Settings)
  - [AMD Navi fix](#AMD-Navi-fix)
  - [Sleep informations](#Sleep-informations)
  - [PAT patch information](#PAT-patch-information)
@@ -39,11 +40,27 @@
   2. Clone the repository and paste "BOOT" and "OC" directories into your's pendrive "EFI" folder
   3. Download [**GenSMBIOS**](https://github.com/corpnewt/GenSMBIOS) to generate unique SMBIOS information. Run it and select **Generate SMBIOS**, as the model select **iMacPro1,1**.
   4. Open config.plist with [**ProperTree**](https://github.com/corpnewt/ProperTree) and go to PlatformInfo > Generic. Set MLB (Board Serial), SystemSerialNumber (Serial) and SystemUUID (SmUUID) to generated values. Change ROM to your network card's MAC address without the `:` character. [**How to get MAC Address?**](https://www.wikihow.com/Find-the-MAC-Address-of-Your-Computer)
-  5. Boot it!
+  5. Update your BIOS to latest version and set it's settings to [**required values**](#BIOS-Settings)
+  6. Boot it!
 
 If audio does not work for you you have to change layout-id for your audio chipset. Find your codec [**here**](https://github.com/acidanthera/applealc/wiki/supported-codecs) and try setting `alcid` in `boot-args` parameter to every layout-id values from AppleALC wiki until you get layout-id correct for your motherboard.
 
 **You CAN NOT use SMBIOS from this repository, it MUST be unique for every macOS installation**
+
+## BIOS Settings
+  - **SATA Mode**: AHCI
+  - **EHCI/XHCI Hand-off**: Enabled
+  - **SVM**: Enabled if you want to use virtual machines
+  - **Above 4G Decoding**: Enabled (If you have this option you **MUST** remove `npci=0x2000` remove from `boot-args` in `config.plist`)
+  - **Resizable BAR Support**: Disabled
+  - **CSM**: Disabled
+  - **Secure Boot**: Disabled
+  - **Serial Port**: Disabled
+  - **Parallel Port**: Disabled
+
+**Most of these options may not exist in your firmware, just try to match it as closely as possible. Don't be too concerned if many of these options are not available in your BIOS**
+
+**Before booting macOS remember to update BIOS to latest version**
 
 ## AMD Navi fix
 For AMD Navi GPUs (RX 5500, 5600, 5700) you have to add `agdpmod=pikera` to boot-args to fix black screen issue.
