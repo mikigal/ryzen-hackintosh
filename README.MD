@@ -23,6 +23,7 @@
  - [Sleep informations](#Sleep-informations)
  - [PAT patch information](#PAT-patch-information)
  - [Adobe applications fix](#Adobe-applications-fix)
+ - [Virtualization](#Virtualization)
  - [Guides](#Guides)
  - [Credits](#Credits)
 
@@ -33,7 +34,6 @@
  - High Sierra (10.13.x)
 
 ## Issues
- - Partially-working virtualization (only VirtualBox & Parallels Dekstop 13.1.0 or below)
  - Not working 3.5mm Jack microphone (only USB/Bluetooth microphones)
 
 ## How to use
@@ -102,10 +102,33 @@ To switch to another patch search for `mtrr_update_action` in `config.plist`. Th
 **Don't try to use them both at the same time, it won't work.**
 
 ## Adobe applications fix
-Adobe applications crash on AMD Hackintoshes due to missing intel_fast_memset instructions. Follow [**this guide**](https://gist.github.com/mikigal/8e1f804fcd7dbafbded2f236653be7c8) to get it working!
+Adobe applications crash on AMD Hackintoshes due to missing intel_fast_memset instructions.
+Run [**this script**](/Resources/Adobe%20patch.sh) or if you prefer to do it manually follow [**this guide**](https://gist.github.com/mikigal/8e1f804fcd7dbafbded2f236653be7c8) to get it working! Remember to reboot your Hackintosh after patching.
 
-If Photoshop crashes while selecting font you have to remove Deep_Font plugin. You can remove it by this command `sudo find / -name "Deep_Font" | xargs rm;` \
-If Photoshop crashes while opening image you have to downgrade it to version 22.0
+If Photoshop crashes while opening image from file you have to downgrade it to version 22.0
+
+## Virtualization
+Firstly you have to enable `SVM` in your BIOS settings. \
+Only compatible software for virtual machines are Parallels Desktop (only up to 13.1, newer version require AppleHV) and VirtualBox (it works much worse than Parallels). There's also VMWare Fusion 10, but it's totally broken on Big Sur, on Catalina it needs [**this workaround**](https://posts.boy.sh/vmware-fusion-catalina) \
+Also Docker does not work - you have to use Docker Toolbox instead, but it does not have all Docker's features.
+
+On Big Sur (11.0) Parallel's won't start - it will show `Required components are missing from the OS` error due to changed versions number schema. You have to run installer from with `SYSTEM_VERSION_COMPAT=1` parameter. \
+Open your Terminal app and run Parallel's installer like this: `SYSTEM_VERSION_COMPAT=1 open /Volumes/Parallels\ Desktop\ 13.1.0/Install.app/`, just replace volume's name to proper for your Parallel's DMG. \
+Same problem will exist while trying to start installed Parallels - you can run it every time with the same way as installer or use my launcher (it simply starts Parallels with needed parameter) - you can get it [**here**](/Resources/Parallels%20Desktop%20Launcher.app.zip)
+
+Parallels 13.1 support only Windows 10 Anniversary Update (build 1607) and older versions. Newer versions stuck while installing. Also I recommend using Windows 7 - it works much better. Do not use automatical installation feature - it caused some issue for me.
+
+**DO NOT** add too much resources to virtual machines, it causes performance issues independently of host specification. \
+I tested lot of VM configurations - the best performance results gives:
+  - Parallels Desktop 13.1
+  - 4 CPU cores
+  - 4GB RAM
+  - 1GB VRAM
+  - 3D Acceleration: DirectX 9
+  - OS: Windows 7 (SP1, build 7601) with disabled Aero theme
+
+With above configuration system is generally responsive, it runs simple games (e. g. The Binding of Isaac: Repentace) smoothly too. All Parallels host-integration features works great. \
+If Parallels does not see USB device reconnecting to another port usually solve this issue.
 
 ## Guides
 **If you have any problems with installation or booting your macOS, kernel panics or another system related issue check OC configuration guide**
