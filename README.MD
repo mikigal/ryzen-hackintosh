@@ -16,11 +16,10 @@
 
 ## Table of content
  - [Compatible macOS versions](#Compatible-macOS-versions)
- - [Compatible hadware](#Compatible-hardware)
  - [Issues](#Issues)
  - [How to use](#How-to-use)
  - [BIOS Settings](#BIOS-Settings)
- - [AMD Navi fix](#AMD-Navi-fix)
+ - [Hardware compatibility](#Hardware-compatibility)
  - [Sleep informations](#Sleep-informations)
  - [PAT patch information](#PAT-patch-information)
  - [Adobe applications fix](#Adobe-applications-fix)
@@ -33,20 +32,6 @@
  - Mojave (10.14.x)
  - High Sierra (10.13.x)
 
-## Compatible hardware
-Most builds with **17h and 19h (Ryzens, Athlon 2xxGE)** CPUs with [**macOS compatible peripherals**](https://dortania.github.io/Anti-Hackintosh-Buyers-Guide/CPU.html) should work with EFI from this repository. \
-Integrated GPUs **DO NOT WORK**, for NVIDIA check details [**here**](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/nvidia-gpu.html). \
-Support for NVIDIA GPUs and Threadripper CPUs is not covered here.
-
-Motherboards with **B550** and **A520** chipsets require additional **SSDT-CPUR** to boot macOS. \
-You have to [**download it**](https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-CPUR.aml) and put it under `OC/ACPI` directory. Then you have to add it to your config. Open it with ProperTree or your favourite text editor and add it under `ACPI -> Add`. You should do this in the same way as you did `SSDT-EC-USBX-DESKTOP`, just change the name of the file.
-
-For **B550, A520 and B450, X470, X570 with newer BIOS** versions `SetupVirtualMap` must be disabled. Go to `Booter -> Quirks -> SetupVirtualMap` in your config and change it to `false`
-
-If you experience issues with your audio, then you have to change `alcid` proper for your audio chipset. Find your chipset [**here**](https://github.com/acidanthera/applealc/wiki/supported-codecs) and try setting `alcid` in `boot-args` parameter to every layout-id values from AppleALC wiki until you get correct value (working audio inputs and outputs) for your motherboard.
-
-If you experience issues with network connection, then you probably have another ethernet chipset. Click [**here**](https://dortania.github.io/OpenCore-Install-Guide/ktext.html#ethernet) for informations about kexts for ethernet cards. \
-Remember to remove `RealtekRTL8111.kext` before use another kext.
 ## Issues
  - Partially-working virtualization (only VirtualBox & Parallels Dekstop 13.1.0 or below)
  - Not working 3.5mm Jack microphone (only USB/Bluetooth microphones)
@@ -57,7 +42,7 @@ Remember to remove `RealtekRTL8111.kext` before use another kext.
   3. Download [**GenSMBIOS**](https://github.com/corpnewt/GenSMBIOS) to generate unique SMBIOS information. Run it and select **Generate SMBIOS**, as the model select **iMacPro1,1**.
   4. Open config.plist with [**ProperTree**](https://github.com/corpnewt/ProperTree) and go to PlatformInfo > Generic. Set MLB (Board Serial), SystemSerialNumber (Serial) and SystemUUID (SmUUID) to generated values. Change ROM to your network card's MAC address without the `:` character. [**How to get MAC Address?**](https://www.wikihow.com/Find-the-MAC-Address-of-Your-Computer)
   5. Update your BIOS to latest version and set it's settings to [**required values**](#BIOS-Settings)
-  6. Read [**informations**](#Compatible-hardware) about required changes for some hardware
+  6. Read [**informations**](#Hardware-compatibility) about required changes for some hardware
   7. Boot it!
 
 **You CAN NOT use SMBIOS from this repository, it MUST be unique for every macOS installation**
@@ -77,15 +62,32 @@ Remember to remove `RealtekRTL8111.kext` before use another kext.
 
 **Before booting macOS remember to update BIOS to latest version**
 
-## AMD Navi fix
-For AMD Navi GPUs (RX 5500, 5600, 5700) you have to add `agdpmod=pikera` to boot-args to fix black screen issue.
+## Hardware compatibility
+Most builds with **17h and 19h (Ryzens, Athlon 2xxGE)** CPUs with [**macOS compatible peripherals**](https://dortania.github.io/Anti-Hackintosh-Buyers-Guide/CPU.html) should work with EFI from this repository. \
+**Support for 16h (FX) and Threadripper CPUs is not covered here.**
+
+Integrated GPUs **DO NOT WORK**, for NVIDIA check details [**here**](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/nvidia-gpu.html) (it's not covered in this repository).
+
+
+Motherboards with **B550 and A520** chipsets require additional **SSDT-CPUR** to boot macOS. \
+You have to [**download it**](https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-CPUR.aml) and put it under `OC/ACPI` directory. Then you have to add it to your config. Open it with ProperTree or your favourite text editor and add it under `ACPI -> Add`. You should do this in the same way as you did `SSDT-EC-USBX-DESKTOP`, just change the name of the file.
+
+For **B550, A520 and B450, X470, X570 with newer BIOS versions** `SetupVirtualMap` must be disabled. Go to `Booter -> Quirks -> SetupVirtualMap` in your config and change it to `false`
+
+For **AMD Navi GPUs (RX 5500, 5600, 5700)** you have to add `agdpmod=pikera` to `boot-args` to fix black screen issue.
+
+If you experience issues with your audio, then you have to change `alcid` proper for your audio chipset. Find your chipset [**here**](https://github.com/acidanthera/applealc/wiki/supported-codecs) and try setting `alcid` in `boot-args` parameter to every layout-id values from AppleALC wiki until you get correct value (working audio inputs and outputs) for your motherboard.
+
+If you experience issues with network connection, then you probably have another ethernet chipset. Click [**here**](https://dortania.github.io/OpenCore-Install-Guide/ktext.html#ethernet) for informations about kexts for ethernet cards. Remember to remove `RealtekRTL8111.kext` before use another kext.
+
+By default enabled is PAT patch made by Shaneee - it improves GPU performance but can cause some issues. It can break HDMI audio and make builds with NVIDIA GPU unbootable. You can switch patch with better compatibility (but worse performance). Click [**here**](#PAT-patch-information) for more informations.
 
 ## Sleep informations
-In `SSDT-SLEEP.aml` there are patches for _STA method. They are applied to `_SB.PCI0.GPP2.PTXH` and `_SB.PCI0.GP17.XHC0` USB controllers. Both patches are applied only for macOS, so sleep on other systems will work normally.
+If you have issues with sleep, firstly you have to map your USB ports. You can read about it [**here**](https://dortania.github.io/OpenCore-Post-Install/usb/). If map does not help, you should try patching USB via SSDT.
 
-Firstly, check does sleep works for your build with default disabled SSDT. If it works, you don't have to do anything. If not, try to enable `SSDT-SLEEP` in `config.plist`. If you have same USB controllers adresses as me, SSDT should work. If it still does not work you have to find addresses of USB controllers, and modify `SSDT-SLEEP`.
+In `SSDT-SLEEP.aml` there are patches for _STA method. Patch as applied to `_SB.PCI0.GPP2.PTXH` and `_SB.PCI0.GP17.XHC0` USB controllers, if you have other addresses of USB controllers you have to edit SSDT for your build. Patch is applied only for macOS, so USB on other systems should work normally.
 
-To modify SSDT use [**MaciASL**](https://github.com/acidanthera/MaciASL). If SSDT does not help read [**Dortania's guide about sleep**](https://dortania.github.io/OpenCore-Post-Install/universal/sleep.html). Remember to try USB mapping.
+Sleep in AMD systems is often broken by USB issues, but not always. If USB patching does not help read [**this guide**](https://dortania.github.io/OpenCore-Post-Install/universal/sleep.html) about fixing sleep.
 
 ## PAT patch information
 | **Shaneee's** | **Algrey's** |
