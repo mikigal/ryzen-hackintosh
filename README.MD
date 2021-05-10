@@ -48,15 +48,19 @@
 **You CAN NOT use SMBIOS from this repository, it MUST be unique for every macOS installation**
 
 ## BIOS Settings
-  - **SATA Mode**: AHCI
-  - **EHCI/XHCI Hand-off**: Enabled
-  - **SVM**: Enabled if you want to use virtual machines
-  - **Above 4G Decoding**: Enabled (If you have this option you **MUST** remove `npci=0x2000` remove from `boot-args` in `config.plist`)
-  - **Resizable BAR Support**: Disabled
-  - **CSM**: Disabled
-  - **Secure Boot**: Disabled
-  - **Serial Port**: Disabled
-  - **Parallel Port**: Disabled
+| **Option** | **Status** |
+| ------------- | --------- |
+| SATA Mode | AHCI |
+| Above 4G Decoding | Enabled <sup>1</sup> |
+| EHCI/XHCI Hand-off | Enabled |
+| SVM | Enabled |
+| CSM | Disabled |
+| Resizable BAR Support | Disabled |
+| Secure Boot | Disabled |
+| Serial Port | Disabled |
+| Parallel Port | Disabled |
+
+<sup>1</sup> If you have this option you **MUST** remove `npci=0x2000` from `boot-args` in `config.plist`
 
 **Most of these options may not exist in your firmware, just try to match it as closely as possible. Don't be too concerned if many of these options are not available in your BIOS**
 
