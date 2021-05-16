@@ -20,7 +20,7 @@
  - [How to use](#How-to-use)
  - [BIOS Settings](#BIOS-Settings)
  - [Hardware compatibility](#Hardware-compatibility)
- - [Sleep informations](#Sleep-informations)
+ - [Sleep information](#Sleep-information)
  - [PAT patch information](#PAT-patch-information)
  - [Adobe applications fix](#Adobe-applications-fix)
  - [Virtualization](#Virtualization)
@@ -42,8 +42,10 @@
   3. Download [**GenSMBIOS**](https://github.com/corpnewt/GenSMBIOS) to generate unique SMBIOS information. Run it and select **Generate SMBIOS**, as the model select **iMacPro1,1**.
   4. Open config.plist with [**ProperTree**](https://github.com/corpnewt/ProperTree) and go to PlatformInfo > Generic. Set MLB (Board Serial), SystemSerialNumber (Serial) and SystemUUID (SmUUID) to generated values. Change ROM to your network card's MAC address without the `:` character. [**How to get MAC Address?**](https://www.wikihow.com/Find-the-MAC-Address-of-Your-Computer)
   5. Update your BIOS to latest version and set it's settings to [**required values**](#BIOS-Settings)
-  6. Read [**informations**](#Hardware-compatibility) about required changes for some hardware
-  7. Boot it!
+  6. Read [**information**](#Hardware-compatibility) about required changes for some hardware
+  7. Boot and install it!
+  8. After installation you can copy your EFI directory to disk's EFI partition - then you can boot macOS without pendrive
+  9. If you want to use dual boot you have to enable Bootstrap - it will protect your OpenCore to be overriden by Windows' boot loader. Click [**here**](https://dortania.github.io/OpenCore-Post-Install/multiboot/bootstrap.html) for information about it.
 
 **You CAN NOT use SMBIOS from this repository, it MUST be unique for every macOS installation**
 
@@ -67,11 +69,11 @@
 **Before booting macOS remember to update BIOS to latest version**
 
 ## Hardware compatibility
-Most builds with **17h and 19h (Ryzens, Athlon 2xxGE)** CPUs with [**macOS compatible peripherals**](https://dortania.github.io/Anti-Hackintosh-Buyers-Guide/CPU.html) should work with EFI from this repository. \
-**Support for 16h (FX) and Threadripper CPUs is not covered here.**
+Most builds with **17h and 19h (All Ryzen's generations, Athlon 2xxGE)** CPUs with [**macOS compatible peripherals**](https://dortania.github.io/Anti-Hackintosh-Buyers-Guide/CPU.html) should work with EFI from this repository. \
+**Support for 15h (FX series), 16h (A series) and Threadripper CPUs is not covered here.**
 
-Integrated GPUs **DO NOT WORK**, for NVIDIA check details [**here**](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/nvidia-gpu.html) (it's not covered in this repository).
-
+Integrated GPUs **DO NOT WORK**, for NVIDIA check details [**here**](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/nvidia-gpu.html) (it's not covered in this repository). \
+If you have **NVIDIA GPU** you may have to change PAT Patch to Algrey's version, read [**here**](#PAT-patch-information) about it
 
 Motherboards with **B550 and A520** chipsets require additional **SSDT-CPUR** to boot macOS. \
 You have to [**download it**](https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-CPUR.aml) and put it under `OC/ACPI` directory. Then you have to add it to your config. Open it with ProperTree or your favourite text editor and add it under `ACPI -> Add`. You should do this in the same way as you did `SSDT-EC-USBX-DESKTOP`, just change the name of the file.
@@ -82,14 +84,14 @@ For **AMD Navi GPUs (RX 5500, 5600, 5700)** you have to add `agdpmod=pikera` to 
 
 If you experience issues with your audio, then you have to change `alcid` proper for your audio chipset. Find your chipset [**here**](https://github.com/acidanthera/applealc/wiki/supported-codecs) and try setting `alcid` in `boot-args` parameter to every layout-id values from AppleALC wiki until you get correct value (working audio inputs and outputs) for your motherboard.
 
-If you experience issues with network connection, then you probably have another ethernet chipset. Click [**here**](https://dortania.github.io/OpenCore-Install-Guide/ktext.html#ethernet) for informations about kexts for ethernet cards. \
+If you experience issues with network connection, then you probably have another ethernet chipset. Click [**here**](https://dortania.github.io/OpenCore-Install-Guide/ktext.html#ethernet) for information about kexts for ethernet cards. \
 For High Sierra use [**this kext**](https://bitbucket.org/RehabMan/os-x-realtek-network/downloads/) for Realtek 8111 ethernet card, because version from this repository needs Mojave or newer version. \
 If you are using Big Sur with RTL8111 but network is unstable try [**this version**](https://github.com/Mieze/RTL8111_driver_for_OS_X/releases/tag/v2.2.2) of kext. \
 Remember to remove `RealtekRTL8111.kext` before use another kext.
 
-By default enabled is PAT patch made by Shaneee - it improves GPU performance but can cause some issues. It can break HDMI audio and make builds with NVIDIA GPU unbootable. You can switch patch with better compatibility (but worse performance). Click [**here**](#PAT-patch-information) for more informations.
+By default enabled is PAT patch made by Shaneee - it improves GPU performance but can cause some issues. It can break HDMI audio and make builds with NVIDIA GPU unbootable. You can switch patch with better compatibility (but worse performance). Click [**here**](#PAT-patch-information) for more information.
 
-## Sleep informations
+## Sleep information
 If you have issues with sleep, firstly you have to map your USB ports. You can read about it [**here**](https://dortania.github.io/OpenCore-Post-Install/usb/). If map does not help, you should try patching USB via SSDT.
 
 In `SSDT-SLEEP.aml` there are patches for _STA method. Patch as applied to `_SB.PCI0.GPP2.PTXH` and `_SB.PCI0.GP17.XHC0` USB controllers, if you have other addresses of USB controllers you have to edit SSDT for your build. Patch is applied only for macOS, so USB on other systems should work normally.
@@ -100,7 +102,7 @@ Sleep in AMD systems is often broken by USB issues, but not always. If USB patch
 | **Shaneee's** | **Algrey's** |
 | ------------- | --------- |
 | Much better GPU performance | Worse GPU performance |
-| May not work with NVidia GPUs | Compatible with all GPUs |
+| May not work with NVIDIA GPUs | Compatible with all GPUs |
 | HDMI/DP audio may not work | HDMI/DP audio works |
 | Enabled by default | Disabled by default |
 
@@ -134,8 +136,12 @@ I tested lot of VM configurations - the best performance results gives:
   - 3D Acceleration: DirectX 9
   - OS: Windows 7 (SP1, build 7601) with disabled Aero theme
 
-With above configuration system is generally responsive, it runs simple games (e. g. The Binding of Isaac: Repentace) smoothly too. All Parallels host-integration features works great. \
-If Parallels does not see USB device reconnecting to another port usually solve this issue.
+With above configuration system is generally responsive, it runs simple games (e. g. The Binding of Isaac: Repentace) smoothly too. All Parallels host-integration features works great.
+
+If guest OS does not see USB device reconnecting it to another port usually solve this issue. \
+If [**Coherence Mode**](https://www.parallels.com/blogs/how-to-use-coherence-mode-in-parallels-desktop/) does not work you have to disable guest's antivirus or add these files to it's exclusions list:
+  - `C:\Program Files (x86)\Parallels\Parallels Tools\Services\coherence.exe`
+  - `C:\Program Files (x86)\Parallels\Parallels Tools\Services\prl_hook.dll`
 
 ## Guides
 **If you have any problems with installation or booting your macOS, kernel panics or another system related issue check OC configuration guide**
