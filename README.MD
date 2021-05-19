@@ -46,7 +46,7 @@
   7. Boot and install it!
   8. After installation you can copy your EFI directory to disk's EFI partition - then you can boot macOS without pendrive
   9. If you want to use dual boot you have to enable Bootstrap - it will protect your OpenCore to be overriden by Windows' boot loader. Click [**here**](https://dortania.github.io/OpenCore-Post-Install/multiboot/bootstrap.html) for information about it.
-  10. To fix not working apps (e. g. Discord voice chat) download and run [**ryzen_patch.sh**](/Resources/adobe_patch.sh). When patching is done remember to reboot your Hackintosh.
+  10. To fix not working apps (e. g. Discord voice chat) download and run [**ryzen_patch.sh**](/Resources/ryzen_patch.sh). When patching is done remember to reboot your Hackintosh.
 
 **You CAN NOT use SMBIOS from this repository, it MUST be unique for every macOS installation**
 
