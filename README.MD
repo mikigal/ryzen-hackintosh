@@ -46,6 +46,7 @@
   7. Boot and install it!
   8. After installation you can copy your EFI directory to disk's EFI partition - then you can boot macOS without pendrive
   9. If you want to use dual boot you have to enable Bootstrap - it will protect your OpenCore to be overriden by Windows' boot loader. Click [**here**](https://dortania.github.io/OpenCore-Post-Install/multiboot/bootstrap.html) for information about it.
+  10. To fix not working apps (e. g. Discord voice chat) download and run [**ryzen_patch.sh**](/Resources/adobe_patch.sh). When patching is done remember to reboot your Hackintosh.
 
 **You CAN NOT use SMBIOS from this repository, it MUST be unique for every macOS installation**
 
@@ -112,7 +113,7 @@ To switch to another patch search for `mtrr_update_action` in `config.plist`. Th
 
 ## Adobe applications fix
 Adobe applications crash on AMD Hackintoshes due to missing intel_fast_memset instructions.
-Run [**this script**](/Resources/Adobe%20patch.sh) or if you prefer to do it manually follow [**this guide**](https://gist.github.com/mikigal/8e1f804fcd7dbafbded2f236653be7c8) to get it working! Remember to reboot your Hackintosh after patching.
+Run [**adobe_patch.sh**](/Resources/adobe_patch.sh) or if you prefer to do it manually follow [**this guide**](https://gist.github.com/mikigal/8e1f804fcd7dbafbded2f236653be7c8) to get it working. Remember to re-run this script after installation of every Adobe app. Remember to run [**ryzen_patch.sh**](/Resources/ryzen_patch.sh) previously!
 
 If Photoshop crashes while opening image from file you have to downgrade it to version 22.0
 
