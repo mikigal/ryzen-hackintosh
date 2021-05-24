@@ -1,6 +1,9 @@
-test -f $HOME/Library/LaunchAgents/environment.plist && echo "LaunchAgent already exists! You don't have to patch it again" && exit
+#!/bin/bash
 
-echo "Generating LaunchAgent for MKL_DEBUG_CPU_TYPE"
+test -f $HOME/Library/LaunchAgents/environment.plist && echo "Patch was already used! You don't have to run it again" && exit
+sudo -v
+
+echo "Generating LaunchAgent for automatically applying MKL_DEBUG_CPU_TYPE..."
 
 [ ! -d $HOME/Library/LaunchAgents ] && mkdir $HOME/Library/LaunchAgents
 AGENT=$HOME/Library/LaunchAgents/environment.plist
@@ -27,4 +30,12 @@ EOF
 launchctl load ${AGENT} >/dev/null 2>&1
 launchctl start ${AGENT} >/dev/null 2>&1
 
-echo "Created LaunchAgent, reboot your Hackintosh"
+echo "Applying required sleep/hibernate parameters..."
+sudo pmset autopoweroff 0
+sudo pmset powernap 0
+sudo pmset standby 0
+sudo pmset proximitywake 0
+sudo pmset tcpkeepalive 0 > /dev/null
+
+echo ""
+echo "Done, reboot your Hackintosh!"
