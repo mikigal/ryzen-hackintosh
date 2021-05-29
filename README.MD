@@ -54,7 +54,7 @@ _Support for 15h (FX series), 16h (A series) and Threadripper CPUs is not covere
 
 For **AMD Navi Series GPUs (RX 5500, RX 5600, RX 5700)** you need to add `agdpmod=pikera` to `boot-args` to fix the black screen issue.
 
-[PAT Patch made by Shaneee](#PAT-Patch) is used by default. It improves GPU performance but it has few caveats. Audio passed by HDMI won't work or will be unstable. It also **does not** work with Nvidia GPUs.
+[PAT Patch made by Shaneee](#PAT-Patch) is used by default. It improves GPU performance but it has a few caveats. Audio passed by HDMI won't work or will be unstable. It also **does not** work with Nvidia GPUs.
 
 ### Motherboards
 
@@ -78,7 +78,7 @@ To disable `SetupVirtualMap` simply go to `Booter -> Quirks -> SetupVirtualMap` 
 
 ### Audio
 
-Follow these steps if your audio chipset is different than specified in the [Specification](#Specification).
+Follow these steps if your audio chipset is different than the one specified in the [Specification](#Specification).
 
 - Go [here](https://github.com/acidanthera/applealc/wiki/supported-codecs) to find your audio chipset codec. (Under _Codec_)
   - If you can't find your codec on the list, then you probably have to use VoodoHDA. This repository does not cover or support the use of VoodoHDA.
@@ -100,18 +100,50 @@ If you use High Sierra and Realtek 8111 Ethernet Card then you should use [this 
 
 ## Installation
 
-1. Make your USB installer with [**this guide**](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/)
-2. Clone the repository and paste "BOOT" and "OC" directories into your's pendrive "EFI" folder
-3. Download [**GenSMBIOS**](https://github.com/corpnewt/GenSMBIOS) to generate unique SMBIOS information. Run it and select **Generate SMBIOS**, as the model select **iMacPro1,1**.
-4. Open config.plist with [**ProperTree**](https://github.com/corpnewt/ProperTree) and go to PlatformInfo > Generic. Set MLB (Board Serial), SystemSerialNumber (Serial) and SystemUUID (SmUUID) to generated values. Change ROM to your network card's MAC address without the `:` character. [**How to get MAC Address?**](https://www.wikihow.com/Find-the-MAC-Address-of-Your-Computer)
-5. Update your BIOS to latest version and set it's settings to [**required values**](#BIOS-Settings)
-6. Read [**information**](#Hardware-compatibility) about required changes for some hardware
-7. Boot and install it!
-8. After installation you can copy your EFI directory to disk's EFI partition - then you can boot macOS without pendrive
-9. If you want to use dual boot you have to enable Bootstrap - it will protect your OpenCore to be overriden by Windows' boot loader. Click [**here**](https://dortania.github.io/OpenCore-Post-Install/multiboot/bootstrap.html) for information about it.
-10. To fix not working apps (e. g. Discord voice chat) download and run [**ryzen_patch.sh**](/Resources/ryzen_patch.sh). When patching is done remember to reboot your Hackintosh.
+### Bootable USB
 
-**You CAN NOT use SMBIOS from this repository, it MUST be unique for every macOS installation**
+1. Follow [this guide](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/) to create your bootable USB.
+
+2. Clone this repository and copy "BOOT" & "OC" directories to your "EFI" directory on your bootable USB. The structure should look somewhat like this: `EFI -> BOOT, OC`.
+
+### SMBIOS
+
+3. Use [this tool](https://github.com/corpnewt/GenSMBIOS) to generate your unique SMBIOS info.
+
+- SMBIOS has to be unique, you cannot use one present in this repository.
+
+- Run the tool and select `Generate SMBIOS`.
+- Select the appropriate model for your hardware using the table below.
+
+| **GPU Series**       | **Model**  |
+| -------------------- | ---------- |
+| AMD Navi Series      | iMacPro1,1 |
+| AMD Polaris Series   | iMacPro1,1 |
+| AMD RX Vega Series   | iMacPro1,1 |
+| AMD Radeon R5/R7/R9  | MacPro6,1  |
+| AMD HD 7000 Series   | MacPro6,1  |
+| AMD HD 8000 Series   | MacPro6,1  |
+| NVIDIA Kepler Series | iMac14,2   |
+
+- Open _config.plist_ and search for `PlatformInfo -> Generic` and replace these values:
+  - _MLB_ - Board Serial
+  - _SystemSerialNumber_ - Serial
+  - _SystemUUID_ - SmUUID
+  - _SystemProductName_ - Model
+- _ROM_ entry should be set to your [network card's MAC address](https://www.wikihow.com/Find-the-MAC-Address-of-Your-Computer).
+
+### Configuration
+
+5. You should update your BIOS to the latest version and configure it appropriately. See [BIOS Settings](#BIOS-Settings) for details.
+6. Remember to verify your hardware and apply appropriate changes to your configuration file. See [Hardware Compatibility](#Hardware-compatibility) for details.
+7. That's it!
+
+### Post-Installation
+
+8. Copy your EFI directory onto your main drive EFI partition, you'll be able to boot the system without your bootable USB.
+9. Dual boot requires Bootstrap, see [this guide](https://dortania.github.io/OpenCore-Post-Install/multiboot/bootstrap.html) for specific details.
+
+If an app appears to be not working on your new Hackintosh system, then your best bet would be to apply the [Ryzen patch script](/Resources/ryzen_patch.sh) on it.
 
 ## BIOS Settings
 
