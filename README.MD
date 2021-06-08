@@ -1,6 +1,6 @@
 # OpenCore EFI for AMD Ryzen Hackintosh
 
-## Specification
+## Tested Specification
 
 | **Component**    | **Model**                                  |
 | ---------------- | ------------------------------------------ |
@@ -21,9 +21,8 @@
 - [Hardware Compatibility](#Hardware-Compatibility)
 - [Installation](#Installation)
 - [BIOS Settings](#BIOS-Settings)
-- [Sleep Issues](#Sleep-Issues)
 - [PAT Patch](#PAT-Patch)
-- [Intel Fast Memset Patch](#Intel-Fast-Memset-Patch-for-AMD-CPUs)
+- [Intel Fast Memset Patch](#Intel-Fast-Memset-Patch)
 - [Virtualization](#Virtualization)
 - [Guides](#Guides)
 - [Credits](#Credits)
@@ -35,22 +34,26 @@
 - Mojave (10.14.x)
 - High Sierra (10.13.x)
 
+macOS Monterey (12.0) is currently not supported due to missing AMD CPU patches. This repository will be updated for the newest macOS version as soon as possible.
+
 ## Hardware Compatibility
 
 ### Central Processing Unit (CPU)
 
 This EFI is compatible with all Ryzen and Athlon 2xxGE processors with
-[**macOS-compatible peripherals**](https://dortania.github.io/Anti-Hackintosh-Buyers-Guide/CPU.html).
+[**macOS-compatible peripherals**](https://dortania.github.io/Anti-Hackintosh-Buyers-Guide/).
 
 _Support for 15h (FX series), 16h (A series) and Threadripper CPUs is not covered here._
 
 ### Graphical Processing Unit (GPU)
 
-| **Model**  | **Compatible?**                                                                                                                                       |
-| ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Integrated | No                                                                                                                                                    |
-| Nvidia     | Partially, under correct [PAT Patch](#PAT-Patch), more details on [Dortania](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/nvidia-gpu.html) |
-| AMD        | Yes                                                                                                                                                   |
+| **Model**  | **Compatible?**        |
+| ---------- | -----------------------|
+| Integrated | No                     |
+| Nvidia     | Partially <sup>1</sup> |
+| AMD        | Yes                    |
+
+<sup>1</sup> Only Big Sur and older versions, under correct [PAT Patch](#PAT-Patch), more details on [Dortania](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/nvidia-gpu.html)
 
 For **AMD Navi Series GPUs (RX 5500, RX 5600, RX 5700)** you need to add `agdpmod=pikera` to `boot-args` to fix the black screen issue.
 
@@ -123,7 +126,9 @@ If you use High Sierra and Realtek 8111 Ethernet Card then you should use [this 
 | AMD Radeon R5/R7/R9  | MacPro6,1  |
 | AMD HD 7000 Series   | MacPro6,1  |
 | AMD HD 8000 Series   | MacPro6,1  |
-| NVIDIA Kepler Series | iMac14,2   |
+| NVIDIA Kepler Series | iMac14,2 <sup>1</sup>  |
+
+<sup>1</sup> Only Big Sur and older versions
 
 - Open _config.plist_ and search for `PlatformInfo -> Generic` and replace these values:
   - _MLB_ - Board Serial
@@ -142,8 +147,7 @@ If you use High Sierra and Realtek 8111 Ethernet Card then you should use [this 
 
 8. Copy your EFI directory onto your main drive EFI partition, you'll be able to boot the system without your bootable USB.
 9. Dual boot requires Bootstrap, see [this guide](https://dortania.github.io/OpenCore-Post-Install/multiboot/bootstrap.html) for specific details.
-
-If an app appears to be not working on your new Hackintosh system, then your best bet would be to apply the [Ryzen patch script](/Resources/ryzen_patch.sh) on it.
+10. Apply [Ryzen patch script](/Resources/ryzen_patch.sh) - it solves MKL (Math Kernel Library) issues and sets correct sleep parameters.
 
 ## BIOS Settings
 
@@ -176,11 +180,11 @@ If an app appears to be not working on your new Hackintosh system, then your bes
 
 To switch to another patch look for `mtrr_update_action` in `config.plist`. Then set `Enabled` to `true` for the patch you want to use. Remember to set `Enabled` to `false` on the other PAT patch.
 
-## Intel Fast Memset Patch for AMD CPUs
+## Intel Fast Memset Patch
 
 Some applications for macOS use `intel_fast_memset` instruction which, obviously, doesn't exist on AMD systems. There's a patch that you can use to easily fix these apps.
 
-Adobe suite requires a different script due to greater amount of issues to patch.
+Adobe suite requires a [different script](/Resources/adobe_patch.sh) due to greater amount of issues to patch.
 
 ## Virtualization
 
@@ -195,7 +199,7 @@ Adobe suite requires a different script due to greater amount of issues to patch
 | VMWare Fusion 10  | Only Catalina, with [this patch](https://posts.boy.sh/vmware-fusion-catalina). |
 | Docker            | Only Docker Toolbox, not all features.                                         |
 
-<sup>1</sup> Parallels will not work by default on Big Sur (macOS 11.0), you need to use `SYSTEM_VERSION_COMPAT=1` environment variable.
+<sup>1</sup> Parallels will not work by default on Big Sur and newer, you need to use `SYSTEM_VERSION_COMPAT=1` environment variable.
 
 <sup>2</sup> Use [this](/Resources/Parallels%20Desktop%20Launcher.app.zip) launcher package to simplify the Parallels installation.
 
@@ -217,7 +221,7 @@ Use the following configuration for best results.
 - Creating USB installer: [**\*click\***](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/)
 - OpenCore configuration: [**\*click\***](https://dortania.github.io/OpenCore-Install-Guide/AMD/zen.html)
 - Post-Install: [**\*click\***](https://dortania.github.io/OpenCore-Post-Install/)
-- Troubleshooting: [**\*click\***](https://dortania.github.io/OpenCore-Post-Install/)
+- Troubleshooting: [**\*click\***](https://dortania.github.io/OpenCore-Install-Guide/troubleshooting/troubleshooting.html)
 - ACPI patching: [**\*click\***](https://dortania.github.io/Getting-Started-With-ACPI/)
 - USB mapping: [**\*click\***](https://dortania.github.io/OpenCore-Post-Install/usb/)
 
@@ -231,7 +235,7 @@ If you have any other questions or issues, feel free to ask on [**AMD-OSX Discor
 - [[Resources] Picker GUI](https://github.com/acidanthera/OcBinaryData/tree/master/Resources)
 - [[Patch] AMD_Vanilla](https://github.com/AMD-OSX/AMD_Vanilla)
 - [[SSDT] EC-USBX-DESKTOP](https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-EC-USBX-DESKTOP.aml)
-- [[SSDT] SLEEP-PTXH](./OC/ACPI/SSDT-SLEEP-PTXH.aml)
+- [[SSDT] SLEEP](./OC/ACPI/SSDT-SLEEP.aml)
 - [[Driver] OpenRuntime](https://github.com/acidanthera/OpenCorePkg)
 - [[Driver] OpenCanopy](https://github.com/acidanthera/OpenCorePkg)
 - [[Driver] OpenHfsPlus](https://github.com/acidanthera/OpenCorePkg)
@@ -239,11 +243,11 @@ If you have any other questions or issues, feel free to ask on [**AMD-OSX Discor
 - [[Kext] VirtualSMC](https://github.com/acidanthera/VirtualSMC)
 - [[Kext] WhateverGreen](https://github.com/acidanthera/WhateverGreen)
 - [[Kext] AppleALC](https://github.com/acidanthera/AppleALC)
+- [[Kext] NVMeFix](https://github.com/acidanthera/NVMeFix)
+- [[Kext] RestrictEvents](https://github.com/acidanthera/RestrictEvents)
 - [[Kext] RealtekRTL8111](https://github.com/Mieze/RTL8111_driver_for_OS_X)
 - [[Kext] AMDRyzenCPUPowerManagement](https://github.com/trulyspinach/SMCAMDProcessor)
 - [[Kext] SMCAMDProcessor](https://github.com/trulyspinach/SMCAMDProcessor)
-- [[Kext] NVMeFix](https://github.com/acidanthera/NVMeFix)
-- [[Kext] RestrictEvents](https://github.com/acidanthera/RestrictEvents)
 - [[Kext] AppleMCEReporterDisabler](https://github.com/AMD-OSX/AMD_Vanilla/blob/opencore/Extra/AppleMCEReporterDisabler.kext.zip)
 
 **People/Organizations:**
