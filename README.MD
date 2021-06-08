@@ -1,6 +1,6 @@
 # OpenCore EFI for AMD Ryzen Hackintosh
 
-## Tested Specification
+## Verified Specification
 
 | **Component**    | **Model**                                  |
 | ---------------- | ------------------------------------------ |
@@ -51,11 +51,12 @@ _Support for 15h (FX series), 16h (A series) and Threadripper CPUs is not covere
 | ---------- | -----------------------|
 | Integrated | No                     |
 | Nvidia     | Partially <sup>1</sup> |
-| AMD        | Yes                    |
+| AMD        | Yes <sup>2</sup>       |
 
 <sup>1</sup> Only Big Sur and older versions, under correct [PAT Patch](#PAT-Patch), more details on [Dortania](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/nvidia-gpu.html)
+<sup>2</sup> Lexa series GPUs are not supported. Older than 7000 series are supported up to High Sierra (10.13), their support is not covered here.
 
-For **AMD Navi Series GPUs (RX 5500, RX 5600, RX 5700)** you need to add `agdpmod=pikera` to `boot-args` to fix the black screen issue.
+For **AMD Navi 10 Series GPUs (RX 5500, RX 5600, RX 5700)** you need to add `agdpmod=pikera` to `boot-args` to fix the black screen issue.
 
 [PAT Patch made by Shaneee](#PAT-Patch) is used by default. It improves GPU performance but it has a few caveats. Audio passed by HDMI won't work or will be unstable. It also **does not** work with Nvidia GPUs.
 
@@ -118,17 +119,18 @@ If you use High Sierra and Realtek 8111 Ethernet Card then you should use [this 
 - Run the tool and select `Generate SMBIOS`.
 - Select the appropriate model for your hardware using the table below.
 
-| **GPU Series**       | **Model**  |
-| -------------------- | ---------- |
-| AMD Navi Series      | iMacPro1,1 |
-| AMD Polaris Series   | iMacPro1,1 |
-| AMD RX Vega Series   | iMacPro1,1 |
-| AMD Radeon R5/R7/R9  | MacPro6,1  |
-| AMD HD 7000 Series   | MacPro6,1  |
-| AMD HD 8000 Series   | MacPro6,1  |
-| NVIDIA Kepler Series | iMac14,2 <sup>1</sup>  |
+| **GPU Series**       | **Model**                      |
+| -------------------- | ----------                     |
+| AMD Navi Series      | iMacPro1,1 <sup>1</sup>        |
+| AMD Polaris Series   | iMacPro1,1 <sup>1</sup>        |
+| AMD RX Vega Series   | iMacPro1,1 <sup>1</sup>        |
+| AMD Radeon R5/R7/R9  | MacPro6,1                      |
+| AMD HD 7000 Series   | MacPro6,1                      |
+| AMD HD 8000 Series   | MacPro6,1                      |
+| Nvidia Kepler Series | It's complicated <sup>2</sup>  |
 
-<sup>1</sup> Only Big Sur and older versions
+<sup>1</sup> For Catalina and newer you can also use MacPro7,1 if you have issues (e. g. broken DRMs)
+<sup>2</sup> For Catalina and older use iMac14,2, for Big Sur MacPro7,1. Monterey and newer does not support any Nvidia GPUs.
 
 - Open _config.plist_ and search for `PlatformInfo -> Generic` and replace these values:
   - _MLB_ - Board Serial
