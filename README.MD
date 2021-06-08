@@ -23,7 +23,7 @@
 - [BIOS Settings](#BIOS-Settings)
 - [Sleep Issues](#Sleep-Issues)
 - [PAT Patch](#PAT-Patch)
-- [Adobe Fix](#Adobe-Fix)
+- [Intel Fast Memset Patch](#Intel-Fast-Memset-Patch-for-AMD-CPUs)
 - [Virtualization](#Virtualization)
 - [Guides](#Guides)
 - [Credits](#Credits)
@@ -159,19 +159,11 @@ If an app appears to be not working on your new Hackintosh system, then your bes
 | Serial Port           | Disabled             |
 | Parallel Port         | Disabled             |
 
-<sup>1</sup> If you have this option you **MUST** remove `npci=0x2000` from `boot-args` in `config.plist`
+<sup>1</sup> You must also remove `npci=0x2000` from `boot-args` in `config.plist`
 
-**Most of these options may not exist in your firmware, just try to match it as closely as possible. Don't be too concerned if many of these options are not available in your BIOS**
+**Some of these options may not exist in your firmware, just try to match it as closely as possible.**
 
-**Before booting macOS remember to update BIOS to latest version**
-
-## Sleep Issues
-
-If you have issues with sleep, firstly you have to map your USB ports. You can read about it [**here**](https://dortania.github.io/OpenCore-Post-Install/usb/). If map does not help, you should try patching USB via SSDT.
-
-In `SSDT-SLEEP.aml` there are patches for \_STA method. Patch as applied to `_SB.PCI0.GPP2.PTXH` and `_SB.PCI0.GP17.XHC0` USB controllers, if you have other addresses of USB controllers you have to edit SSDT for your build. Patch is applied only for macOS, so USB on other systems should work normally.
-
-Sleep in AMD systems is often broken by USB issues, but not always. If USB patching does not help read [**this guide**](https://dortania.github.io/OpenCore-Post-Install/universal/sleep.html) about fixing sleep.
+**Before booting macOS remember to update BIOS to the latest version.**
 
 ## PAT Patch
 
@@ -182,52 +174,45 @@ Sleep in AMD systems is often broken by USB issues, but not always. If USB patch
 | HDMI/DP audio may not work    | HDMI/DP audio works      |
 | Enabled by default            | Disabled by default      |
 
-To switch to another patch search for `mtrr_update_action` in `config.plist`. Then set `Enabled` to `true` for patch which you want to use. Remember to set `Enabled` to `false` for second PAT patch.
+To switch to another patch look for `mtrr_update_action` in `config.plist`. Then set `Enabled` to `true` for the patch you want to use. Remember to set `Enabled` to `false` on the other PAT patch.
 
-**Don't try to use them both at the same time, it won't work.**
+## Intel Fast Memset Patch for AMD CPUs
 
-## Adobe Fix
+Some applications for macOS use `intel_fast_memset` instruction which, obviously, doesn't exist on AMD systems. There's a patch that you can use to easily fix these apps.
 
-Adobe applications crash on AMD Hackintoshes due to missing intel_fast_memset instructions.
-Run [**adobe_patch.sh**](/Resources/adobe_patch.sh) or if you prefer to do it manually follow [**this guide**](https://gist.github.com/mikigal/8e1f804fcd7dbafbded2f236653be7c8) to get it working. Remember to re-run this script after installation of every Adobe app. Remember to run [**ryzen_patch.sh**](/Resources/ryzen_patch.sh) previously!
-
-If Photoshop crashes while opening image from file you have to downgrade it to version 22.0
+Adobe suite requires a different script due to greater amount of issues to patch.
 
 ## Virtualization
 
-Firstly you have to enable `SVM` in your BIOS settings. \
-Parallels Desktop (only up to 13.1, newer version require AppleHV) and VirtualBox (it works much worse than Parallels) are only compatible software for virtual machines. There's also VMWare Fusion 10, but it's totally broken on Big Sur, on Catalina it needs [**this workaround**](https://posts.boy.sh/vmware-fusion-catalina) \
-Docker also does not work - you have to use Docker Toolbox instead, but it does not have all Docker's features.
+### Prerequisites
 
-On Big Sur (11.0) Parallel's won't start - it will show `Required components are missing from the OS` error due to changed versions number schema. You have to run installer from with `SYSTEM_VERSION_COMPAT=1` parameter. \
-Open your Terminal app and run Parallel's installer like this: `SYSTEM_VERSION_COMPAT=1 open /Volumes/Parallels\ Desktop\ 13.1.0/Install.app/`, just replace volume's name to proper for your Parallel's DMG. \
-Same problem will exist while trying to start installed Parallels - you can run it every time with the same way as installer or use my launcher (it simply starts Parallels with required parameter) - you can get it [**here**](/Resources/Parallels%20Desktop%20Launcher.app.zip)
+- Make sure you have `SVM` enabled in your BIOS settings.
 
-Parallels 13.1 support only Windows 10 Anniversary Update (build 1607) and older versions. Newer versions stuck while installing. Also I recommend using Windows 7 - it works much better. Do not use automatical installation feature - it caused some issue for me.
+| **Software**      | **Compatibility**                                                              |
+| ----------------- | ------------------------------------------------------------------------------ |
+| Parallels Desktop | Up to 13.1 unless AppleHV is used.<sup>1</sup> <sup>2</sup>                    |
+| VirtualBox        | Drastically decreased performance.                                             |
+| VMWare Fusion 10  | Only Catalina, with [this patch](https://posts.boy.sh/vmware-fusion-catalina). |
+| Docker            | Only Docker Toolbox, not all features.                                         |
 
-**DO NOT** add too much resources to virtual machines, it causes performance issues independently of host specification. \
-I tested lot of VM configurations - the best performance results gives:
+<sup>1</sup> Parallels will not work by default on Big Sur (macOS 11.0), you need to use `SYSTEM_VERSION_COMPAT=1` environment variable.
+
+<sup>2</sup> Use [this](/Resources/Parallels%20Desktop%20Launcher.app.zip) launcher package to simplify the Parallels installation.
+
+### Resource management
+
+You shouldn't add too much resources to your virtual machines, as it causes performance issues regardless of your hardware.
+
+Use the following configuration for best results.
 
 - Parallels Desktop 13.1
 - 4 CPU cores
 - 4GB RAM
 - 1GB VRAM
 - 3D Acceleration: DirectX 9
-- OS: Windows 7 (SP1, build 7601) with disabled Aero theme
-
-With above configuration system is generally responsive, it runs simple games (e. g. The Binding of Isaac: Repentace) smoothly too. All Parallels host-integration features works great.
-
-If guest OS does not see USB device reconnecting it to another port usually solve this issue. \
-If [**Coherence Mode**](https://www.parallels.com/blogs/how-to-use-coherence-mode-in-parallels-desktop/) does not work you have to disable guest's antivirus or add these files to it's exclusions list:
-
-- `C:\Program Files (x86)\Parallels\Parallels Tools\Services\coherence.exe`
-- `C:\Program Files (x86)\Parallels\Parallels Tools\Services\prl_hook.dll`
+- OS: Windows 7 (SP1, build 7601) with Aero theme disabled.
 
 ## Guides
-
-**If you have any problems with installation or booting your macOS, kernel panics or another system related issue check OC configuration guide**
-
-**If something else does not work properly (for example USB ports, iServices, DRM/Netflix) check Post-Install guide**
 
 - Creating USB installer: [**\*click\***](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/)
 - OpenCore configuration: [**\*click\***](https://dortania.github.io/OpenCore-Install-Guide/AMD/zen.html)
