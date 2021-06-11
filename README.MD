@@ -186,7 +186,7 @@ To switch to another patch look for `mtrr_update_action` in `config.plist`. Then
 
 Some applications for macOS use `intel_fast_memset` instruction which, obviously, doesn't exist on AMD systems. There's a patch that you can use to easily fix these apps.
 
-Adobe suite requires a [different script](/Resources/adobe_patch.sh) due to greater amount of issues to patch.
+Adobe suite requires a [different script](/Resources/adobe_patch.sh) due to greater amount of issues to patch. If you have problems while running script from file, try to copy and paste it's code to Terminal. \
 Newer versions of Adobe software (e. g. since 22.3.1 for Photoshop) no loger need running this script.
 
 ## Virtualization

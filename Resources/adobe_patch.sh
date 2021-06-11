@@ -24,6 +24,6 @@ for file in MMXCore FastCore TextModel libiomp5.dylib libtbb.dylib libtbbmalloc.
 done
 
 echo "Removing Deep_Font plugin"
-sudo find /Applications/Adobe* -name "Deep_Font" | xargs sudo rm;
+sudo find /Applications/Adobe* -name "Deep_Font" -exec rm -r {} +
 
 echo "Adobe Patching done, remember to run Ryzen_patch.sh too"
