@@ -129,7 +129,7 @@ If you use High Sierra and Realtek 8111 Ethernet Card then you should use [this 
 | AMD HD 8000 Series   | MacPro6,1                      |
 | Nvidia Kepler Series | It's complicated <sup>2</sup>  |
 
-<sup>1</sup> For Catalina and newer you can also use MacPro7,1 if you have issues (e. g. broken DRMs)
+<sup>1</sup> For Catalina and newer you can also use MacPro7,1 if you have issues (e. g. broken DRMs) \
 <sup>2</sup> For Catalina and older use iMac14,2, for Big Sur MacPro7,1. Monterey and newer does not support any Nvidia GPUs.
 
 - Open _config.plist_ and search for `PlatformInfo -> Generic` and replace these values:
@@ -187,6 +187,7 @@ To switch to another patch look for `mtrr_update_action` in `config.plist`. Then
 Some applications for macOS use `intel_fast_memset` instruction which, obviously, doesn't exist on AMD systems. There's a patch that you can use to easily fix these apps.
 
 Adobe suite requires a [different script](/Resources/adobe_patch.sh) due to greater amount of issues to patch.
+Newer versions of Adobe software (e. g. since 22.3.1 for Photoshop) no loger need running this script.
 
 ## Virtualization
 
