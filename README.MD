@@ -7,8 +7,9 @@
 | CPU              | AMD Ryzen 7 1700 @ 3.8GHz                  |
 | Motherboard      | ASUS B350 Plus                             |
 | RAM              | 16GB (2 x 8GB) Corsair Vengeance @ 3000MHz |
-| Audio Chipset    | ALC-887                                    |
 | GPU              | MSI RX Vega 64                             |
+| Audio Chipset    | ALC-887                                    |
+| Ethernet         | Realtek RTL8111                            |
 | WiFi & Bluetooth | Fenvi T919 (BCM94360CD)                    |
 | OS Disk (NVMe)   | ADATA SX8200 Pro 1TB                       |
 
@@ -100,7 +101,7 @@ _Caveats_:
 
 If you experience any issues with your network connection, then your best bet would be to install a different kext, preferably from [here](https://dortania.github.io/OpenCore-Install-Guide/ktext.html#ethernet).
 
-If you use High Sierra and Realtek 8111 Ethernet Card then you should use [this kext](https://bitbucket.org/RehabMan/os-x-realtek-network/downloads/).
+If you use High Sierra and Realtek 8111 Ethernet Card then you should use [older version of kext](https://github.com/Mieze/RTL8111_driver_for_OS_X/releases/tag/v2.2.2).
 
 ## Installation
 
