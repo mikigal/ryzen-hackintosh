@@ -7,12 +7,15 @@ assignees: ''
 
 ---
 
-| **Component** | **Model** |
-| ------------- | --------- |
-| CPU | [Your CPU] |
-| Motherboard | [Your motherboard] |
-| Audio Chipset | [Your audio chipset] |
-| GPU | [Your GPU] |
-| WiFi & Bluetooth | [Your WiFi card] |
+| **Component**    | **Model**            |
+| ---------------- | -------------------- |
+| CPU              | [Your CPU]           |
+| Motherboard      | [Your motherboard]   |
+| GPU              | [Your GPU]           |
+| Audio Chipset    | [Your audio chipset] |
+| Ethernet         | [Your Ethernet card] |
+| WiFi & Bluetooth | [Your WiFi card]     |
 
-**Paste here screenshot or video with logs/kernel panic, remember to boot with `-v debug=0x100` parameters**
+**Link to your EFI**: [Paste link]
+
+**Paste here screenshot or video with logs/kernel panic, remember to boot with `-v debug=0x100 keepsyms=1` parameters**
