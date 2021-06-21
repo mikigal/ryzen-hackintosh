@@ -37,6 +37,13 @@
 
 macOS Monterey (12.0) is currently not supported due to missing AMD CPU patches. This repository will be updated for the newest macOS version as soon as possible.
 
+### DRMs
+DRMs are fixed by default only for Big Sur and newer versions. For older versions you have to
+ - Remove `unfairgva=1` from `boot-args` in your configuration file.
+ - Go [here](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.Chart.md) to find correct value for your system.
+ - Add parameter from _Mode_ to `boot-args` in your configuration file.
+   - If parameter from chart does not work try `shikigva=80` or `shikigva=16` - it's common to work even when chart says something another.
+
 ## Hardware Compatibility
 
 ### Central Processing Unit (CPU)
@@ -54,12 +61,13 @@ _Support for 15h (FX series), 16h (A series) and Threadripper CPUs is not covere
 | Nvidia     | Partially <sup>1</sup> |
 | AMD        | Yes <sup>2</sup>       |
 
-<sup>1</sup> Only Big Sur and older versions, under correct [PAT Patch](#PAT-Patch), more details on [Dortania](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/nvidia-gpu.html)
+<sup>1</sup> Kepler series up to Big Sur, under correct [PAT Patch](#PAT-Patch). Others require WebDrivers which work only in High Sierra or are not supported. More details on [Dortania](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/nvidia-gpu.html)
+
 <sup>2</sup> Lexa series GPUs are not supported. Older than 7000 series are supported up to High Sierra (10.13), their support is not covered here.
 
 For **AMD Navi 10 Series GPUs (RX 5500, RX 5600, RX 5700)** you need to add `agdpmod=pikera` to `boot-args` to fix the black screen issue.
 
-[PAT Patch made by Shaneee](#PAT-Patch) is used by default. It improves GPU performance but it has a few caveats. Audio passed by HDMI won't work or will be unstable. It also **does not** work with Nvidia GPUs.
+[PAT Patch made by Shaneee](#PAT-Patch) is used by default. It improves GPU performance but it has a few caveats. Audio passed by HDMI or DisplayPort won't work or will be unstable. It also **may not** work with Nvidia GPUs.
 
 ### Motherboards
 
@@ -130,7 +138,8 @@ If you use High Sierra and Realtek 8111 Ethernet Card then you should use [older
 | AMD HD 8000 Series   | MacPro6,1                      |
 | Nvidia Kepler Series | It's complicated <sup>2</sup>  |
 
-<sup>1</sup> For Catalina and newer you can also use MacPro7,1 if you have issues (e. g. broken DRMs) \
+<sup>1</sup> For Catalina and newer you can also use MacPro7,1 if you have some issues (e. g. unfixable DRMs)
+
 <sup>2</sup> For Catalina and older use iMac14,2, for Big Sur MacPro7,1. Monterey and newer does not support any Nvidia GPUs.
 
 - Open _config.plist_ and search for `PlatformInfo -> Generic` and replace these values:
@@ -151,6 +160,7 @@ If you use High Sierra and Realtek 8111 Ethernet Card then you should use [older
 8. Copy your EFI directory onto your main drive EFI partition, you'll be able to boot the system without your bootable USB.
 9. Dual boot requires Bootstrap, see [this guide](https://dortania.github.io/OpenCore-Post-Install/multiboot/bootstrap.html) for specific details.
 10. Apply [Ryzen patch script](/Resources/ryzen_patch.sh) - it solves MKL (Math Kernel Library) issues and sets correct sleep parameters.
+11. When everything work you can disable verbose mode - then you will see Apple's logo instead of logs while booting. To do it you have to remove `-v debug=0x100 keepsyms=1` from `boot-args` in your configuration file.
 
 ## BIOS Settings
 
@@ -166,7 +176,7 @@ If you use High Sierra and Realtek 8111 Ethernet Card then you should use [older
 | Serial Port           | Disabled             |
 | Parallel Port         | Disabled             |
 
-<sup>1</sup> You must also remove `npci=0x2000` from `boot-args` in `config.plist`
+<sup>1</sup> If you have this option in BIOS you must also remove `npci=0x2000` from `boot-args` in your configuration file
 
 **Some of these options may not exist in your firmware, just try to match it as closely as possible.**
 
@@ -196,16 +206,18 @@ Newer versions of Adobe software (e. g. since 22.3.1 for Photoshop) no loger nee
 
 - Make sure you have `SVM` enabled in your BIOS settings.
 
-| **Software**      | **Compatibility**                                                              |
-| ----------------- | ------------------------------------------------------------------------------ |
-| Parallels Desktop | Up to 13.1 unless AppleHV is used.<sup>1</sup> <sup>2</sup>                    |
-| VirtualBox        | Drastically decreased performance.                                             |
-| VMWare Fusion 10  | Only Catalina, with [this patch](https://posts.boy.sh/vmware-fusion-catalina). |
-| Docker            | Only Docker Toolbox, not all features.                                         |
+| **Software**      | **Compatibility**                                                                                     |
+| ----------------- | ------------------------------------------------------------------------------------------------------|
+| Parallels Desktop | Up to 13.1 unless AppleHV is used.<sup>1</sup> <sup>2</sup> <sup>3</sup>                              |
+| VirtualBox        | Drastically decreased performance.                                                                    |
+| VMWare Fusion 10  | Only Catalina and older, for Catalina with [this patch](https://posts.boy.sh/vmware-fusion-catalina). |
+| Docker            | Only Docker Toolbox, not all features.                                                                |
 
 <sup>1</sup> Parallels will not work by default on Big Sur and newer, you need to use `SYSTEM_VERSION_COMPAT=1` environment variable.
 
 <sup>2</sup> Use [this](/Resources/Parallels%20Desktop%20Launcher.app.zip) launcher package to simplify the Parallels installation.
+
+<sup>3</sup> Only Windows 10 Anniversary Update (build 1607) or older systems work
 
 ### Resource management
 
@@ -261,8 +273,8 @@ If you have any other questions or issues, feel free to ask on [**AMD-OSX Discor
 - [Acidanthera](https://github.com/acidanthera) for OpenCore and most of used kexts
 - [Trulyspinach](https://github.com/trulyspinach) for Ryzen power management and monitoring kexts
 - [Mieze](https://github.com/Mieze) for RealtekRTL8111 kext
+- [XLNC](https://github.com/naveenkrdy) for AppleMCEReporterDisabler and Adobe patches for AMD CPUs
 - [Dortania](https://github.com/dortania) for OpenCore configuration guides
-- [XLNC](https://github.com/naveenkrdy) for Adobe patches for AMD CPUs
 - [AMD-OSX Community](https://amd-osx.com) for support while making my Hackintosh
 - [SocketByte](https://github.com/SocketByte) for README maintenance and being a great friend :)
   <br>
