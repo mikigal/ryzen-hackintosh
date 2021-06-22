@@ -23,7 +23,7 @@
 - [Installation](#Installation)
 - [BIOS Settings](#BIOS-Settings)
 - [PAT Patch](#PAT-Patch)
-- [Intel Fast Memset Patch](#Intel-Fast-Memset-Patch)
+- [MKL and Intel Fast Memset Patch](#MKL-and-Intel-Fast-Memset-Patch)
 - [Virtualization](#Virtualization)
 - [Guides](#Guides)
 - [Credits](#Credits)
@@ -49,7 +49,7 @@ DRMs are fixed by default only for Big Sur and newer versions. For older version
 ### Central Processing Unit (CPU)
 
 This EFI is compatible with all Ryzen and Athlon 2xxGE processors with
-[**macOS-compatible peripherals**](https://dortania.github.io/Anti-Hackintosh-Buyers-Guide/).
+[macOS-compatible peripherals](https://dortania.github.io/Anti-Hackintosh-Buyers-Guide/).
 
 _Support for 15h (FX series), 16h (A series) and Threadripper CPUs is not covered here._
 
@@ -140,7 +140,7 @@ If you use High Sierra and Realtek 8111 Ethernet Card then you should use [older
 
 <sup>1</sup> For Catalina and newer you can also use MacPro7,1 if you have some issues (e. g. unfixable DRMs)
 
-<sup>2</sup> Some R7 and R9 GPUs require FakeID. More details [**here**](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/amd-gpu.html#r7-r9)
+<sup>2</sup> Some R7 and R9 GPUs require FakeID. More details [here](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/amd-gpu.html#r7-r9)
 
 <sup>3</sup> For Catalina and older use iMac14,2, for Big Sur MacPro7,1. Monterey and newer does not support any Nvidia GPUs.
 
@@ -195,12 +195,13 @@ If you use High Sierra and Realtek 8111 Ethernet Card then you should use [older
 
 To switch to another patch look for `mtrr_update_action` in `config.plist`. Then set `Enabled` to `true` for the patch you want to use. Remember to set `Enabled` to `false` on the other PAT patch.
 
-## Intel Fast Memset Patch
+## MKL and Intel Fast Memset Patch
 
-Some applications for macOS use `intel_fast_memset` instruction which, obviously, doesn't exist on AMD systems. There's a patch that you can use to easily fix these apps.
+Some applications for macOS use MKL - Math Kernel Library. Unfortunately, it does not work on AMD CPUs natively - we need to patch it with [this script](/Resources/ryzen_patch.sh).
 
-Adobe suite requires a [different script](/Resources/adobe_patch.sh) due to greater amount of issues to patch. If you have problems while running script from file, try to copy and paste it's code to Terminal. \
-Older versions of Adobe software (e. g. up to 22.3.1 for Photoshop) need [legacy version](/Resources/adobe_patch_legacy.sh) of this script
+There's also `intel_fast_memset` instruction which, obviously, doesn't exist on AMD systems. It's very common in Adobe software - you can simply fix it by running [this script](/Resources/adobe_patch.sh). Older versions of Adobe software (e. g. up to 22.3.1 for Photoshop) need it's [legacy version](/Resources/adobe_patch_legacy.sh).
+
+ If you have problems while running script from file, try to copy and paste it's code to Terminal.
 
 ## Virtualization
 
@@ -236,14 +237,14 @@ Use the following configuration for best results.
 
 ## Guides
 
-- Creating USB installer: [**\*click\***](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/)
-- OpenCore configuration: [**\*click\***](https://dortania.github.io/OpenCore-Install-Guide/AMD/zen.html)
-- Post-Install: [**\*click\***](https://dortania.github.io/OpenCore-Post-Install/)
-- Troubleshooting: [**\*click\***](https://dortania.github.io/OpenCore-Install-Guide/troubleshooting/troubleshooting.html)
-- ACPI patching: [**\*click\***](https://dortania.github.io/Getting-Started-With-ACPI/)
-- USB mapping: [**\*click\***](https://dortania.github.io/OpenCore-Post-Install/usb/)
+- Creating USB installer: [\*click\*](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/)
+- OpenCore configuration: [\*click\*](https://dortania.github.io/OpenCore-Install-Guide/AMD/zen.html)
+- Post-Install: [\*click\*](https://dortania.github.io/OpenCore-Post-Install/)
+- Troubleshooting: [\*click\*](https://dortania.github.io/OpenCore-Install-Guide/troubleshooting/troubleshooting.html)
+- ACPI patching: [\*click\*](https://dortania.github.io/Getting-Started-With-ACPI/)
+- USB mapping: [\*click\*](https://dortania.github.io/OpenCore-Post-Install/usb/)
 
-If you have any other questions or issues, feel free to ask on [**AMD-OSX Discord**](https://discord.gg/EfCYAJW) or [**Forum**](https://forum.amd-osx.com)
+If you have any other questions or issues, feel free to ask on [AMD-OSX Discord](https://discord.gg/EfCYAJW) or [Forum](https://forum.amd-osx.com)
 
 ## Credits
 
@@ -268,7 +269,7 @@ If you have any other questions or issues, feel free to ask on [**AMD-OSX Discor
 - [[Kext] SMCAMDProcessor](https://github.com/trulyspinach/SMCAMDProcessor)
 - [[Kext] AppleMCEReporterDisabler](https://github.com/AMD-OSX/AMD_Vanilla/blob/opencore/Extra/AppleMCEReporterDisabler.kext.zip)
 
-**People/Organizations:**
+**People and Organizations:**
 
 - [Apple](https://apple.com) for macOS
 - [AMD-OSX Developers](https://github.com/AMD-OSX) for kernel patches for AMD CPUs
