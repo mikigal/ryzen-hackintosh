@@ -1,12 +1,12 @@
 #!/bin/bash
 
-test -f $HOME/Library/LaunchAgents/environment.plist && echo "Patch was already used! You don't have to run it again" && exit
+test -f $HOME/Library/LaunchAgents/mkl.plist && echo "Patch was already used! You don't have to run it again" && exit
 sudo -v
 
 echo "Generating LaunchAgent for automatically applying MKL_DEBUG_CPU_TYPE..."
 
 [ ! -d $HOME/Library/LaunchAgents ] && mkdir $HOME/Library/LaunchAgents
-AGENT=$HOME/Library/LaunchAgents/environment.plist
+AGENT=$HOME/Library/LaunchAgents/mkl.plist
 sysctl -n machdep.cpu.brand_string | grep FX >/dev/null 2>&1
 x=$(echo $(($? != 0 ? 5 : 4)))
 cat >$AGENT <<EOF

@@ -133,14 +133,16 @@ If you use High Sierra and Realtek 8111 Ethernet Card then you should use [older
 | AMD Navi Series      | iMacPro1,1 <sup>1</sup>        |
 | AMD Polaris Series   | iMacPro1,1 <sup>1</sup>        |
 | AMD RX Vega Series   | iMacPro1,1 <sup>1</sup>        |
-| AMD Radeon R5/R7/R9  | MacPro6,1                      |
+| AMD Radeon R5/R7/R9  | MacPro6,1 <sup>2</sup>         |
 | AMD HD 7000 Series   | MacPro6,1                      |
 | AMD HD 8000 Series   | MacPro6,1                      |
 | Nvidia Kepler Series | It's complicated <sup>2</sup>  |
 
 <sup>1</sup> For Catalina and newer you can also use MacPro7,1 if you have some issues (e. g. unfixable DRMs)
 
-<sup>2</sup> For Catalina and older use iMac14,2, for Big Sur MacPro7,1. Monterey and newer does not support any Nvidia GPUs.
+<sup>2</sup> Some R7 and R9 GPUs require FakeID. More details [**here**](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/amd-gpu.html#r7-r9)
+
+<sup>3</sup> For Catalina and older use iMac14,2, for Big Sur MacPro7,1. Monterey and newer does not support any Nvidia GPUs.
 
 - Open _config.plist_ and search for `PlatformInfo -> Generic` and replace these values:
   - _MLB_ - Board Serial
@@ -198,7 +200,7 @@ To switch to another patch look for `mtrr_update_action` in `config.plist`. Then
 Some applications for macOS use `intel_fast_memset` instruction which, obviously, doesn't exist on AMD systems. There's a patch that you can use to easily fix these apps.
 
 Adobe suite requires a [different script](/Resources/adobe_patch.sh) due to greater amount of issues to patch. If you have problems while running script from file, try to copy and paste it's code to Terminal. \
-Newer versions of Adobe software (e. g. since 22.3.1 for Photoshop) no loger need running this script.
+Older versions of Adobe software (e. g. up to 22.3.1 for Photoshop) need [legacy version](/Resources/adobe_patch_legacy.sh) of this script
 
 ## Virtualization
 
