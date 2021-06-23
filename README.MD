@@ -56,7 +56,7 @@ _Support for 15h (FX series), 16h (A series) and Threadripper CPUs is not covere
 ### Graphical Processing Unit (GPU)
 
 | **Model**  | **Compatible?**        |
-| ---------- | -----------------------|
+| ---------- | ---------------------- |
 | Integrated | No                     |
 | Nvidia     | Partially <sup>1</sup> |
 | AMD        | Yes <sup>2</sup>       |
@@ -129,20 +129,20 @@ If you use High Sierra and Realtek 8111 Ethernet Card then you should use [older
 - Select the appropriate model for your hardware using the table below.
 
 | **GPU Series**       | **Model**                      |
-| -------------------- | ----------                     |
+| -------------------- | ------------------------------ |
 | AMD Navi Series      | iMacPro1,1 <sup>1</sup>        |
+| AMD Vega Series      | iMacPro1,1 <sup>1</sup>        |
 | AMD Polaris Series   | iMacPro1,1 <sup>1</sup>        |
-| AMD RX Vega Series   | iMacPro1,1 <sup>1</sup>        |
 | AMD Radeon R5/R7/R9  | MacPro6,1 <sup>2</sup>         |
-| AMD HD 7000 Series   | MacPro6,1                      |
 | AMD HD 8000 Series   | MacPro6,1                      |
-| Nvidia Kepler Series | It's complicated <sup>2</sup>  |
+| AMD HD 7000 Series   | MacPro6,1                      |
+| Nvidia Kepler Series | It's complicated <sup>3</sup>  |
 
 <sup>1</sup> For Catalina and newer you can also use MacPro7,1 if you have some issues (e. g. unfixable DRMs)
 
 <sup>2</sup> Some R7 and R9 GPUs require FakeID. More details [here](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/amd-gpu.html#r7-r9)
 
-<sup>3</sup> For Catalina and older use iMac14,2, for Big Sur MacPro7,1. Monterey and newer does not support any Nvidia GPUs.
+<sup>3</sup> For Catalina and older use `iMac14,2`, for Big Sur `MacPro7,1`. Monterey and newer does not support any Nvidia GPUs.
 
 - Open _config.plist_ and search for `PlatformInfo -> Generic` and replace these values:
   - _MLB_ - Board Serial
@@ -189,11 +189,11 @@ If you use High Sierra and Realtek 8111 Ethernet Card then you should use [older
 | **Shaneee's**                 | **Algrey's**             |
 | ----------------------------- | ------------------------ |
 | Much better GPU performance   | Worse GPU performance    |
-| May not work with NVIDIA GPUs | Compatible with all GPUs |
+| May not work with Nvidia GPUs | Compatible with all GPUs |
 | HDMI/DP audio may not work    | HDMI/DP audio works      |
 | Enabled by default            | Disabled by default      |
 
-To switch to another patch look for `mtrr_update_action` in `config.plist`. Then set `Enabled` to `true` for the patch you want to use. Remember to set `Enabled` to `false` on the other PAT patch.
+To switch to another patch look for `mtrr_update_action` in `config.plist`. Then set `Enabled` to `true` for the patch you want to use. Remember to set `Enabled` to `false` on the other PAT patch. Do not try to enable both at the same time, trust me, it won't work.
 
 ## MKL and Intel Fast Memset Patch
 
@@ -210,7 +210,7 @@ There's also `intel_fast_memset` instruction which, obviously, doesn't exist on 
 - Make sure you have `SVM` enabled in your BIOS settings.
 
 | **Software**      | **Compatibility**                                                                                     |
-| ----------------- | ------------------------------------------------------------------------------------------------------|
+| ----------------- | ----------------------------------------------------------------------------------------------------- |
 | Parallels Desktop | Up to 13.1 unless AppleHV is used.<sup>1</sup> <sup>2</sup> <sup>3</sup>                              |
 | VirtualBox        | Drastically decreased performance.                                                                    |
 | VMWare Fusion 10  | Only Catalina and older, for Catalina with [this patch](https://posts.boy.sh/vmware-fusion-catalina). |
