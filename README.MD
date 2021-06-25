@@ -140,7 +140,7 @@ If you use High Sierra and Realtek 8111 Ethernet Card then you should use [older
 
 <sup>1</sup> For Catalina and newer you can also use MacPro7,1 if you have some issues (e. g. unfixable DRMs)
 
-<sup>2</sup> Some R7 and R9 GPUs require FakeID. More details [here](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/amd-gpu.html#r7-r9)
+<sup>2</sup> Some R7 and R9 GPUs require FakeID. More details [here](https://dortania.github.io/Getting-Started-With-ACPI/Universal/spoof.html)
 
 <sup>3</sup> For Catalina and older use `iMac14,2`, for Big Sur `MacPro7,1`. Monterey and newer does not support any Nvidia GPUs.
 
@@ -155,14 +155,22 @@ If you use High Sierra and Realtek 8111 Ethernet Card then you should use [older
 
 5. You should update your BIOS to the latest version and configure it appropriately. See [BIOS Settings](#BIOS-Settings) for details.
 6. Remember to verify your hardware and apply appropriate changes to your configuration file. See [Hardware Compatibility](#Hardware-compatibility) for details.
-7. That's it!
+7. That's it! Now you can boot macOS installer
 
 ### Post-Installation
 
 8. Copy your EFI directory onto your main drive EFI partition, you'll be able to boot the system without your bootable USB.
-9. Dual boot requires Bootstrap, see [this guide](https://dortania.github.io/OpenCore-Post-Install/multiboot/bootstrap.html) for specific details.
-10. Apply [Ryzen patch script](/Resources/ryzen_patch.sh) - it solves MKL (Math Kernel Library) issues and sets correct sleep parameters.
-11. When everything work you can disable verbose mode - then you will see Apple's logo instead of logs while booting. To do it you have to remove `-v debug=0x100 keepsyms=1` from `boot-args` in your configuration file.
+9. Apply [Ryzen patch script](/Resources/ryzen_patch.sh) - it solves MKL (Math Kernel Library) issues and sets correct sleep parameters.
+10. When everything work you can disable verbose mode - then you will see Apple's logo instead of logs while booting. To do it you have to remove `-v debug=0x100 keepsyms=1` from `boot-args` in your configuration file.
+
+### Bootstrap
+In general, enabling Bootstrap is not required, but it will protect your OpenCore from being overriden. \
+Remember to do not enable Bootstrap on pendrive - do it only after copying OpenCore to your disk's EFI
+
+11. Go to `Misc -> Boot -> LauncherOption` in your configuration file and set it to `Full`.
+12. Reboot your computer.
+13. Reboot PC again and go to your BIOS settings. In boot options you will see new boot entry named `OpenCore`. Set BIOS to boot from it, instead of your drive.
+14. It's done!
 
 ## BIOS Settings
 
