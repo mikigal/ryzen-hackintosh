@@ -55,15 +55,17 @@ _Support for 15h (FX series), 16h (A series) and Threadripper CPUs is not covere
 
 ### Graphical Processing Unit (GPU)
 
-| **Model**  | **Compatible?**        |
-| ---------- | ---------------------- |
-| Integrated | No                     |
-| Nvidia     | Partially <sup>1</sup> |
-| AMD        | Yes <sup>2</sup>       |
+| **Model**  | **Compatible?**                     |
+| ---------- | ----------------------------------- |
+| Integrated | No                                  |
+| Nvidia     | Partially <sup>1</sup>              |
+| AMD        | Yes <sup>2</sup> <sup>3</sup>       |
 
 <sup>1</sup> Kepler series up to Big Sur, under correct [PAT Patch](#PAT-Patch). Others require WebDrivers which work only in High Sierra or are not supported. More details on [Dortania](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/nvidia-gpu.html)
 
-<sup>2</sup> Lexa series GPUs are not supported. Older than 7000 series are supported up to High Sierra (10.13), their support is not covered here.
+<sup>2</sup> Some R7 and R9 GPUs require FakeID. More details [here](https://dortania.github.io/Getting-Started-With-ACPI/Universal/spoof.html)
+
+<sup>3</sup> Lexa series GPUs are not supported. Older than 7000 series are supported up to High Sierra (10.13), their support is not covered here.
 
 For **AMD Navi 10 Series GPUs (RX 5500, RX 5600, RX 5700)** you need to add `agdpmod=pikera` to `boot-args` to fix the black screen issue.
 
@@ -128,21 +130,19 @@ If you use High Sierra and Realtek 8111 Ethernet Card then you should use [older
 - Run the tool and select `Generate SMBIOS`.
 - Select the appropriate model for your hardware using the table below.
 
-| **GPU Series**       | **Model**                      |
-| -------------------- | ------------------------------ |
-| AMD Navi Series      | iMacPro1,1 <sup>1</sup>        |
-| AMD Vega Series      | iMacPro1,1 <sup>1</sup>        |
-| AMD Polaris Series   | iMacPro1,1 <sup>1</sup>        |
-| AMD Radeon R5/R7/R9  | MacPro6,1 <sup>2</sup>         |
-| AMD HD 8000 Series   | MacPro6,1                      |
-| AMD HD 7000 Series   | MacPro6,1                      |
-| Nvidia Kepler Series | It's complicated <sup>3</sup>  |
+| **GPU Series**       | **Model**                     |
+| -------------------- | ----------------------------- |
+| AMD Navi Series      | iMacPro1,1 <sup>1</sup>       |
+| AMD Vega Series      | iMacPro1,1 <sup>1</sup>       |
+| AMD Polaris Series   | iMacPro1,1 <sup>1</sup>       |
+| AMD Radeon R5/R7/R9  | MacPro6,1                     |
+| AMD HD 8000 Series   | MacPro6,1                     |
+| AMD HD 7000 Series   | MacPro6,1                     |
+| Nvidia Kepler Series | It's complicated <sup>2</sup> |
 
 <sup>1</sup> For Catalina and newer you can also use MacPro7,1 if you have some issues (e. g. unfixable DRMs)
 
-<sup>2</sup> Some R7 and R9 GPUs require FakeID. More details [here](https://dortania.github.io/Getting-Started-With-ACPI/Universal/spoof.html)
-
-<sup>3</sup> For Catalina and older use `iMac14,2`, for Big Sur `MacPro7,1`. Monterey and newer does not support any Nvidia GPUs.
+<sup>2</sup> For Catalina and older use `iMac14,2`, for Big Sur `MacPro7,1`. Monterey and newer does not support any Nvidia GPUs.
 
 - Open _config.plist_ and search for `PlatformInfo -> Generic` and replace these values:
   - _MLB_ - Board Serial
