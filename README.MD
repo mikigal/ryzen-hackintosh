@@ -14,7 +14,7 @@
 | OS Disk (NVMe)   | ADATA SX8200 Pro 1TB                       |
 
 **macOS version**: 11.4 (20F71) \
-**OpenCore version**: 0.7.0
+**OpenCore version**: 0.7.1 ([c872d45](https://github.com/acidanthera/OpenCorePkg/commit/c872d45a4298a8eb2eceec24e4620e2df640fd4b))
 
 ## Table of contents
 
@@ -55,11 +55,11 @@ _Support for 15h (FX series), 16h (A series) and Threadripper CPUs is not covere
 
 ### Graphical Processing Unit (GPU)
 
-| **Model**  | **Compatible?**                     |
-| ---------- | ----------------------------------- |
-| Integrated | No                                  |
-| Nvidia     | Partially <sup>1</sup>              |
-| AMD        | Yes <sup>2</sup> <sup>3</sup>       |
+| **Model**  | **Compatible?**               |
+| ---------- | ----------------------------- |
+| Integrated | No                            |
+| Nvidia     | Partially <sup>1</sup>        |
+| AMD        | Yes <sup>2</sup> <sup>3</sup> |
 
 <sup>1</sup> Kepler series up to Big Sur, under correct [PAT Patch](#PAT-Patch). Others require WebDrivers which work only in High Sierra or are not supported. More details on [Dortania](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/nvidia-gpu.html)
 
