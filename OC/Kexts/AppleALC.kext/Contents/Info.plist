@@ -29,19 +29,19 @@
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
-	<string>12D4e</string>
+	<string>12B45b</string>
 	<key>DTPlatformName</key>
 	<string>macosx</string>
 	<key>DTPlatformVersion</key>
-	<string>11.1</string>
+	<string>11.0</string>
 	<key>DTSDKBuild</key>
-	<string>20C63</string>
+	<string>20A2408</string>
 	<key>DTSDKName</key>
-	<string>macosx11.1</string>
+	<string>macosx11.0</string>
 	<key>DTXcode</key>
-	<string>1240</string>
+	<string>1220</string>
 	<key>DTXcodeBuild</key>
-	<string>12D4e</string>
+	<string>12B45b</string>
 	<key>IOKitPersonalities</key>
 	<dict>
 		<key>ALCUserClientProvider</key>
@@ -2543,7 +2543,7 @@
 					<integer>96</integer>
 					<key>WakeConfigData</key>
 					<data>
-					AUcMAgIXDAIBlwcC
+					AUcMAg==
 					</data>
 					<key>WakeVerbReinit</key>
 					<true/>
@@ -13309,6 +13309,32 @@
 					<data>
 					AUcMAgFnDAABVwwAAXcMAAG3DAIBhwwAAacM
 					AAEXDAABlwwAAdcMAA==
+					</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>Codec</key>
+					<string>b0ltun/agasecond - Realtek ALC256 (3246) for Hasee KingBook X57S1</string>
+					<key>CodecID</key>
+					<integer>283902550</integer>
+					<key>ConfigData</key>
+					<data>
+					AbccEAG3HQABtx4XAbcfkAG3DAICFwwCAUcM
+					AgGXByUCBQBFAgTQiQIFABsCBAxLAgUAEAIE
+					ACA=
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>70</integer>
+					<key>WakeConfigData</key>
+					<data>
+					AbcMAgFHDAICFwwC
 					</data>
 					<key>WakeVerbReinit</key>
 					<true/>
