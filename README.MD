@@ -14,7 +14,7 @@
 | OS Disk (NVMe)   | ADATA SX8200 Pro 1TB                       |
 
 **macOS version**: 12.0 Beta 1 (21A5248p) \
-**OpenCore version**: 0.7.1 ([c872d45](https://github.com/acidanthera/OpenCorePkg/commit/c872d45a4298a8eb2eceec24e4620e2df640fd4b))
+**OpenCore version**: 0.7.1
 
 ## Table of contents
 
