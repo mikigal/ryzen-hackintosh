@@ -117,6 +117,8 @@ If you experience any issues with your network connection, then your best bet wo
 
 If you use High Sierra and Realtek 8111 Ethernet Card then you should use [older version of kext](https://github.com/Mieze/RTL8111_driver_for_OS_X/releases/tag/v2.2.2).
 
+If you use SmallTree kext for your Ethernet Card you have to stay with Big Sur for now - it does not work on Monterey, we need to wait for update.
+
 ## Installation
 
 ### Bootable USB
