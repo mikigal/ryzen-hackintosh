@@ -62,7 +62,7 @@ _Support for 15h (FX series), 16h (A series) and Threadripper CPUs is not covere
 | Nvidia     | Partially <sup>1</sup>        |
 | AMD        | Yes <sup>2</sup> <sup>3</sup> |
 
-<sup>1</sup> Kepler series up to Big Sur, under correct [PAT Patch](#PAT-Patch). Others require WebDrivers which work only in High Sierra or are not supported. More details on [Dortania](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/nvidia-gpu.html)
+<sup>1</sup> Kepler series under correct [PAT Patch](#PAT-Patch). Others require WebDrivers which work only in High Sierra or are not supported. More details on [Dortania](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/nvidia-gpu.html)
 
 <sup>2</sup> Some R7 and R9 GPUs require FakeID. More details [here](https://dortania.github.io/Getting-Started-With-ACPI/Universal/spoof.html)
 
@@ -144,9 +144,9 @@ If you use High Sierra and Realtek 8111 Ethernet Card then you should use [older
 | AMD HD 7000 Series   | MacPro6,1                     |
 | Nvidia Kepler Series | It's complicated <sup>2</sup> |
 
-<sup>1</sup> For Catalina and newer you can also use MacPro7,1 if you have some issues (e. g. unfixable DRMs)
+<sup>1</sup> For Catalina and newer you can also use MacPro7,1 if you have some issues (e. g. unfixable DRMs).
 
-<sup>2</sup> For Catalina and older use `iMac14,2`, for Big Sur `MacPro7,1`. Monterey and newer does not support any Nvidia GPUs.
+<sup>2</sup> For Catalina and older use `iMac14,2`, for Big Sur and newer `MacPro7,1`. Monterey and newer does not support any Nvidia GPUs.
 
 - Open _config.plist_ and search for `PlatformInfo -> Generic` and replace these values:
   - _MLB_ - Board Serial
@@ -159,7 +159,7 @@ If you use High Sierra and Realtek 8111 Ethernet Card then you should use [older
 
 5. You should update your BIOS to the latest version and configure it appropriately. See [BIOS Settings](#BIOS-Settings) for details.
 6. Remember to verify your hardware and apply appropriate changes to your configuration file. See [Hardware Compatibility](#Hardware-compatibility) for details.
-7. That's it! Now you can boot macOS installer
+7. That's it! Now you can boot macOS installer.
 
 ### Post-Installation
 
@@ -169,7 +169,7 @@ If you use High Sierra and Realtek 8111 Ethernet Card then you should use [older
 
 ### Bootstrap
 In general, enabling Bootstrap is not required, but it will protect your OpenCore from being overriden. \
-Remember to do not enable Bootstrap on pendrive - do it only after copying OpenCore to your disk's EFI
+Remember to do not enable Bootstrap on pendrive - do it only after copying OpenCore to your disk's EFI.
 
 11. Go to `Misc -> Boot -> LauncherOption` in your configuration file and set it to `Full`.
 12. Reboot your computer.
@@ -190,7 +190,7 @@ Remember to do not enable Bootstrap on pendrive - do it only after copying OpenC
 | Serial Port           | Disabled             |
 | Parallel Port         | Disabled             |
 
-<sup>1</sup> If you have this option in BIOS you must also remove `npci=0x2000` from `boot-args` in your configuration file
+<sup>1</sup> If you have this option in BIOS you must also remove `npci=0x2000` from `boot-args` in your configuration file.
 
 **Some of these options may not exist in your firmware, just try to match it as closely as possible.**
 
@@ -232,7 +232,7 @@ There's also `intel_fast_memset` instruction which, obviously, doesn't exist on 
 
 <sup>2</sup> Use [this](/Resources/Parallels%20Desktop%20Launcher.app.zip) launcher package to simplify the Parallels installation.
 
-<sup>3</sup> Only Windows 10 Anniversary Update (build 1607) or older systems work
+<sup>3</sup> Only Windows 10 Anniversary Update (build 1607) or older systems work.
 
 ### Resource management
 
@@ -256,7 +256,7 @@ Use the following configuration for best results.
 - ACPI patching: [\*click\*](https://dortania.github.io/Getting-Started-With-ACPI/)
 - USB mapping: [\*click\*](https://dortania.github.io/OpenCore-Post-Install/usb/)
 
-If you have any other questions or issues, feel free to ask on [AMD-OSX Discord](https://discord.gg/EfCYAJW) or [Forum](https://forum.amd-osx.com)
+If you have any other questions or issues, feel free to ask on [AMD-OSX Discord](https://discord.gg/EfCYAJW) or [Forum](https://forum.amd-osx.com).
 
 ## Credits
 
