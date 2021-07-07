@@ -119,6 +119,11 @@ If you use High Sierra and Realtek 8111 Ethernet Card then you should use [older
 
 If you use SmallTree kext for your Ethernet Card you have to stay with Big Sur for now - it does not work on Monterey, we need to wait for update.
 
+### WiFi and Bluetooth
+Only Apple Airport and Fenvi cards work out of the box. [Here](https://dortania.github.io/Wireless-Buyers-Guide/types-of-wireless-card) you can list of all supported cards and needed kexts for them.
+
+Rembember that AirDrop, Handoff, etc works only on cards with Broadcom chips.
+
 ## Installation
 
 ### Bootable USB
@@ -232,7 +237,7 @@ There's also `intel_fast_memset` instruction which, obviously, doesn't exist on 
 
 <sup>1</sup> Parallels will not work by default on Big Sur and newer, you need to use `SYSTEM_VERSION_COMPAT=1` environment variable.
 
-<sup>2</sup> Use [this](/Resources/Parallels%20Desktop%20Launcher.app.zip) launcher package to simplify the Parallels installation.
+<sup>2</sup> Use [this](/Resources/Parallels%20Desktop%20Launcher.app.zip) launcher package to simplify the Parallels usage.
 
 <sup>3</sup> Only Windows 10 Anniversary Update (build 1607) or older systems work.
 
