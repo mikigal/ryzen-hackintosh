@@ -267,29 +267,6 @@ If you have any other questions or issues, feel free to ask on [AMD-OSX Discord]
 
 ## Credits
 
-**Software:**
-
-- [[Bootloader] OpenCore](https://github.com/acidanthera/OpenCorePkg)
-- [[Resources] Picker GUI](https://github.com/acidanthera/OcBinaryData/tree/master/Resources)
-- [[Patch] AMD_Vanilla](https://github.com/AMD-OSX/AMD_Vanilla)
-- [[SSDT] EC-USBX-DESKTOP](https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-EC-USBX-DESKTOP.aml)
-- [[SSDT] SLEEP](./OC/ACPI/SSDT-SLEEP.aml)
-- [[Driver] OpenRuntime](https://github.com/acidanthera/OpenCorePkg)
-- [[Driver] OpenCanopy](https://github.com/acidanthera/OpenCorePkg)
-- [[Driver] OpenHfsPlus](https://github.com/acidanthera/OpenCorePkg)
-- [[Kext] Lilu](https://github.com/acidanthera/Lilu)
-- [[Kext] VirtualSMC](https://github.com/acidanthera/VirtualSMC)
-- [[Kext] WhateverGreen](https://github.com/acidanthera/WhateverGreen)
-- [[Kext] AppleALC](https://github.com/acidanthera/AppleALC)
-- [[Kext] NVMeFix](https://github.com/acidanthera/NVMeFix)
-- [[Kext] RestrictEvents](https://github.com/acidanthera/RestrictEvents)
-- [[Kext] RealtekRTL8111](https://github.com/Mieze/RTL8111_driver_for_OS_X)
-- [[Kext] AMDRyzenCPUPowerManagement](https://github.com/trulyspinach/SMCAMDProcessor)
-- [[Kext] SMCAMDProcessor](https://github.com/trulyspinach/SMCAMDProcessor)
-- [[Kext] AppleMCEReporterDisabler](https://github.com/AMD-OSX/AMD_Vanilla/blob/opencore/Extra/AppleMCEReporterDisabler.kext.zip)
-
-**People and Organizations:**
-
 - [Apple](https://apple.com) for macOS
 - [AMD-OSX Developers](https://github.com/AMD-OSX) for kernel patches for AMD CPUs
 - [Acidanthera](https://github.com/acidanthera) for OpenCore and most of used kexts
@@ -299,6 +276,5 @@ If you have any other questions or issues, feel free to ask on [AMD-OSX Discord]
 - [Dortania](https://github.com/dortania) for OpenCore configuration guides
 - [AMD-OSX Community](https://amd-osx.com) for support while making my Hackintosh
 - [SocketByte](https://github.com/SocketByte) for README maintenance and being a great friend :)
-  <br>
 
 ![Screenshot](/screenshot.png?raw=true)
