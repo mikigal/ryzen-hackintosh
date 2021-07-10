@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Staring patching..."
+echo "Starting patching..."
 
 for file in MMXCore FastCore TextModel libiomp5.dylib libtbb.dylib libtbbmalloc.dylib; do
     find /Applications/Adobe* -type f -name $file | while read -r FILE; do
@@ -27,4 +27,4 @@ echo "Removing Deep_Font plugin"
 sudo find /Applications/Adobe* -name "Deep_Font" -exec rm -r {} +
 
 echo ""
-echo "Adobe Patching done, remember to run Ryzen_patch.sh too"
+echo "Adobe Patching done, remember to run ryzen_patch.sh too"

@@ -1,7 +1,7 @@
 #!/bin/bash
 # Credits to XLNC (https://gist.github.com/naveenkrdy/26760ac5135deed6d0bb8902f6ceb6bd)
 
-echo "Staring patching..."
+echo "Starting patching..."
 
 files_list=(MMXCore FastCore TextModel libiomp5.dylib)
 lib_dir="${HOME}/Documents/AdobeLibs"
