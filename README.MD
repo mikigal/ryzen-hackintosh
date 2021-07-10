@@ -108,8 +108,9 @@ Follow these steps if your audio chipset is different than the one specified in 
 
 _Caveats_:
 
-- External (USB) audio chipsets should work out of the box.
+- External (USB) audio cards should work out of the box.
 - Microphone input (3.5mm Jack) won't work properly. Use USB/Bluetooth microphones instead.
+- If you have CPU with integrated GPU (even if you don't use it) your audio may be broken or unstable. You can try using [SpeedKeeper](https://github.com/astrihale/speedkeeper) but it's not guaranteed to fix your problem. The best solution is using external (USB) audio card.
 
 ### Network
 
