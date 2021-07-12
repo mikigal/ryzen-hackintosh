@@ -250,7 +250,7 @@ Use the following configuration for best results.
 
 - Parallels Desktop 13.1
 - 4 CPU cores
-- 4GB RAM
+- 4GB - 8GB RAM
 - 1GB VRAM
 - 3D Acceleration: DirectX 9
 - OS: Windows 7 (SP1, build 7601) with Aero theme disabled.
