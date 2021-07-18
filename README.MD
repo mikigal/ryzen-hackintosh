@@ -13,7 +13,7 @@
 | WiFi & Bluetooth | Fenvi T919 (BCM94360CD)                    |
 | OS Disk (NVMe)   | ADATA SX8200 Pro 1TB                       |
 
-**macOS version**: 12.0 Beta 1 (21A5248p) \
+**macOS version**: 12.0 Beta 3 (21A5284e) \
 **OpenCore version**: 0.7.2 ([Shaneee's fork, aa4dd59](https://github.com/Shaneee/OpenCorePkg/commit/aa4dd5942603a7ccb6bed3d7b55f546b5235f0ed))
 
 ## Table of contents
@@ -30,13 +30,11 @@
 
 ## Software Compatibility
 
-- Monterey (12.x) - **only Beta 1 (21A5248p)**
+- Monterey (12.x)
 - Big Sur (11.x)
 - Catalina (10.15.x)
 - Mojave (10.14.x)
 - High Sierra (10.13.x)
-
-Only first beta of macOS Monterey (21A5248p) is currently supported due to broken AMD CPU patches for newer Beta versions. This repository will be updated for the newest macOS version as soon as possible.
 
 ### DRMs
 DRMs are fixed by default only for Big Sur and newer versions. For older versions you have to
