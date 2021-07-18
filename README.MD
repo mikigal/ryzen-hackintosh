@@ -36,6 +36,8 @@
 - Mojave (10.14.x)
 - High Sierra (10.13.x)
 
+There were some reports about issues that occur while using MSI motherboards on Monterey Beta 3. The only possible solution to this problem as of right now is to downgrade to Monterey Beta 2 and wait for a confirmed workaround.
+
 ### DRMs
 DRMs are fixed by default only for Big Sur and newer versions. For older versions you have to
  - Remove `unfairgva=1` from `boot-args` in your configuration file.
