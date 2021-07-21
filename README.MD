@@ -229,12 +229,12 @@ There's also `intel_fast_memset` instruction which, obviously, doesn't exist on 
 
 - Make sure you have `SVM` enabled in your BIOS settings.
 
-| **Software**      | **Compatibility**                                                                                     |
-| ----------------- | ----------------------------------------------------------------------------------------------------- |
-| Parallels Desktop | Up to 13.1 unless AppleHV is used.<sup>1</sup> <sup>2</sup> <sup>3</sup>                              |
-| VirtualBox        | Drastically decreased performance.                                                                    |
-| VMWare Fusion 10  | Only Catalina and older, for Catalina with [this patch](https://posts.boy.sh/vmware-fusion-catalina). |
-| Docker            | Only Docker Toolbox, not all features.                                                                |
+| **Software**      | **Compatibility**                                                                                             |
+| ----------------- | ------------------------------------------------------------------------------------------------------------- |
+| Parallels Desktop | Up to 13.1 unless AppleHV is used.<sup>1</sup> <sup>2</sup> <sup>3</sup>                                      |
+| VirtualBox        | Drastically decreased performance.                                                                            |
+| VMWare Fusion 10  | Only Catalina and older, for Catalina with [this patch](https://posts.boy.sh/vmware-fusion-catalina).         |
+| Docker            | Only [Docker in VirtualBox](https://github.com/sergeycherepanov/homebrew-docker-virtualbox) or Docker Toolbox |
 
 <sup>1</sup> Parallels will not work by default on Big Sur and newer, you need to use `SYSTEM_VERSION_COMPAT=1` environment variable.
 
