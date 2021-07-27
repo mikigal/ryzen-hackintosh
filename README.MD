@@ -150,8 +150,6 @@ Rembember that AirDrop, Handoff, etc. works only on cards with Broadcom chip.
 | 6 Cores                | `06`          |
 | 8 Cores                | `08`          |
 | 12 Cores               | `0C`          |
-| 16 Cores               | `10`          |
-| 32 Cores               | `20`          |
 
 ### SMBIOS
 
