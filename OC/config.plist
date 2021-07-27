@@ -306,15 +306,16 @@
 				<key>Arch</key>
 				<string>x86_64</string>
 				<key>Base</key>
-				<string>_i386_switch_lbrs</string>
+				<string>_cpuid_set_info</string>
 				<key>Comment</key>
-				<string>algrey - Disable _i386_switch_lbrs - 11.0/12.0</string>
+				<string>algrey - Force cpuid_cores_per_package 10.13,10.14</string>
 				<key>Count</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
 				<data>
+				wegaAAAA
 				</data>
 				<key>Identifier</key>
 				<string>kernel</string>
@@ -322,17 +323,19 @@
 				<integer>0</integer>
 				<key>Mask</key>
 				<data>
+				//3/AAAA
 				</data>
 				<key>MaxKernel</key>
-				<string>21.99.99</string>
+				<string>18.99.99</string>
 				<key>MinKernel</key>
-				<string>20.1.0</string>
+				<string>17.0.0</string>
 				<key>Replace</key>
 				<data>
-				ww==
+				uAAAAAAA
 				</data>
 				<key>ReplaceMask</key>
 				<data>
+				//////8A
 				</data>
 				<key>Skip</key>
 				<integer>0</integer>
@@ -341,15 +344,16 @@
 				<key>Arch</key>
 				<string>x86_64</string>
 				<key>Base</key>
-				<string>_i386_lbr_init</string>
+				<string>_cpuid_set_info</string>
 				<key>Comment</key>
-				<string>algrey - Disable _i386_lbr_init - 11.0/12.0</string>
+				<string>algrey - Force cpuid_cores_per_package 10.15,11.0</string>
 				<key>Count</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
 				<data>
+				wegaAAAA
 				</data>
 				<key>Identifier</key>
 				<string>kernel</string>
@@ -357,88 +361,19 @@
 				<integer>0</integer>
 				<key>Mask</key>
 				<data>
-				</data>
-				<key>MaxKernel</key>
-				<string>21.99.99</string>
-				<key>MinKernel</key>
-				<string>20.1.0</string>
-				<key>Replace</key>
-				<data>
-				ww==
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
-				<string>algrey - _i386_init_slave - Remove wrmsr 0x1c8 - 11.0/12.0</string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				uAEAAAC5yAEAADHSDzA=
-				</data>
-				<key>Identifier</key>
-				<string>kernel</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>MaxKernel</key>
-				<string>21.99.99</string>
-				<key>MinKernel</key>
-				<string>20.1.0</string>
-				<key>Replace</key>
-				<data>
-				Zg8fhAAAAAAADx9EAAA=
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>Base</key>
-				<string>_i386_lbr_native_state_to_mach_thread_state</string>
-				<key>Comment</key>
-				<string>algrey - Disable _i386_lbr_native_state_to_mach_thread_state  - 11.0</string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				</data>
-				<key>Identifier</key>
-				<string>kernel</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
+				//3/AAAA
 				</data>
 				<key>MaxKernel</key>
 				<string>20.99.99</string>
 				<key>MinKernel</key>
-				<string>20.1.0</string>
+				<string>19.0.0</string>
 				<key>Replace</key>
 				<data>
-				ww==
+				ugAAAAAA
 				</data>
 				<key>ReplaceMask</key>
 				<data>
+				//////8A
 				</data>
 				<key>Skip</key>
 				<integer>0</integer>
@@ -447,15 +382,16 @@
 				<key>Arch</key>
 				<string>x86_64</string>
 				<key>Base</key>
-				<string>_i386_filtered_lbr_state_to_mach_thread_state</string>
+				<string>_cpuid_set_info</string>
 				<key>Comment</key>
-				<string>Goldfish64 - Disable _i386_filtered_lbr_state_to_mach_thread_state - 12.0</string>
+				<string>algrey - Force cpuid_cores_per_package 12.0</string>
 				<key>Count</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
 				<data>
+				wegaAAAA
 				</data>
 				<key>Identifier</key>
 				<string>kernel</string>
@@ -463,17 +399,19 @@
 				<integer>0</integer>
 				<key>Mask</key>
 				<data>
+				//3/AAAA
 				</data>
 				<key>MaxKernel</key>
-				<string></string>
+				<string>21.99.99</string>
 				<key>MinKernel</key>
 				<string>21.0.0</string>
 				<key>Replace</key>
 				<data>
-				ww==
+				ugAAAACQ
 				</data>
 				<key>ReplaceMask</key>
 				<data>
+				////////
 				</data>
 				<key>Skip</key>
 				<integer>0</integer>
@@ -507,115 +445,6 @@
 				<key>Replace</key>
 				<data>
 				Dx+AAAAAAA==
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>Base</key>
-				<string>_x86_validate_topology</string>
-				<key>Comment</key>
-				<string>XLNC - Disable _x86_validate_topology - 10.13/10.14/10.15/11.0/12.0</string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				</data>
-				<key>Identifier</key>
-				<string>kernel</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>MaxKernel</key>
-				<string>21.99.99</string>
-				<key>MinKernel</key>
-				<string>17.0.0</string>
-				<key>Replace</key>
-				<data>
-				ww==
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
-				<string>algrey - _cpuid_set_cache_info - Set cpuid to 0x8000001D instead 0 - 10.15/10.16/12.0</string>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				McAx2zHJMdIPokGJxgAAAAAAAAB0
-				</data>
-				<key>Identifier</key>
-				<string>kernel</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				/////////////////wAAAAAA////
-				</data>
-				<key>MaxKernel</key>
-				<string>21.99.99</string>
-				<key>MinKernel</key>
-				<string>19.0.0</string>
-				<key>Replace</key>
-				<data>
-				uB0AAIAx2zHJMdIPokGJxg8fQADr
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
-				<string>algrey - _cpuid_set_cache_info - Set cpuid to 0x8000001D instead 0 - 10.13/10.14</string>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				McAx2zHJMdIPokGJxkGJ0QAAAAAAAAA=
-				</data>
-				<key>Identifier</key>
-				<string>kernel</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				/////////////////////wAAAAAA//8=
-				</data>
-				<key>MaxKernel</key>
-				<string>18.99.99</string>
-				<key>MinKernel</key>
-				<string>17.0.0</string>
-				<key>Replace</key>
-				<data>
-				uB0AAIAx2zHJMdIPokGJxkGJ0escZpA=
 				</data>
 				<key>ReplaceMask</key>
 				<data>
@@ -826,7 +655,7 @@
 				<data>
 				</data>
 				<key>MaxKernel</key>
-				<string>21.99.99</string>
+				<string>20.99.99</string>
 				<key>MinKernel</key>
 				<string>17.0.0</string>
 				<key>Replace</key>
@@ -981,155 +810,6 @@
 				<data>
 				Zg8fhAAAAAAAZg8fhAAAAAAAZg8fhAAAAAAAZg8fhAAA
 				AAAAZg8fRAAA
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>Base</key>
-				<string>_tsc_init</string>
-				<key>Comment</key>
-				<string>algrey - Remove Penryn check to execute default case - 10.14</string>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				gfm8T+p4D4TFAQAA
-				</data>
-				<key>Identifier</key>
-				<string>kernel</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>MaxKernel</key>
-				<string>18.99.99</string>
-				<key>MinKernel</key>
-				<string>18.0.0</string>
-				<key>Replace</key>
-				<data>
-				ZmZmDx+EAAAAAACQ
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>Base</key>
-				<string>_tsc_init</string>
-				<key>Comment</key>
-				<string>algrey - Remove Penryn check to execute default case - 10.13/10.15/11.0/12.0</string>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				PbxP6ngPhAABAAA=
-				</data>
-				<key>Identifier</key>
-				<string>kernel</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				/////////wD///8=
-				</data>
-				<key>MaxKernel</key>
-				<string>21.99.99</string>
-				<key>MinKernel</key>
-				<string>17.0.0</string>
-				<key>Replace</key>
-				<data>
-				ZmZmDx+EAAAAAAA=
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>Base</key>
-				<string>_tsc_init</string>
-				<key>Comment</key>
-				<string>algrey - Get DID and VID from MSR - 10.13/10.14/10.15/11.0/12.0</string>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				uZQBAAAPMonDuc4AAAAPMg+2zokNAAAAAA+2xIkFAAAA
-				AA==
-				</data>
-				<key>Identifier</key>
-				<string>kernel</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				////////////////////////////AAAA////////AAAA
-				/w==
-				</data>
-				<key>MaxKernel</key>
-				<string>21.99.99</string>
-				<key>MinKernel</key>
-				<string>17.0.0</string>
-				<key>Replace</key>
-				<data>
-				uWQAAcAPMg+2yInGwe4Ig+Y/RTH/MdJIichI9/ZIAcBm
-				kA==
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>Base</key>
-				<string>_tsc_init</string>
-				<key>Comment</key>
-				<string>algrey - Skip msr_flex_ratio test and get FSBFrequency from EFI - 10.13/10.14/10.15/11.0/12.0</string>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				98MAAAEAdA==
-				</data>
-				<key>Identifier</key>
-				<string>kernel</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>MaxKernel</key>
-				<string>21.99.99</string>
-				<key>MinKernel</key>
-				<string>17.0.0</string>
-				<key>Replace</key>
-				<data>
-				Zg8fRAAA6w==
 				</data>
 				<key>ReplaceMask</key>
 				<data>
