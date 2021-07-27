@@ -146,6 +146,7 @@ Rembember that AirDrop, Handoff, etc. works only on cards with Broadcom chip.
 
 | **Physical CPU cores** | **Hex value** |
 | ---------------------- | ------------- |
+| 4 Cores                | `04`          |
 | 6 Cores                | `06`          |
 | 8 Cores                | `08`          |
 | 12 Cores               | `0C`          |
