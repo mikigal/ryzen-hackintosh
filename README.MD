@@ -14,7 +14,7 @@
 | OS Disk (NVMe)   | ADATA SX8200 Pro 1TB                       |
 
 **macOS version**: 12.0 Beta 3 (21A5284e) \
-**OpenCore version**: 0.7.2 ([Shaneee's fork, aa4dd59](https://github.com/Shaneee/OpenCorePkg/commit/aa4dd5942603a7ccb6bed3d7b55f546b5235f0ed))
+**OpenCore version**: 0.7.1
 
 ## Table of contents
 
@@ -229,12 +229,12 @@ There's also `intel_fast_memset` instruction which, obviously, doesn't exist on 
 
 - Make sure you have `SVM` enabled in your BIOS settings.
 
-| **Software**      | **Compatibility**                                                                                             |
-| ----------------- | ------------------------------------------------------------------------------------------------------------- |
-| Parallels Desktop | Up to 13.1 unless AppleHV is used.<sup>1</sup> <sup>2</sup> <sup>3</sup>                                      |
-| VirtualBox        | Drastically decreased performance.                                                                            |
-| VMWare Fusion 10  | Only Catalina and older, for Catalina with [this patch](https://posts.boy.sh/vmware-fusion-catalina).         |
-| Docker            | Only [Docker in VirtualBox](https://github.com/sergeycherepanov/homebrew-docker-virtualbox) or Docker Toolbox |
+| **Software**      | **Compatibility**                                                                                              |
+| ----------------- | -------------------------------------------------------------------------------------------------------------- |
+| Parallels Desktop | Up to 13.1 unless AppleHV is used.<sup>1</sup> <sup>2</sup> <sup>3</sup>                                       |
+| VirtualBox        | Drastically decreased performance.                                                                             |
+| VMWare Fusion 10  | Only Catalina and older, for Catalina with [this patch](https://posts.boy.sh/vmware-fusion-catalina).          |
+| Docker            | Only [Docker in VirtualBox](https://github.com/sergeycherepanov/homebrew-docker-virtualbox) or Docker Toolbox. |
 
 <sup>1</sup> Parallels will not work by default on Big Sur and newer, you need to use `SYSTEM_VERSION_COMPAT=1` environment variable.
 
