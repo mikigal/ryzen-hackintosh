@@ -133,9 +133,28 @@ Rembember that AirDrop, Handoff, etc. works only on cards with Broadcom chip.
 
 2. Clone this repository and copy "BOOT" & "OC" directories to your "EFI" directory on your bootable USB. The structure should look somewhat like this: `EFI -> BOOT, OC`.
 
+### Modifying kernel patches
+3. Modify Core Count patches to match your CPU's cores amount.
+
+  - Find three `algrey - Force cpuid_cores_per_package` patches under `Kernel -> Patches` in your config.
+  - Modify these patches for your CPU physical cores. Change **first pair** of `00` in `Replace` of these patches to `Hex value` from below table
+
+    - e. g. for Ryzen 7 1700 with 8 Cores three modified patches should look like:
+      - B8 **00** 0000 0000 -> B8 **08** 0000 0000
+      - BA **00** 0000 0000 -> BA **08** 0000 0000
+      - BA **00** 0000 0090 -> BA **08** 0000 0090
+
+| **Physical CPU cores** | **Hex value** |
+| ---------------------- | ------------- |
+| 6 Cores                | `06`          |
+| 8 Cores                | `08`          |
+| 12 Cores               | `0C`          |
+| 16 Cores               | `10`          |
+| 32 Cores               | `20`          |
+
 ### SMBIOS
 
-3. Use [this tool](https://github.com/corpnewt/GenSMBIOS) to generate your unique SMBIOS info.
+4. Use [this tool](https://github.com/corpnewt/GenSMBIOS) to generate your unique SMBIOS info.
 
 - SMBIOS has to be unique, you cannot use one present in this repository.
 
