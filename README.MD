@@ -38,13 +38,6 @@
 
 There were some reports about issues that occur while using MSI motherboards on Monterey Beta 3. The only possible solution to this problem as of right now is to downgrade to Monterey Beta 2 and wait for a confirmed workaround.
 
-### DRMs
-DRMs are fixed by default only for Big Sur and newer versions. For older versions you have to
- - Remove `unfairgva=1` from `boot-args` in your configuration file.
- - Go [here](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.Chart.md) to find correct value for your system.
- - Add parameter from _Mode_ to `boot-args` in your configuration file.
-   - If parameter from chart does not work try `shikigva=80` or `shikigva=16` - it's common to work even when chart says something another.
-
 ## Hardware Compatibility
 
 ### Central Processing Unit (CPU)
@@ -202,6 +195,14 @@ Remember to do not enable Bootstrap on pendrive - do it only after copying OpenC
 12. Reboot your computer.
 13. Reboot PC again and go to your BIOS settings. In boot options you will see new boot entry named `OpenCore`. Set BIOS to boot from it, instead of your drive.
 14. It's done!
+
+### DRMs
+DRMs are fixed by default only for Big Sur and newer versions. For older versions you have to:
+ 1. Remove `unfairgva=1` from `boot-args` in your configuration file.
+ 2. Go [here](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.Chart.md) to find correct value for your system.
+ 3. Add parameter from _Mode_ to `boot-args` in your configuration file.
+    - If parameter from chart does not work try `shikigva=80` or `shikigva=16` - it's common to work even when chart says something another.
+ 4. Test DRMs with Netflix in Safari or Apple TV+.
 
 ## BIOS Settings
 
