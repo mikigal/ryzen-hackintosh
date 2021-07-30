@@ -185,16 +185,17 @@ Rembember that AirDrop, Handoff, etc. works only on cards with Broadcom chip.
 
 8. Copy your EFI directory onto your main drive EFI partition, you'll be able to boot the system without your bootable USB.
 9. Apply [Ryzen patch script](/Resources/ryzen_patch.sh) - it solves MKL (Math Kernel Library) issues and sets correct sleep parameters.
-10. When everything work you can disable verbose mode - then you will see Apple's logo instead of logs while booting. To do it you have to remove `-v debug=0x100 keepsyms=1` from `boot-args` in your configuration file.
+10. Map your USB ports. If you have working Windows instance I recommend [this tool](https://github.com/usbtoolbox/tool), otherwise you have to [do it manually](https://dortania.github.io/OpenCore-Post-Install/usb/#macos-and-the-15-port-limit). This step is not required if all of your ports are working with correct speed, but it's recommended.
+11. When everything work you can disable verbose mode - then you will see Apple's logo instead of logs while booting. To do it you have to remove `-v debug=0x100 keepsyms=1` from `boot-args` in your configuration file.
 
 ### Bootstrap
 In general, enabling Bootstrap is not required, but it will protect your OpenCore from being overriden. \
 Remember to do not enable Bootstrap on pendrive - do it only after copying OpenCore to your disk's EFI.
 
-11. Go to `Misc -> Boot -> LauncherOption` in your configuration file and set it to `Full`.
-12. Reboot your computer.
-13. Reboot PC again and go to your BIOS settings. In boot options you will see new boot entry named `OpenCore`. Set BIOS to boot from it, instead of your drive.
-14. It's done!
+12. Go to `Misc -> Boot -> LauncherOption` in your configuration file and set it to `Full`.
+13. Reboot your computer.
+14. Reboot PC again and go to your BIOS settings. In boot options you will see new boot entry named `OpenCore`. Set BIOS to boot from it, instead of your drive.
+15. It's done!
 
 ### DRMs
 DRMs are fixed by default only for Big Sur and newer versions. For older versions you have to:
