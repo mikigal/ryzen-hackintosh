@@ -24,6 +24,7 @@
 - [BIOS Settings](#BIOS-Settings)
 - [PAT Patch](#PAT-Patch)
 - [MKL and Intel Fast Memset Patch](#MKL-and-Intel-Fast-Memset-Patch)
+- [DRMs support](#DRMs-support)
 - [Virtualization](#Virtualization)
 - [Guides](#Guides)
 - [Credits](#Credits)
@@ -197,14 +198,6 @@ Remember to do not enable Bootstrap on pendrive - do it only after copying OpenC
 14. Reboot PC again and go to your BIOS settings. In boot options you will see new boot entry named `OpenCore`. Set BIOS to boot from it, instead of your drive.
 15. It's done!
 
-### DRMs
-DRMs are fixed by default only for Big Sur and newer versions. For older versions you have to:
- 1. Remove `unfairgva=1` from `boot-args` in your configuration file.
- 2. Go [here](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.Chart.md) to find correct value for your system.
- 3. Add parameter from _Mode_ to `boot-args` in your configuration file.
-    - If parameter from chart does not work try `shikigva=80` or `shikigva=16` - it's common to work even when chart says something another.
- 4. Test DRMs with Netflix in Safari or Apple TV+.
-
 ## BIOS Settings
 
 | **Option**            | **Status**           |
@@ -242,7 +235,15 @@ Some applications for macOS use MKL - Math Kernel Library. Unfortunately, it doe
 
 There's also `intel_fast_memset` instruction which, obviously, doesn't exist on AMD systems. It's very common in Adobe software - you can simply fix it by running [this script](/Resources/adobe_patch.sh). Older versions of Adobe software (e. g. up to 22.3.1 for Photoshop) need it's [legacy version](/Resources/adobe_patch_legacy.sh).
 
- If you have problems while running script from file, try to copy and paste it's code to Terminal.
+If you have problems while running script from file, try to copy and paste it's code to Terminal.
+
+## DRMs support
+DRMs are fixed by default only for Big Sur and newer versions. For older versions you have to:
+ 1. Remove `unfairgva=1` from `boot-args` in your configuration file.
+ 2. Go [here](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.Chart.md) to find correct value for your system.
+ 3. Add parameter from _Mode_ to `boot-args` in your configuration file.
+    - If parameter from chart does not work try `shikigva=80` or `shikigva=16` - it's common to work even when chart says something another.
+ 4. Test DRMs with Netflix in Safari or Apple TV+.
 
 ## Virtualization
 
