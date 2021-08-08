@@ -186,7 +186,8 @@ Rembember that AirDrop, Handoff, etc. works only on cards with Broadcom chip.
 
 8. Copy your EFI directory onto your main drive EFI partition, you'll be able to boot the system without your bootable USB.
 9. Apply [Ryzen patch script](/Resources/ryzen_patch.sh) - it solves MKL (Math Kernel Library) issues and sets correct sleep parameters.
-10. Map your USB ports. If you have working Windows instance I recommend [this tool](https://github.com/usbtoolbox/tool), otherwise you have to [do it manually](https://dortania.github.io/OpenCore-Post-Install/usb/#macos-and-the-15-port-limit). This step is not required if all of your ports are working with correct speed, but it's recommended.
+10. Map your USB ports. If you have working Windows instance I recommend [this tool](https://github.com/usbtoolbox/tool), otherwise you have to [do it manually](https://dortania.github.io/OpenCore-Post-Install/usb/#macos-and-the-15-port-limit). This step is not required if all of your ports are working with correct speed, but it's recommended. \
+After mapping remember to disable `Kernel -> Quriks -> XhciPortLimit` in your configuration file.
 11. When everything work you can disable verbose mode - then you will see Apple's logo instead of logs while booting. To do it you have to remove `-v debug=0x100 keepsyms=1` from `boot-args` in your configuration file.
 
 ### Bootstrap
@@ -245,6 +246,19 @@ DRMs are fixed by default only for Big Sur and newer versions. For older version
     - If parameter from chart does not work try `shikigva=80` or `shikigva=16` - it's common to work even when chart says something another.
  4. Test DRMs with Netflix in Safari or Apple TV+.
 
+## Sleep
+Firstly, check if your sleep works out of the box. If it works, you can skip reading this section.
+
+The most common reason of broken sleep on AMD systems are USB problems. \
+You have to map your USB ports. If you have working Windows instance I recommend [this tool](https://github.com/usbtoolbox/tool), otherwise you have to [do it manually](https://dortania.github.io/OpenCore-Post-Install/usb/#macos-and-the-15-port-limit). \
+After mapping remember to disable `Kernel -> Quriks -> XhciPortLimit` in your configuration file.
+
+If map does not fix your issue you can try to patch `_STA` method of your USB controllers. Go to `ACPI -> Add` in your configuration file and set `Enabled` to `true` under `SSTD-SLEEP` section. By default this SSDT patches `_SB.PCI0.GPP2.PTXH` device. In most cases your controller will have another address. \
+You can find it with [Hackintool](https://github.com/headkaze/Hackintool) - go to `PCIe` tab, then look for devices with `USB controller` value under `Subclass`. When you find address of your controller you have to open `SSDT-SLEEP.aml` with [MaciASL](https://github.com/acidanthera/MaciASL) and change addresses.
+If you have more than one controller you can try to patch `_STA` for every of them.
+
+If USB fixes does not help, probably something another is broken. You can read more detailed guide about it on [Dortania](https://dortania.github.io/OpenCore-Post-Install/universal/sleep.html).
+
 ## Virtualization
 
 ### Prerequisites
@@ -284,7 +298,6 @@ Use the following configuration for best results.
 - Post-Install: [\*click\*](https://dortania.github.io/OpenCore-Post-Install/)
 - Troubleshooting: [\*click\*](https://dortania.github.io/OpenCore-Install-Guide/troubleshooting/troubleshooting.html)
 - ACPI patching: [\*click\*](https://dortania.github.io/Getting-Started-With-ACPI/)
-- USB mapping: [\*click\*](https://dortania.github.io/OpenCore-Post-Install/usb/)
 
 If you have any other questions or issues, feel free to ask on [AMD-OSX Discord](https://discord.gg/EfCYAJW) or [Forum](https://forum.amd-osx.com).
 
