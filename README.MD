@@ -25,6 +25,7 @@
 - [PAT Patch](#PAT-Patch)
 - [MKL and Intel Fast Memset Patch](#MKL-and-Intel-Fast-Memset-Patch)
 - [DRMs support](#DRMs-support)
+- [Sleep](#Sleep)
 - [Virtualization](#Virtualization)
 - [Guides](#Guides)
 - [Credits](#Credits)
