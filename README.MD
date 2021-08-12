@@ -40,9 +40,6 @@
 
 There were some reports about issues that occur while using MSI motherboards on Monterey Beta 3. The only possible solution to this problem as of right now is to downgrade to Monterey Beta 2 and wait for a confirmed workaround.
 
-Since Monterey (12.x) there are some issues with Steam - if you have AirPods connected to Hackintosh while Steam is starting it will crash. Same issue was found while starting some games (e. g. Don't Starve). \
-Currently only workaround is temporarily disconnecting AirPods, launching Steam and then reconnecting your AirPods.
-
 ## Hardware Compatibility
 
 ### Central Processing Unit (CPU)
