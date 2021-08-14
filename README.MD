@@ -163,15 +163,15 @@ Rembember that AirDrop, Handoff, etc. works only on cards with Broadcom chip.
   - _SystemUUID_ - SmUUID
 - _ROM_ entry should be set to your [network card's MAC address](https://www.wikihow.com/Find-the-MAC-Address-of-Your-Computer), without separators (e. g. `:`, `-`).
 
-| **GPU Series**       | **Model**                     |
-| -------------------- | ----------------------------- |
-| AMD Navi Series      | iMacPro1,1 <sup>1</sup>       |
-| AMD Vega Series      | iMacPro1,1 <sup>1</sup>       |
-| AMD Polaris Series   | iMacPro1,1 <sup>1</sup>       |
-| AMD Radeon R5/R7/R9  | MacPro6,1                     |
-| AMD HD 8000 Series   | MacPro6,1                     |
-| AMD HD 7000 Series   | MacPro6,1                     |
-| Nvidia Kepler Series | MacPro7,1 <sup>2</sup>        |
+| **GPU Series**       | **Model**               |
+| -------------------- | ----------------------- |
+| AMD Navi Series      | iMacPro1,1 <sup>1</sup> |
+| AMD Vega Series      | iMacPro1,1 <sup>1</sup> |
+| AMD Polaris Series   | iMacPro1,1 <sup>1</sup> |
+| AMD Radeon R5/R7/R9  | MacPro6,1               |
+| AMD HD 8000 Series   | MacPro6,1               |
+| AMD HD 7000 Series   | MacPro6,1               |
+| Nvidia Kepler Series | MacPro7,1 <sup>2</sup>  |
 
 <sup>1</sup> For Catalina and newer you can also use `MacPro7,1` if you have some issues (e. g. unfixable DRMs).
 
@@ -189,16 +189,17 @@ Rembember that AirDrop, Handoff, etc. works only on cards with Broadcom chip.
 9. Apply [Ryzen patch script](/Resources/ryzen_patch.sh) - it solves MKL (Math Kernel Library) issues and sets correct sleep parameters.
 10. Map your USB ports. If you have working Windows instance I recommend [this tool](https://github.com/usbtoolbox/tool), otherwise you have to [do it manually](https://dortania.github.io/OpenCore-Post-Install/usb/#macos-and-the-15-port-limit). This step is not required if all of your ports are working with correct speed, but it's recommended. \
 After mapping remember to disable `Kernel -> Quriks -> XhciPortLimit` in your configuration file.
-11. When everything work you can disable verbose mode - then you will see Apple's logo instead of logs while booting. To do it you have to remove `-v debug=0x100 keepsyms=1` from `boot-args` in your configuration file.
+11. If you have `Unknown` instead of your CPU name in About this Mac go to `PlatformInfo -> Generic -> ProcessorType` in your configuration file. Set it to `3841` if your CPU has 8 or more physical cores, else set it to `1537`.
+12. When everything work you can disable verbose mode - then you will see Apple's logo instead of logs while booting. To do it you have to remove `-v debug=0x100 keepsyms=1` from `boot-args` in your configuration file.
 
 ### Bootstrap
 In general, enabling Bootstrap is not required, but it will protect your OpenCore from being overriden. \
 Remember to do not enable Bootstrap on pendrive - do it only after copying OpenCore to your disk's EFI.
 
-12. Go to `Misc -> Boot -> LauncherOption` in your configuration file and set it to `Full`.
-13. Reboot your computer.
-14. Reboot PC again and go to your BIOS settings. In boot options you will see new boot entry named `OpenCore`. Set BIOS to boot from it, instead of your drive.
-15. It's done!
+13. Go to `Misc -> Boot -> LauncherOption` in your configuration file and set it to `Full`.
+14. Reboot your computer.
+15. Reboot PC again and go to your BIOS settings. In boot options you will see new boot entry named `OpenCore`. Set BIOS to boot from it, instead of your drive.
+16. It's done!
 
 ## BIOS Settings
 
