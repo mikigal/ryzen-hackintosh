@@ -155,6 +155,13 @@ Rembember that AirDrop, Handoff, etc. works only on cards with Broadcom chip.
 
 - Run the tool and select `Generate SMBIOS`.
 - Select the appropriate model for your hardware using the table below.
+- Go to [Apple Coverage](https://checkcoverage.apple.com/) and paste generated _Serial_. You need "Invalid Serial" or "Purchase Date not Validated" message. If you get something another you have to generate SMBIOS data and check it again.
+- Open _config.plist_ and search for `PlatformInfo -> Generic` and replace these values:
+  - _SystemProductName_ - Model
+  - _MLB_ - Board Serial
+  - _SystemSerialNumber_ - Serial
+  - _SystemUUID_ - SmUUID
+- _ROM_ entry should be set to your [network card's MAC address](https://www.wikihow.com/Find-the-MAC-Address-of-Your-Computer), without separators (e. g. `:`, `-`).
 
 | **GPU Series**       | **Model**                     |
 | -------------------- | ----------------------------- |
@@ -164,18 +171,11 @@ Rembember that AirDrop, Handoff, etc. works only on cards with Broadcom chip.
 | AMD Radeon R5/R7/R9  | MacPro6,1                     |
 | AMD HD 8000 Series   | MacPro6,1                     |
 | AMD HD 7000 Series   | MacPro6,1                     |
-| Nvidia Kepler Series | It's complicated <sup>2</sup> |
+| Nvidia Kepler Series | MacPro7,1 <sup>2</sup>        |
 
-<sup>1</sup> For Catalina and newer you can also use MacPro7,1 if you have some issues (e. g. unfixable DRMs).
+<sup>1</sup> For Catalina and newer you can also use `MacPro7,1` if you have some issues (e. g. unfixable DRMs).
 
-<sup>2</sup> For Catalina and older use `iMac14,2`, for Big Sur and newer `MacPro7,1`. Monterey and newer does not support any Nvidia GPUs.
-
-- Open _config.plist_ and search for `PlatformInfo -> Generic` and replace these values:
-  - _MLB_ - Board Serial
-  - _SystemSerialNumber_ - Serial
-  - _SystemUUID_ - SmUUID
-  - _SystemProductName_ - Model
-- _ROM_ entry should be set to your [network card's MAC address](https://www.wikihow.com/Find-the-MAC-Address-of-Your-Computer).
+<sup>2</sup> For Catalina and older use `iMac14,2`.
 
 ### Configuration
 
