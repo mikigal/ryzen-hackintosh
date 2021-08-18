@@ -57,7 +57,7 @@ _Support for 15h (FX series), 16h (A series) and Threadripper CPUs is not covere
 | Nvidia     | Partially <sup>1</sup>        |
 | AMD        | Yes <sup>2</sup> <sup>3</sup> |
 
-<sup>1</sup> Kepler series under correct [PAT Patch](#PAT-Patch). Others require WebDrivers which work only in High Sierra or are not supported. More details on [Dortania](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/nvidia-gpu.html)
+<sup>1</sup> Kepler series under correct [PAT Patch](#PAT-Patch). Others require WebDrivers which work only in High Sierra or are not supported. More details on [Dortania](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/nvidia-gpu.html).
 
 <sup>2</sup> Some R7 and R9 GPUs require FakeID. More details [here](https://dortania.github.io/Getting-Started-With-ACPI/Universal/spoof.html)
 
@@ -95,7 +95,7 @@ To disable `SetupVirtualMap` simply go to `Booter -> Quirks -> SetupVirtualMap` 
 Follow these steps if your audio chipset is different than the one specified in the [Specification](#Specification).
 
 - Go [here](https://github.com/acidanthera/applealc/wiki/supported-codecs) to find your audio chipset codec. (Under _Codec_)
-  - If you can't find your codec on the list, then you probably have to use VoodoHDA. This repository does not cover or support the use of VoodoHDA.
+  - If you can't find your codec on the list, then you probably have to use [VoodooHDA](https://sourceforge.net/projects/voodoohda/). This repository does not cover or support the use of VoodooHDA.
 - Under _Revisions and layouts_ you'll see bunch of numbers and layout ids.
 - Find your `boot-args` settings and look for `alcid=11`.
 - Try every layout id (except _0x_ values) one by one until it works.
