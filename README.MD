@@ -67,6 +67,8 @@ For **AMD Navi 10 Series GPUs (RX 5500, RX 5600, RX 5700)** you need to add `agd
 
 [PAT Patch made by Shaneee](#PAT-Patch) is used by default. It improves GPU performance but it has a few caveats. Audio passed by HDMI or DisplayPort won't work or will be unstable. It also **may not** work with Nvidia GPUs.
 
+If you want to control monitor's brightness or HDMI/DP audio you need to use [MonitorControl](https://github.com/MonitorControl/MonitorControl) for that.
+
 ### Laptops
 All laptops with AMD CPUs are not supported due to integrated GPUs incompatbility.
 
