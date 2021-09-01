@@ -1,5 +1,6 @@
 #!/bin/bash
 # Credits to XLNC (https://gist.github.com/naveenkrdy/26760ac5135deed6d0bb8902f6ceb6bd)
+# Credits to tomnic (https://www.macos86.it/profile/69-tomnic/) for libfakeintel.dylib
 
 echo "Starting patching..."
 
