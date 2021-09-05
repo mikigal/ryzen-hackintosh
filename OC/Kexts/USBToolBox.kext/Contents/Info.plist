@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BuildMachineOSBuild</key>
+	<string>19H1030</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleExecutable</key>
+	<string>USBToolBox</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.dhinakg.USBToolBox.kext</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>USBToolBox</string>
+	<key>CFBundlePackageType</key>
+	<string>KEXT</string>
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>MacOSX</string>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>1.0.1</string>
+	<key>DTCompiler</key>
+	<string>com.apple.compilers.llvm.clang.1_0</string>
+	<key>DTPlatformBuild</key>
+	<string>12B45b</string>
+	<key>DTPlatformName</key>
+	<string>macosx</string>
+	<key>DTPlatformVersion</key>
+	<string>11.0</string>
+	<key>DTSDKBuild</key>
+	<string>20A2408</string>
+	<key>DTSDKName</key>
+	<string>macosx11.0</string>
+	<key>DTXcode</key>
+	<string>1220</string>
+	<key>DTXcodeBuild</key>
+	<string>12B45b</string>
+	<key>IOKitPersonalities</key>
+	<dict/>
+	<key>LSMinimumSystemVersion</key>
+	<string>10.11</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © 2020-2021 Dhinak G. All rights reserved.</string>
+	<key>OSBundleCompatibleVersion</key>
+	<string>1.0.0</string>
+	<key>OSBundleLibraries</key>
+	<dict>
+		<key>com.apple.driver.AppleUSBHostMergeProperties</key>
+		<string>1.0</string>
+		<key>com.apple.iokit.IOPCIFamily</key>
+		<string>2.9</string>
+		<key>com.apple.kpi.iokit</key>
+		<string>15.0.0</string>
+		<key>com.apple.kpi.libkern</key>
+		<string>15.0.0</string>
+	</dict>
+	<key>OSBundleRequired</key>
+	<string>Root</string>
+</dict>
+</plist>

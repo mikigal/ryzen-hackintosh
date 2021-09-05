@@ -183,14 +183,13 @@ Rembember that AirDrop, Handoff, etc. works only on cards with Broadcom chip.
 
 5. You should update your BIOS to the latest version and configure it appropriately. See [BIOS Settings](#BIOS-Settings) for details.
 6. Remember to verify your hardware and apply appropriate changes to your configuration file. See [Hardware Compatibility](#Hardware-compatibility) for details.
-7. That's it! Now you can boot macOS installer.
+7. Map your USB ports with [USBToolBox](https://github.com/USBToolBox/tool). Guide about it is available [here](https://github.com/USBToolBox/tool#usage). You have to do it from Windows.
+8. That's it! Now you can boot macOS installer.
 
 ### Post-Installation
 
-8. Copy your EFI directory onto your main drive EFI partition, you'll be able to boot the system without your bootable USB.
-9. Apply [Ryzen patch script](/Resources/ryzen_patch.sh) - it solves MKL (Math Kernel Library) issues and sets correct sleep parameters.
-10. Map your USB ports. If you have working Windows instance I recommend [this tool](https://github.com/usbtoolbox/tool), otherwise you have to [do it manually](https://dortania.github.io/OpenCore-Post-Install/usb/#macos-and-the-15-port-limit). This step is not required if all of your ports are working with correct speed, but it's recommended. \
-After mapping remember to disable `Kernel -> Quriks -> XhciPortLimit` in your configuration file.
+9. Copy your EFI directory onto your main drive EFI partition, you'll be able to boot the system without your bootable USB.
+10. Apply [Ryzen patch script](/Resources/ryzen_patch.sh) - it solves MKL (Math Kernel Library) issues and sets correct sleep parameters.
 11. If you have `Unknown` instead of your CPU name in About this Mac go to `PlatformInfo -> Generic -> ProcessorType` in your configuration file. Set it to `3841` if your CPU has 8 or more physical cores, else set it to `1537`.
 12. When everything work you can disable verbose mode - then you will see Apple's logo instead of logs while booting. To do it you have to remove `-v debug=0x100 keepsyms=1` from `boot-args` in your configuration file.
 
@@ -312,6 +311,7 @@ If you have any other questions or issues, feel free to ask on [AMD-OSX Discord]
 - [Acidanthera](https://github.com/acidanthera) for OpenCore and most of used kexts
 - [Trulyspinach](https://github.com/trulyspinach) for Ryzen power management and monitoring kexts
 - [Mieze](https://github.com/Mieze) for RealtekRTL8111 kext
+- [DhinakG](https://github.com/USBToolBox) for USBToolBox
 - [XLNC](https://github.com/naveenkrdy) for AppleMCEReporterDisabler and Adobe patches for AMD CPUs
 - [tomnic](https://www.macos86.it/profile/69-tomnic/) for libfakeintel.dylib used by Adobe patches
 - [Dortania](https://github.com/dortania) for OpenCore configuration guides
