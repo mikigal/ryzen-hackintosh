@@ -12,7 +12,7 @@ lib1_link="https://raw.githubusercontent.com/naveenkrdy/Misc/master/Libs/libiomp
 for file in $files_list; do
     find /Applications/Adobe* -type f -name $file | while read -r curr_file; do
         name=$(basename $curr_file)
-        sw_vers -productVersion | grep "11" >/dev/null 2>&1
+        sw_vers -productVersion | grep "11\|12" >/dev/null 2>&1
         [[ $? == 0 ]] && [[ $name =~ ^(MMXCore|FastCore)$ ]] && continue
         echo "found $curr_file"
         sudo -v
