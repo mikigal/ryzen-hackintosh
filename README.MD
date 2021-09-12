@@ -84,7 +84,7 @@ All laptops with AMD CPUs are not supported due to integrated GPUs incompatbilit
 
 Follow these steps to properly install _SSDT-CPUR_.
 
-- Download from [here](https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-CPUR.aml).
+- Download from [here](https://github.com/naveenkrdy/Misc/blob/master/SSDTs/Compiled/SSDT-CPUR.aml).
 - Install it to your `OC/ACPI` directory.
 - Add it to your configuration file. Use ProperTree for simplicity.
 
