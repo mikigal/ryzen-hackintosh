@@ -13,7 +13,7 @@
 | WiFi & Bluetooth | Fenvi T919 (BCM94360CD)                    |
 | OS Disk (NVMe)   | ADATA SX8200 Pro 1TB                       |
 
-**macOS version**: 12.0 Beta 6 (21A5506j) \
+**macOS version**: 12.0 Beta 7 (21A5522h) \
 **OpenCore version**: 0.7.3
 
 ## Table of contents
