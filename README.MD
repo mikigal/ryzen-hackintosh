@@ -57,7 +57,7 @@ _Support for 15h (FX series), 16h (A series) and Threadripper CPUs is not covere
 | Nvidia     | Partially <sup>1</sup>        |
 | AMD        | Yes <sup>2</sup> <sup>3</sup> |
 
-<sup>1</sup> Kepler series under correct [PAT Patch](#PAT-Patch). Others require WebDrivers which work only in High Sierra or are not supported. More details on [Dortania](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/nvidia-gpu.html).
+<sup>1</sup> Support for Nvidia GPUs was dropped in Monterey Beta 7, the only way to get it back is using [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher). Kepler series under correct [PAT Patch](#PAT-Patch). Others require WebDrivers which work only in High Sierra or are not supported. More details on [Dortania](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/nvidia-gpu.html).
 
 <sup>2</sup> Some R7 and R9 GPUs require FakeID. More details [here](https://dortania.github.io/Getting-Started-With-ACPI/Universal/spoof.html)
 
