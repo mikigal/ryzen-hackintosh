@@ -40,8 +40,6 @@
 
 There were some reports about issues that occur while using MSI motherboards on Monterey Beta 3. The only possible solution to this problem as of right now is to downgrade to Monterey Beta 2 and wait for a confirmed workaround.
 
-To receive new Monterey beta you have to set `Misc -> Security -> SecureBootModel` to `j137` for iMacPro1,1 or `j160` for MacPro7,1. After set it to correct value reboot and start downloading update. Then set `SecureBootModel` again to `Disabled`, you must do it before updater's reboot.
-
 ## Hardware Compatibility
 
 ### Central Processing Unit (CPU)
