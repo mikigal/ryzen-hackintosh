@@ -274,7 +274,7 @@ If USB fixes does not help, probably something another is broken. You can read m
 | VirtualBox        | Drastically decreased performance.                                                                             |
 | VMWare Fusion 10  | Only Catalina and older, for Catalina with [this patch](https://posts.boy.sh/vmware-fusion-catalina).          |
 | Docker            | Only [Docker in VirtualBox](https://github.com/sergeycherepanov/homebrew-docker-virtualbox) or Docker Toolbox. |
-| Android Emulator  | Does not work due to AppleHV, only workaround is Android-x86 with compatible VM software.                      |
+| Android Emulator  | Only [Android-x86](https://www.android-x86.org/) with compatible VM software.                                  |
 | iOS Emulator      | Works out of the box.                                                                                          |
 
 <sup>1</sup> Parallels will not work by default on Big Sur and newer, you need to use `SYSTEM_VERSION_COMPAT=1` environment variable.
