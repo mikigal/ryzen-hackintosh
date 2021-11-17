@@ -16,19 +16,19 @@ for file in $files_list; do
         [[ $? == 0 ]] && [[ $name =~ ^(MMXCore|FastCore)$ ]] && continue
         echo "found $curr_file"
         sudo -v
-        [[ ! -f ${curr_file}.back ]] && sudo cp -f $curr_file ${curr_file}.back || sudo cp -f ${curr_file}.back $curr_file
+        [[ ! -f "${curr_file}.back" ]] && sudo cp -f "$curr_file" "${curr_file}.back" || sudo cp -f "${curr_file}.back" "$curr_file"
         if [[ $name == "libiomp5.dylib" ]]; then
-            [[ ! -d $lib_dir ]] && mkdir $lib_dir
-            [[ ! -f $lib1_file ]] && cd $lib_dir && curl -sO $lib1_link
+            [[ ! -d "$lib_dir" ]] && mkdir "$lib_dir"
+            [[ ! -f "$lib1_file" ]] && cd "$lib_dir" && curl -sO $lib1_link
             adobelib_dir=$(dirname "$curr_file")
-            echo -n "replacing " && sudo cp -vf $lib1_file $adobelib_dir
+            echo -n "replacing " && sudo cp -vf "$lib1_file" "$adobelib_dir"
         elif [[ $name == "TextModel" ]]; then
             echo "emptying $curr_file"
-            sudo echo -n >$curr_file
+            sudo echo -n > "$curr_file"
         else
             echo "patching $curr_file"
-            sudo perl -i -pe 's|\x90\x90\x90\x90\x56\xE8\x6A\x00|\x90\x90\x90\x90\x56\xE8\x3A\x00|sg' $curr_file
-            sudo perl -i -pe 's|\x90\x90\x90\x90\x56\xE8\x4A\x00|\x90\x90\x90\x90\x56\xE8\x1A\x00|sg' $curr_file
+            sudo perl -i -pe 's|\x90\x90\x90\x90\x56\xE8\x6A\x00|\x90\x90\x90\x90\x56\xE8\x3A\x00|sg' "$curr_file"
+            sudo perl -i -pe 's|\x90\x90\x90\x90\x56\xE8\x4A\x00|\x90\x90\x90\x90\x56\xE8\x1A\x00|sg' "$curr_file"
         fi
     done
 done
