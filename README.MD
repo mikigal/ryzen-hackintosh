@@ -313,6 +313,7 @@ If you have any other questions or issues, feel free to ask on [AMD-OSX Discord]
 - [Acidanthera](https://github.com/acidanthera) for OpenCore and most of used kexts
 - [Trulyspinach](https://github.com/trulyspinach) for Ryzen power management and monitoring kexts
 - [Mieze](https://github.com/Mieze) for RealtekRTL8111 kext
+- [Pavo](https://github.com/Pavo-IM) for AppleMCEReportedDisabler kext
 - [DhinakG](https://github.com/USBToolBox) for USBToolBox
 - [XLNC](https://github.com/naveenkrdy) for Adobe patches for AMD CPUs
 - [tomnic](https://www.macos86.it/profile/69-tomnic/) for libfakeintel.dylib used by Adobe patches
