@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>20G417</string>
+	<string>20G527</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.7.0</string>
+	<string>1.7.1</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
@@ -25,23 +25,23 @@
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1.7.0</string>
+	<string>1.7.1</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
-	<string>12E507</string>
+	<string>13C100</string>
 	<key>DTPlatformName</key>
 	<string>macosx</string>
 	<key>DTPlatformVersion</key>
-	<string>11.3</string>
+	<string>12.1</string>
 	<key>DTSDKBuild</key>
-	<string>20E214</string>
+	<string>21C46</string>
 	<key>DTSDKName</key>
-	<string>macosx11.3</string>
+	<string>macosx12.1</string>
 	<key>DTXcode</key>
-	<string>1251</string>
+	<string>1321</string>
 	<key>DTXcodeBuild</key>
-	<string>12E507</string>
+	<string>13C100</string>
 	<key>IOKitPersonalities</key>
 	<dict>
 		<key>ALCUserClientProvider</key>
@@ -4390,14 +4390,20 @@
 					<string>ALC269VC for Lenovo Z580, John</string>
 					<key>ConfigData</key>
 					<data>
-					AVccQAFXHRABVx4hAVcfAwGHHCABhx0QAYce
-					gQGHHwMBlxwwAZcdAQGXHqABlx+QAbccEAG3
-					HQEBtx4XAbcfkAFXDAI=
+					AbccEAG3HQEBtx4XAbcfkAG3DAIBhxwgAYcd
+					EAGHHoEBhx8DAZccMAGXHQEBlx6gAZcfkAFX
+					HEABVx0QAVceIQFXHwMBVwwC
 					</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>28</integer>
+					<key>WakeConfigData</key>
+					<data>
+					AVcMAgG3DAI=
+					</data>
+					<key>WakeVerbReinit</key>
+					<true/>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
@@ -7750,9 +7756,9 @@
 					<integer>283902616</integer>
 					<key>ConfigData</key>
 					<data>
-					ASccQAEnHQEBJx6mAScftwF3HBABdx0BAXce
-					FwF3H5ABpxwwAacdEAGnHqEBpx8DAhccIAIX
-					HRACFx4hAhcfAwFHDAICFwwC
+					ASccMAEnHQABJx6gAScfkAF3HEABdx0AAXce
+					FwF3H5ABdwwCAYcccAGHHRABhx6BAYcfAAIX
+					HCACFx0QAhceIQIXHwA=
 					</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
@@ -7760,7 +7766,7 @@
 					<integer>11</integer>
 					<key>WakeConfigData</key>
 					<data>
-					AUcMAg==
+					AXcMAg==
 					</data>
 					<key>WakeVerbReinit</key>
 					<true/>
@@ -11786,7 +11792,7 @@
 					px8BAZccYAGXHZABlx6BAZcfAgG3HHABtx1A
 					AbceIQG3HwIBtwwCAecckAHnHREB5x5FAecf
 					AQEXHPABFx0AARceAAEXH0ABdxzwAXcdAAF3
-					HgABdx9A
+					HgABdx9AAgUABwIEfKM=
 					</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
@@ -11812,7 +11818,7 @@
 					5x5FAecfAQGHHBABhx0QAYceoQGHH5ABpxwg
 					AacdEAGnHoEBpx8BAZccgAGXHZABlx6hAZcf
 					AgF3HPABdx0AAXceAAF3H0ABFxzwARcdAAEX
-					HgABFx9A
+					HgABFx9AAgUABwIEfKM=
 					</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
@@ -14364,6 +14370,91 @@
 					<key>WakeConfigData</key>
 					<data>
 					AUcMAg==
+					</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>Codec</key>
+					<string>Realtek ALC235 for Lenovo M920x by meloay</string>
+					<key>CodecID</key>
+					<integer>283902517</integer>
+					<key>ConfigData</key>
+					<data>
+					AUccEAFHHQEBRx4XAUcfkAF3HPABdx0AAXce
+					AAF3H0ABhxzwAYcdAAGHHgABhx9AAZcccAGX
+					HRABlx6hAZcfAgGnHCABpx0QAacegQGnHwIB
+					txyAAbcdEAG3HgEBtx8BAdcc8AHXHQAB1x4A
+					AdcfQAHnHPAB5x0AAeceAAHnH0ACFxxQAhcd
+					EAIXHiECFx8CAUcMAgG3DAICFwwCAhcHwAIX
+					CIIBlwck
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>72</integer>
+					<key>WakeConfigData</key>
+					<data>
+					AUcMAgG3DAICFwwCAhcHwAIXCIIBlwck
+					</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>Codec</key>
+					<string>NUC8I5BEH JUST MIC</string>
+					<key>CodecID</key>
+					<integer>283902517</integer>
+					<key>ConfigData</key>
+					<data>
+					ASccUAEnHQEBJx6jAScfkg==
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>88</integer>
+					<key>WakeConfigData</key>
+					<data>
+					</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>Codec</key>
+					<string>ALC 292 for Dell M4800 with Dock</string>
+					<key>CodecID</key>
+					<integer>283902610</integer>
+					<key>Comment</key>
+					<string>ALC 292 for Dell M4800 with Dock</string>
+					<key>ConfigData</key>
+					<data>
+					ASccEAEnHQEBJx6mAScfkAE3HPABNx0AATce
+					AAE3H0ABRxxAAUcdAQFHHhcBRx+QAUcMAgFX
+					HFABVx1AAVceKwFXHwIBVwwCAWccgAFnHUAB
+					Zx4BAWcfAQFnDAIBhxwgAYcdIAGHHoEBhx8C
+					AZccIAGXHZABlx6BAZcfAQGnHCABpx0QAace
+					+wGnHwIBtxzwAbcdAAG3HgABtx9AAdcc8AHX
+					HQAB1x4AAdcfQAHnHPAB5x0AAeceAAHnH0A=
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>59</integer>
+					<key>WakeConfigData</key>
+					<data>
+					AUcMAgFXDAIBZwwCAacHJA==
 					</data>
 					<key>WakeVerbReinit</key>
 					<true/>
