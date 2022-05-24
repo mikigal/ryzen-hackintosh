@@ -1,0 +1,24 @@
+
+name: tests
+on:
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - '**.md'
+  pull_request:
+    paths-ignore:
+      - '**.md'
+jobs:
+  test-configs:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: brokeyourbike/ocvalidate-action@v0.2
+        with:
+          opencore-version: '0.8.0'
+          release: true
+
+      - run: |
+          ocvalidate "EFI/OC/config.plist" || exit 1
