@@ -21,4 +21,4 @@ jobs:
           release: true
 
       - run: |
-          ocvalidate "EFI/OC/config.plist" || exit 1
+          ocvalidate "OC/config.plist" || exit 1
