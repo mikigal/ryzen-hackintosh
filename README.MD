@@ -14,7 +14,7 @@
 | OS Disk (NVMe)   | ADATA SX8200 Pro 1TB                       |
 
 **macOS version**: 12.4 (21F79) \
-**OpenCore version**: 0.8.0
+**OpenCore version**: 0.8.3
 
 ## Table of contents
 
@@ -32,13 +32,12 @@
 
 ## Software Compatibility
 
+- Ventura (13.x)
 - Monterey (12.x)
 - Big Sur (11.x)
 - Catalina (10.15.x)
 - Mojave (10.14.x)
 - High Sierra (10.13.x)
-
-There were some reports about issues that occur while using MSI motherboards on Monterey Beta 3. The only possible solution to this problem as of right now is to downgrade to Monterey Beta 2 and wait for a confirmed workaround.
 
 ## Hardware Compatibility
 
