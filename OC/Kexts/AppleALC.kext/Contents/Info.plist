@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>21G217</string>
+	<string>21G320</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.7.7</string>
+	<string>1.7.8</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
@@ -25,7 +25,7 @@
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1.7.7</string>
+	<string>1.7.8</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
@@ -11652,6 +11652,35 @@
 					<key>CodecID</key>
 					<integer>283906592</integer>
 					<key>CodecName</key>
+					<string>CaseySJ - ALC1220 for Gigabyte B550 Vision D</string>
+					<key>ConfigData</key>
+					<data>
+					AUccEAFHHUABRx4QAUcfkAFHDAIBVxwgAVcd
+					EAFXHgEBVx8BAWccMAFnHWABZx4BAWcfAQGH
+					HEABhx2QAYceoAGHH5ABlxxQAZcdkAGXHqEB
+					lx8CAaccYAGnHTABpx6BAacfAQG3HHABtx1A
+					AbceIQG3HwIBtwwCAeccgAHnHSEB5x5FAecf
+					AQ==
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>20</integer>
+					<key>WakeConfigData</key>
+					<data>
+					AUcMAg==
+					</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>CodecID</key>
+					<integer>283906592</integer>
+					<key>CodecName</key>
 					<string>ALC1220 for MSI GE63 Raider RGB 8RF</string>
 					<key>ConfigData</key>
 					<data>
@@ -12374,6 +12403,33 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>13</integer>
+					<key>WakeConfigData</key>
+					<data>
+					AUcMAg==
+					</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>CodecID</key>
+					<integer>283906408</integer>
+					<key>CodecName</key>
+					<string>Realtek ALC S1220A for Asus ROG Strix X570-F Gaming (based on Mirone's layout 7)</string>
+					<key>ConfigData</key>
+					<data>
+					AUccEAFHHUABRx4RAUcfAQFXHFABVx0QAVce
+					AQFXHwEBZxwwAWcdYAFnHgEBZx8BAYccYAGH
+					HZABhx6gAYcfkAGXHHABlx2QAZcegQGXHwEB
+					txwgAbcdQAG3HiEBtx8BAUcMAg==
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>15</integer>
 					<key>WakeConfigData</key>
 					<data>
 					AUcMAg==
@@ -14895,6 +14951,32 @@
 					<key>WakeConfigData</key>
 					<data>
 					AhcMAgG3DAI=
+					</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>Codec</key>
+					<string>juniorcaesar - Acer Aspire A315-56-327T ALC255</string>
+					<key>CodecID</key>
+					<integer>283902549</integer>
+					<key>ConfigData</key>
+					<data>
+					AZccEAGXHZABlx6AAZcfAQGXByQBRxwgAUcd
+					EAFHHhcBRx+QAUcMAgIXHDACFx0QAhceIQIX
+					HwECFwwCAhcIgwEnHMABJx0AASceoAEnH5A=
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>69</integer>
+					<key>WakeConfigData</key>
+					<data>
+					AUcMAgIXDAICFwiDAZcHJA==
 					</data>
 					<key>WakeVerbReinit</key>
 					<true/>
