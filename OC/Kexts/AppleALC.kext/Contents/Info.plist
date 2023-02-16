@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>21G320</string>
+	<string>21G419</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.7.8</string>
+	<string>1.7.9</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
@@ -25,7 +25,7 @@
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1.7.8</string>
+	<string>1.7.9</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
@@ -3872,6 +3872,30 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>3</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>Codec</key>
+					<string>Goldfish64 - ALC268 for Dell Inspiron Mini 9</string>
+					<key>CodecID</key>
+					<integer>283902568</integer>
+					<key>ConfigData</key>
+					<data>
+					AScc8AEnHQABJx4AAScfQAE3HPABNx0AATce
+					AAE3H0ABRxwQAUcdAQFHHhMBRx+QAUcMAgFX
+					HCABVx1AAVceIQFXHwEBVwwCAWcc8AFnHQAB
+					Zx4AAWcfQAGHHEABhx2QAYcegQGHHwEBlxww
+					AZcdAQGXHqABlx+QAacc8AGnHQABpx4AAacf
+					QAHHHPABxx0AAcceAAHHH0AB1xzwAdcdAAHX
+					HgAB1x9AAecc8AHnHQAB5x4AAecfQA==
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>11</integer>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
@@ -10692,7 +10716,7 @@
 					<key>CodecID</key>
 					<integer>283904146</integer>
 					<key>Comment</key>
-					<string>Custom ALC892 for MSI Z370-A PRO by GeorgeWan</string>
+					<string>GeorgeWan - ALC892 for MSI-Z370-A PRO</string>
 					<key>ConfigData</key>
 					<data>
 					ARcc8AEXHQABFx4AARcfQAEnHPABJx0AASce
@@ -12131,7 +12155,7 @@
 					<key>CodecID</key>
 					<integer>283904768</integer>
 					<key>CodecName</key>
-					<string>GeorgeWan - ALCS1200A for ASROCK Z490 Steel Legend</string>
+					<string>GeorgeWan - ALCS1200A for ASROCK-Z490-Steel-Legend</string>
 					<key>ConfigData</key>
 					<data>
 					ARcc8AEXHQABFx4AARcfQAFHHBABRx1AAUce
@@ -12146,6 +12170,32 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>51</integer>
+					<key>WakeConfigData</key>
+					<data>
+					AUcMAgG3DAI=
+					</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>CodecID</key>
+					<integer>283904768</integer>
+					<key>CodecName</key>
+					<string>GeorgeWan - ALCS1200A for MSI-Mortar-B460M</string>
+					<key>ConfigData</key>
+					<data>
+					ARcc8AEXHQABFx4AARcfQAFHHBABRx1AAUce
+					EQFHH5ABRwwCAVccIAFXHRABVx4BAVcfAQFn
+					HDABZx1gAWceAQFnHwEBdxzwAXcdAAF3HgAB
+					dx9AAYccQAGHHZABhx6gAYcfkAGXHGABlx2Q
+					AZcegQGXHwIBpxxQAacdMAGnHoEBpx8BAbcc
+					cAG3HUABtx4hAbcfAgG3DAIB5xyQAecdYQHn
+					HksB5x8B
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>52</integer>
 					<key>WakeConfigData</key>
 					<data>
 					AUcMAgG3DAI=
@@ -12553,6 +12603,32 @@
 					<key>WakeConfigData</key>
 					<data>
 					AXcMAgFnDAI=
+					</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>Codec</key>
+					<string>Andres ZeroCross - Conexant CX8070 for Lenovo ThinkPad E14</string>
+					<key>CodecID</key>
+					<integer>351346566</integer>
+					<key>ConfigData</key>
+					<data>
+					AXccEAF3HQABdx4XAXcfkQGnHCABpx0AAace
+					oAGnH5ABlxwwAZcdEAGXHoEBlx8AAWccQAFn
+					HRABZx4hAWcfAAF3DAIBZwwCAZcHJAGnByQ=
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>21</integer>
+					<key>WakeConfigData</key>
+					<data>
+					AXcMAgFnDAIBlwckAacHJA==
 					</data>
 					<key>WakeVerbReinit</key>
 					<true/>
@@ -14206,6 +14282,32 @@
 					AwAAAA==
 					</data>
 					<key>Codec</key>
+					<string>HafidzRadhival - DELL Vostro 5468 ALC256 (3246)</string>
+					<key>CodecID</key>
+					<integer>283902550</integer>
+					<key>ConfigData</key>
+					<data>
+					ASccQAEnHQEBJx6mAScfkAFHHDABRx0BAUce
+					FwFHH5ABRwwCAZccIAGXHRABlx6BAZcfAgIX
+					HBACFx0QAhceIQIXHwICFwwC
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>12</integer>
+					<key>WakeConfigData</key>
+					<data>
+					AUcMAg==
+					</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>Codec</key>
 					<string>Enrico - GA-Z77X-D3Hrev1.0 - VIA VT2020/2021</string>
 					<key>CodecID</key>
 					<integer>285606977</integer>
@@ -14529,6 +14631,37 @@
 					<key>WakeConfigData</key>
 					<data>
 					AUcMAgIXDAI=
+					</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>Codec</key>
+					<string>GeorgeWan - ALC897 for MSI-Z590-A-PRO</string>
+					<key>CodecID</key>
+					<integer>283904151</integer>
+					<key>ConfigData</key>
+					<data>
+					ARcc8AEXHQABFx4AARcfQAEnHPABJx0AASce
+					AAEnH0ABRxwQAUcdQAFHHhEBRx+QAUcMAgFX
+					HCABVx0QAVceAQFXHwEBZxwwAWcdYAFnHgEB
+					Zx8BAXccQAF3HSABdx4BAXcfAQGHHFABhx2Q
+					AYceoAGHH5ABlxxwAZcdkAGXHoEBlx8CAacc
+					YAGnHTABpx6BAacfAQG3HIABtx1AAbceIQG3
+					HwIBtwwCAccc8AHHHQABxx4AAccfQAHnHPAB
+					5x0AAeceAAHnH0AB9xzwAfcdAAH3HgAB9x9A
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>13</integer>
+					<key>WakeConfigData</key>
+					<data>
+					AUcMAgG3DAI=
 					</data>
 					<key>WakeVerbReinit</key>
 					<true/>
@@ -14910,13 +15043,9 @@
 					<integer>283902549</integer>
 					<key>ConfigData</key>
 					<data>
-					AScc8AEnHQABJx4AAScfQAFHHBABRx0BAUce
-					FwFHH5ABdxzwAXcdAAF3HgABdx9AAYcc8AGH
-					HQABhx4AAYcfQAIXDAIBlxxAAZcdEAGXHosB
-					lx8CAacc8AGnHQABpx4AAacfQAG3HCABtx0Q
-					AbceAQG3HwEB1xzwAdcdAAHXHgAB1x9AAecc
-					8AHnHQAB5x4AAecfQAIXHDACFx0QAhceKwIX
-					HwIBRwwC
+					AZccEAGXHZABlx6AAZcfAQGXByQBRxwgAUcd
+					EAFHHhcBRx+QAUcMAgIXHDACFx0QAhceIQIX
+					HwECFwwCAhcIgwEnHMABJx0AASceoAEnH5A=
 					</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
@@ -14940,9 +15069,10 @@
 					<integer>283902550</integer>
 					<key>ConfigData</key>
 					<data>
-					AhccEAIXHRACFx4hAhcfAgIXDAIB5xwgAecd
-					EQHnHkUB5x8BAZccMAGXHRABlx6gAZcfkgG3
-					HEABtx0QAbceEQG3HwEBtwwC
+					ASccAAEnHQABJx4QAScfQAIXHBACFx0QAhce
+					IQIXHwICFwwCAeccIAHnHREB5x5FAecfAQHX
+					HCkB1x3AAdceRAHXH0ABlxwwAZcdEAGXHqAB
+					lx+SAbccQAG3HRABtx4RAbcfAQG3DAI=
 					</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
@@ -14966,9 +15096,9 @@
 					<integer>283902549</integer>
 					<key>ConfigData</key>
 					<data>
-					AZccEAGXHZABlx6AAZcfAQGXByQBRxwgAUcd
-					EAFHHhcBRx+QAUcMAgIXHDACFx0QAhceIQIX
-					HwECFwwCAhcIgwEnHMABJx0AASceoAEnH5A=
+					AZccEAGXHRABlx6LAZcfAQFHHCABRx0QAUce
+					FwFHH5ABRwwCAhccMAIXHRACFx4rAhcfAQIX
+					DAICFwiDASccQAEnHQABJx6gAScfkAGXByI=
 					</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
@@ -14976,7 +15106,7 @@
 					<integer>69</integer>
 					<key>WakeConfigData</key>
 					<data>
-					AUcMAgIXDAICFwiDAZcHJA==
+					AUcMAgIXDAICFwiDAZcHIg==
 					</data>
 					<key>WakeVerbReinit</key>
 					<true/>
