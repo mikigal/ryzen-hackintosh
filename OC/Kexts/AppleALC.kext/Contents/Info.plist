@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>21G419</string>
+	<string>21G531</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.8.1</string>
+	<string>1.8.2</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
@@ -25,7 +25,7 @@
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1.8.1</string>
+	<string>1.8.2</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
@@ -8232,12 +8232,12 @@
 					AScfkAE3HPABNx0AATceAAE3HwABRxwQAUcd
 					AQFHHhcBRx+QAUcMAgFXHPABVx0AAVceAAFX
 					HwABZxzwAWcdAAFnHgABZx8AAXcc8AF3HQAB
-					dx4AAXcfAAGHHDABhx0QAYcegQGHHwMBlxzw
-					AZcdAAGXHgABlx8AAacc8AGnHQABpx4AAacf
-					AAG3HPABtx0AAbceAAG3HwABxxzwAccdAAHH
-					HgABxx8AAdcc8AHXHQAB1x4AAdcfAAHnHPAB
-					5x0AAeceAAHnHwAB9xzwAfcdAAH3HgAB9x8A
-					Agcc8AIHHQACBx4AAgcfAA==
+					dx4AAXcfAAF3DAIBhxwwAYcdEAGHHoEBhx8D
+					AZcc8AGXHQABlx4AAZcfAAGnHPABpx0AAace
+					AAGnHwABtxzwAbcdAAG3HgABtx8AAccc8AHH
+					HQABxx4AAccfAAHXHPAB1x0AAdceAAHXHwAB
+					5xzwAecdAAHnHgAB5x8AAfcc8AH3HQAB9x4A
+					AfcfAAIHHPACBx0AAgceAAIHHwA=
 					</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
@@ -8245,7 +8245,7 @@
 					<integer>29</integer>
 					<key>WakeConfigData</key>
 					<data>
-					AUcMAg==
+					AUcMAgF3DAIBhwcl
 					</data>
 					<key>WakeVerbReinit</key>
 					<true/>
@@ -15282,6 +15282,36 @@
 					<key>WakeConfigData</key>
 					<data>
 					AUcMAgIXDAI=
+					</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>CodecID</key>
+					<integer>283906592</integer>
+					<key>CodecName</key>
+					<string>hgsshaanxi- ALC1220 for Gigabyte Z490 Aorus Master</string>
+					<key>ConfigData</key>
+					<data>
+					AScc8AEnHQABJx4AAScfQAFHHBABRx1AAUce
+					IQFHHwIBRwwCAVccIAFXHRABVx4BAVcfAQFn
+					HDABZx1gAWceAQFnHwEBdxzwAXcdAAF3HgAB
+					dx9AAYccQAGHHZABhx6gAYcfkQGXHGABlx2Q
+					AZcegQGXHwIBpxxQAacdMAGnHoEBpx8BAbcc
+					cAG3HUABtx4RAbcfkAG3DAIB1xzwAdcdAAHX
+					HgAB1x9AAecckAHnHSEB5x5FAecfkQ==
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>18</integer>
+					<key>WakeConfigData</key>
+					<data>
+					AUcMAgG3DAI=
 					</data>
 					<key>WakeVerbReinit</key>
 					<true/>
