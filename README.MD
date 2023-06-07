@@ -39,6 +39,8 @@
 - Mojave (10.14.x)
 - High Sierra (10.13.x)
 
+**Note about macOS Sonoma**: I don't add support for macOS Sonoma due to many bugs (in OpenCore, kexts and beta of macOS). You can do it yourself by updating OC, kexts and kernel patches manually to it's beta versions. Support will be added after public beta release.
+
 ## Hardware Compatibility
 
 ### Central Processing Unit (CPU)
