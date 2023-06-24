@@ -14,14 +14,6 @@
 				<key>Path</key>
 				<string>SSDT-EC-USBX-DESKTOP.aml</string>
 			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Patch for USB controllers, fixes sleep and instant wake</string>
-				<key>Enabled</key>
-				<false/>
-				<key>Path</key>
-				<string>SSDT-SLEEP.aml</string>
-			</dict>
 		</array>
 		<key>Delete</key>
 		<array/>

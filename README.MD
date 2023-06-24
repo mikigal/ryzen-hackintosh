@@ -262,10 +262,6 @@ The most common reason of broken sleep on AMD systems are USB problems. \
 You have to map your USB ports. If you have working Windows instance I recommend [this tool](https://github.com/usbtoolbox/tool), otherwise you have to [do it manually](https://dortania.github.io/OpenCore-Post-Install/usb/#macos-and-the-15-port-limit). \
 After mapping remember to disable `Kernel -> Quriks -> XhciPortLimit` in your configuration file.
 
-If map does not fix your issue you can try to patch `_STA` method of your USB controllers. Go to `ACPI -> Add` in your configuration file and set `Enabled` to `true` under `SSTD-SLEEP` section. By default this SSDT patches `_SB.PCI0.GPP2.PTXH` device. In most cases your controller will have another address. \
-You can find it with [Hackintool](https://github.com/headkaze/Hackintool) - go to `PCIe` tab, then look for devices with `USB controller` value under `Subclass`. When you find address of your controller you have to open `SSDT-SLEEP.aml` with [MaciASL](https://github.com/acidanthera/MaciASL) and change addresses.
-If you have more than one controller you can try to patch `_STA` for every of them.
-
 If USB fixes does not help, probably something another is broken. You can read more detailed guide about it on [Dortania](https://dortania.github.io/OpenCore-Post-Install/universal/sleep.html).
 
 ## Virtualization
