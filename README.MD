@@ -14,7 +14,7 @@
 | OS Disk (NVMe)   | ADATA SX8200 Pro 1TB                       |
 
 **macOS version**: 13.3.1 (a) (22E772610a) \
-**OpenCore version**: 0.9.3
+**OpenCore version**: 0.9.4
 
 ## Table of contents
 
@@ -27,7 +27,7 @@
 - [DRMs support](#DRMs-support)
 - [Sleep](#Sleep)
 - [Virtualization](#Virtualization)
-- [Guides](#Guides)
+- [Guides and troubleshooting](#Guides-and-troubleshooting)
 - [Credits](#Credits)
 
 ## Software Compatibility
@@ -298,7 +298,7 @@ Use the following configuration for best results.
 - 3D Acceleration: DirectX 9
 - OS: Windows 7 (SP1, build 7601) with Aero theme disabled.
 
-## Guides
+## Guides and troubleshooting
 
 - Creating USB installer: [\*click\*](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/)
 - OpenCore configuration: [\*click\*](https://dortania.github.io/OpenCore-Install-Guide/AMD/zen.html)
@@ -307,6 +307,8 @@ Use the following configuration for best results.
 - ACPI patching: [\*click\*](https://dortania.github.io/Getting-Started-With-ACPI/)
 
 If you have any other questions or issues, feel free to ask on [AMD-OSX Discord](https://discord.gg/EfCYAJW) or [Forum](https://forum.amd-osx.com).
+Due to the diversity of configurations, I am unable to assist with issues related to specific computer specifications. For troubleshooting, I recommend starting with inquiries on the AMD-OSX Discord. 
+Please create an Issue on GitHub primarily for cases concerning more general problems.
 
 ## Credits
 
