@@ -307,7 +307,9 @@ Use the following configuration for best results.
 - ACPI patching: [\*click\*](https://dortania.github.io/Getting-Started-With-ACPI/)
 
 If you have any other questions or issues, feel free to ask on [AMD-OSX Discord](https://discord.gg/EfCYAJW) or [Forum](https://forum.amd-osx.com).
+
 Due to the diversity of configurations, I am unable to assist with issues related to specific computer specifications. For troubleshooting, I recommend starting with inquiries on the AMD-OSX Discord. 
+
 Please create an Issue on GitHub primarily for cases concerning more general problems.
 
 ## Credits
