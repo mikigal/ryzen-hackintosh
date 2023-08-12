@@ -32,7 +32,6 @@ body:
       label: What happened?
       description: Tell us all details, it will make solving this problem much easier!
       placeholder: My hackintosh panic while booting!
-      value: ""
     validations:
       required: true
   - type: input
