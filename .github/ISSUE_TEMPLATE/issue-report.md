@@ -1,21 +1,64 @@
 ---
 name: Issue report
 about: Issue report
-title: ''
+title: '[Issue]: '
 labels: ''
 assignees: ''
-
----
-
-| **Component**    | **Model**            |
-| ---------------- | -------------------- |
-| CPU              | [Your CPU]           |
-| Motherboard      | [Your motherboard]   |
-| GPU              | [Your GPU]           |
-| Audio Chipset    | [Your audio chipset] |
-| Ethernet         | [Your Ethernet card] |
-| WiFi & Bluetooth | [Your WiFi card]     |
-
-**Link to your EFI**: [Paste link]
-
-**Paste here screenshot or video with logs/kernel panic, remember to boot with `-v debug=0x100 keepsyms=1` parameters**
+body:
+  - type: dropdown
+    id: version
+    attributes:
+      label: macOS Version
+      description: What version of macOS are you running?
+      options:
+        - Ventura (13.x)
+        - Monterey (12.x)
+        - Big Sur (11.x)
+        - Catalina (10.15.x)
+        - Mojave (10.14.x)
+        - High Sierra (10.13.x)
+      default: 0
+    validations:
+      required: true
+  - type: textarea
+    id: specification
+    attributes:
+      label: Specification
+      description: Tell us your computer's specification
+      value: "| **Component**    | **Model**            |
+        | ---------------- | -------------------- |
+        | CPU              | [Your CPU]           |
+        | Motherboard      | [Your motherboard]   |
+        | GPU              | [Your GPU]           |
+        | Audio Chipset    | [Your audio chipset] |
+        | Ethernet         | [Your Ethernet card] |
+        | WiFi & Bluetooth | [Your WiFi card]     |"
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Tell us all details, it will make solving this problem much easier!
+      placeholder: My hackintosh panic while booting!
+      value: ""
+    validations:
+      required: true
+  - type: input
+    id: efi
+    attributes:
+      label: Your EFI link
+      description: Send us your EFI! You can remove SMBIOS informations if you want
+      placeholder: "https://drive.google.com/my-efi"
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Before creating an issue
+      description: Did you do it?
+      options:
+        - label: I tried fixing this issue myself and asked for support on [AMD-OSX Discord](https://discord.gg/EfCYAJW)
+          required: true
+        - label: I filled my computer specification
+          required: true
+        - label: I attached logs with enabled verbose mode
+          required: true
