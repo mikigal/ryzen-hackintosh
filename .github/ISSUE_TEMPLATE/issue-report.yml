@@ -2,6 +2,7 @@
 name: Issue report
 title: '[Issue]: '
 labels: ['issue']
+about: 'Please carefully describe all details about your issue'
 assignees: 
   - mikigal
 body:
