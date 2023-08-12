@@ -1,9 +1,9 @@
 ---
 name: Issue report
-about: Issue report
 title: '[Issue]: '
-labels: ''
-assignees: ''
+labels: ['issue']
+assignees: 
+  - mikigal
 body:
   - type: dropdown
     id: version
@@ -25,14 +25,7 @@ body:
     attributes:
       label: Specification
       description: Tell us your computer's specification
-      value: "| **Component**    | **Model**            |
-        | ---------------- | -------------------- |
-        | CPU              | [Your CPU]           |
-        | Motherboard      | [Your motherboard]   |
-        | GPU              | [Your GPU]           |
-        | Audio Chipset    | [Your audio chipset] |
-        | Ethernet         | [Your Ethernet card] |
-        | WiFi & Bluetooth | [Your WiFi card]     |"
+      value: "| **Component**    | **Model**            |\n| ---------------- | -------------------- |\n| CPU              | [Your CPU]           |\n| Motherboard      | [Your motherboard]   |\n| GPU              | [Your GPU]           |\n| Audio Chipset    | [Your audio chipset] |\n| Ethernet         | [Your Ethernet card] |\n| WiFi & Bluetooth | [Your WiFi card]     |"
   - type: textarea
     id: what-happened
     attributes:
