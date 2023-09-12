@@ -14,7 +14,7 @@
 | OS Disk (NVMe)   | ADATA SX8200 Pro 1TB                       |
 
 **macOS version**: 13.3.1 (a) (22E772610a) \
-**OpenCore version**: 0.9.4
+**OpenCore version**: 0.9.5
 
 ## Table of contents
 

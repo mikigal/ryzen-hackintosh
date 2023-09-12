@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>21G651</string>
+	<string>21G725</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.8.4</string>
+	<string>1.8.5</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
@@ -25,7 +25,7 @@
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1.8.4</string>
+	<string>1.8.5</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
@@ -629,6 +629,29 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>28</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>Codec</key>
+					<string>Goldfish64 - AD1884 - Panasonic Toughbook CF-30</string>
+					<key>CodecID</key>
+					<integer>299112580</integer>
+					<key>ConfigData</key>
+					<data>
+					ARccIAEXHRABFx4hARcfAQEnHBABJx0BASce
+					EAEnH5ABJwwCATcc8AE3HQABNx4AATcfQAFH
+					HDABRx0QAUcegQFHHwEBVxzwAVcdAAFXHgAB
+					Vx9AAWcc8AFnHQABZx4AAWcfQAGnHPABpx0A
+					AaceAAGnH0ABtxzwAbcdAAG3HgABtx9AAccc
+					8AHHHQABxx4AAccfQA==
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>11</integer>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
@@ -15521,6 +15544,66 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>38</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>Codec</key>
+					<string>liangyi - ALC897 for MSI PRO B760M-P DDR4</string>
+					<key>CodecID</key>
+					<integer>283904151</integer>
+					<key>ConfigData</key>
+					<data>
+					ARcc8AEXHQABFx4AARcfQAEnHPABJx0AASce
+					AAEnH0ABRxwQAUcdQAFHHhEBRx8BAUcMAgFX
+					HPABVx0AAVceAAFXH0ABZxzwAWcdAAFnHgAB
+					Zx9AAXcc8AF3HQABdx4AAXcfQAGHHDABhx2Q
+					AYceoAGHH5EBlxxwAZcdkAGXHoABlx8BAacc
+					UAGnHTABpx6BAacfAQG3HCABtx1AAbceIQG3
+					HwEBtwwCAccc8AHHHQABxx4AAccfQAHXHPAB
+					1x0AAdceAAHXH0AB5xzwAecdAAHnHgAB5x9A
+					Afcc8AH3HQAB9x4AAfcfQA==
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>98</integer>
+					<key>WakeConfigData</key>
+					<data>
+					AUcMAgG3DAI=
+					</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>Codec</key>
+					<string>Custom ALC897 by Marcos_Vinicios  for HUANANZHI QD4</string>
+					<key>CodecID</key>
+					<integer>283904151</integer>
+					<key>ConfigData</key>
+					<data>
+					AdccEAHXHcAB1x4kAdcfQAG3HCABtx1AAbce
+					IQG3HwIBtwwCAYccMAGHHZABhx6gAYcfkQEX
+					HEABFx3AARceFwEXH0ABRxxQAUcdQAFHHhEB
+					Rx8BAUcMAgGnHGABpx0wAacegQGnHwEBlxxw
+					AZcdkAGXHoEBlx8C
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>99</integer>
+					<key>WakeConfigData</key>
+					<data>
+					AUcMAgG3DAI=
+					</data>
+					<key>WakeVerbReinit</key>
+					<true/>
 				</dict>
 			</array>
 			<key>IOClass</key>
