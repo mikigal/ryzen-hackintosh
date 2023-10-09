@@ -1,21 +1,5 @@
 # OpenCore EFI for AMD Ryzen Hackintosh [![tests](https://github.com/mikigal/ryzen-hackintosh/actions/workflows/tests.yml/badge.svg)](https://github.com/mikigal/ryzen-hackintosh/actions/workflows/tests.yml)
 
-## Verified Specification
-
-| **Component**    | **Model**                                  |
-| ---------------- | ------------------------------------------ |
-| CPU              | AMD Ryzen 7 1700 @ 3.8GHz                  |
-| Motherboard      | ASUS B350 Plus                             |
-| RAM              | 16GB (2 x 8GB) Corsair Vengeance @ 3000MHz |
-| GPU              | MSI RX Vega 64                             |
-| Audio Chipset    | ALC-887                                    |
-| Ethernet         | Realtek RTL8111                            |
-| WiFi & Bluetooth | Fenvi T919 (BCM94360CD)                    |
-| OS Disk (NVMe)   | ADATA SX8200 Pro 1TB                       |
-
-**macOS version**: 14.0 (23A344) \
-**OpenCore version**: 0.9.5
-
 ## Table of contents
 
 - [Software Compatibility](#Software-Compatibility)
@@ -40,7 +24,7 @@
 - Mojave (10.14.x)
 - High Sierra (10.13.x)
 
-**Note about macOS Sonoma**: I don't add support for macOS Sonoma due to many bugs (in OpenCore, kexts and beta of macOS). You can do it yourself by updating OC, kexts and kernel patches manually to it's beta versions. Support will be added after public beta release. Also Broadcome WiFi cards **does not work** for now as Apple removed it's support. Support may be added in future by some kext, but it's not guaranteed.
+**Used OpenCore version**: 0.9.5
 
 ## Hardware Compatibility
 
