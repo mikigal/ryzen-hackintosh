@@ -24,7 +24,7 @@
 - Mojave (10.14.x)
 - High Sierra (10.13.x)
 
-**Used OpenCore version**: 0.9.5
+**Used OpenCore version**: 0.9.6
 
 ## Hardware Compatibility
 
@@ -293,6 +293,8 @@ Use the following configuration for best results.
 - Post-Install: [\*click\*](https://dortania.github.io/OpenCore-Post-Install/)
 - Troubleshooting: [\*click\*](https://dortania.github.io/OpenCore-Install-Guide/troubleshooting/troubleshooting.html)
 - ACPI patching: [\*click\*](https://dortania.github.io/Getting-Started-With-ACPI/)
+
+Firstly try to disable AMDRyzenCPUPowerManagement and SMCAMDProcessor kexts - it may cause random kernel panic with some hardware configurations.
 
 If you have any other questions or issues, feel free to ask on [AMD-OSX Discord](https://discord.gg/EfCYAJW) or [Forum](https://forum.amd-osx.com).
 

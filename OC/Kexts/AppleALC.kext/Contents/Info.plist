@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.8.6</string>
+	<string>1.8.7</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
@@ -25,7 +25,7 @@
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1.8.6</string>
+	<string>1.8.7</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
@@ -15483,10 +15483,10 @@
 					<integer>283902550</integer>
 					<key>ConfigData</key>
 					<data>
-					ASccAAEnHQABJx4QAScfQAIXHBACFx0QAhce
-					IQIXHwICFwwCAeccIAHnHREB5x5FAecfAQHX
-					HCkB1x3AAdceRAHXH0ABlxwwAZcdEAGXHqAB
-					lx+SAbccQAG3HRABtx4RAbcfAQG3DAI=
+					AZccMAGXHRABlx6gAZcfkgIXHBACFx0QAhce
+					IQIXHwICFwwCAbccQAG3HRABtx4RAbcfAQG3
+					DAIB5xwgAecdEQHnHkUB5x8BAUcc8AFHHREB
+					Rx4RAUcfQQFHDAI=
 					</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
@@ -15494,7 +15494,7 @@
 					<integer>68</integer>
 					<key>WakeConfigData</key>
 					<data>
-					AhcMAgG3DAI=
+					AhcMAgG3DAIBRwwC
 					</data>
 					<key>WakeVerbReinit</key>
 					<true/>
@@ -15709,6 +15709,35 @@
 					<key>WakeConfigData</key>
 					<data>
 					AUcMAgFXDAI=
+					</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>Codec</key>
+					<string>IDT 92HD81B1X5 by SkyrilHD for HP Elitebook 8x70 series</string>
+					<key>CodecID</key>
+					<integer>287143429</integer>
+					<key>ConfigData</key>
+					<data>
+					AKccMACnHRAApx4BAKcfIQCnDAIAtxwhALcd
+					EAC3HiEAtx8EALcMAgDHHBEAxx0QAMceoQDH
+					HwQAxwwCANccIADXHQEA1x4TANcfmQDXDAIA
+					5xzwAOcdAADnHvAA5x9AAOcMAgD3HBAA9x0Q
+					APcegQD3HyEA9wwCARccAAEXHQEBFx6jARcf
+					mQ==
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>76</integer>
+					<key>WakeConfigData</key>
+					<data>
+					AKcMAgC3DAIAxwwCANcMAgDnDAIA9wwC
 					</data>
 					<key>WakeVerbReinit</key>
 					<true/>
