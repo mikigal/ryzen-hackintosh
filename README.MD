@@ -74,6 +74,9 @@ Follow these steps to properly install _SSDT-CPUR_.
 - Install it to your `OC/ACPI` directory.
 - Add it to your configuration file. Use ProperTree for simplicity.
 
+#### _AM5_ Socket
+On AM5 motherboards with on-board Thunderbolt/USB4, macOS Ventura may not enumerate devices on the PCI bus properly when on-board WiFi and on-board Thunderbolt are both enabled. Patch `CaseySJ | IOPCIIsHotplugPort | Fix PCI bus enumeration on AM5 | 13.0+` bypasses the problem. This patch is disabled by default. If you have described issue you have to enable this patch.
+
 #### _Disabling SetupVirtualMap_
 
 To disable `SetupVirtualMap` simply go to `Booter -> Quirks -> SetupVirtualMap` in your configuration file and disable it. (Should be `false`).
