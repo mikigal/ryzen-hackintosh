@@ -4,8 +4,8 @@
 
 - [Software Compatibility](#Software-Compatibility)
 - [Hardware Compatibility](#Hardware-Compatibility)
-- [Installation](#Installation)
 - [BIOS Settings](#BIOS-Settings)
+- [Installation](#Installation)
 - [PAT Patch](#PAT-Patch)
 - [MKL and Intel Fast Memset Patch](#MKL-and-Intel-Fast-Memset-Patch)
 - [DRMs support](#DRMs-support)
@@ -81,6 +81,9 @@ On AM5 motherboards with on-board Thunderbolt/USB4, macOS Ventura may not enumer
 
 To disable `SetupVirtualMap` simply go to `Booter -> Quirks -> SetupVirtualMap` in your configuration file and disable it. (Should be `false`).
 
+#### _PCI Express_
+If you have the `Above 4G Decoding` option in your BIOS settings, enable it and remove the `npci=0x2000` parameter from the `boot-args` (NVRAM section). 
+
 ### Audio
 
 Follow these steps if your audio chipset is different than the one specified in the [Specification](#Specification).
@@ -112,6 +115,26 @@ SmallTree kext does not work on Monterey for now. You can try [AppleIGB kext](ht
 Only Apple Airport and Fenvi cards work out of the box. [Here](https://dortania.github.io/Wireless-Buyers-Guide/) you can list of all supported cards and needed kexts for them.
 
 Rembember that AirDrop, Handoff, etc. works only on cards with Broadcom chip.
+
+## BIOS Settings
+
+| **Option**            | **Status**           |
+| --------------------- | -------------------- |
+| SATA Mode             | AHCI                 |
+| Above 4G Decoding     | Enabled <sup>1</sup> |
+| EHCI/XHCI Hand-off    | Enabled              |
+| SVM                   | Enabled              |
+| CSM                   | Disabled             |
+| Resizable BAR Support | Disabled             |
+| Secure Boot           | Disabled             |
+| Serial Port           | Disabled             |
+| Parallel Port         | Disabled             |
+
+<sup>1</sup> If you have this option in BIOS you must also remove `npci=0x2000` from `boot-args` in your configuration file.
+
+**Some of these options may not exist in your firmware, just try to match it as closely as possible.**
+
+**Before booting macOS remember to update BIOS to the latest version.**
 
 ## Installation
 
@@ -187,34 +210,16 @@ Rembember that AirDrop, Handoff, etc. works only on cards with Broadcom chip.
 11. If you have `Unknown` instead of your CPU name in About this Mac go to `PlatformInfo -> Generic -> ProcessorType` in your configuration file. Set it to `3841` if your CPU has 8 or more physical cores, else set it to `1537`.
 12. When everything work you can disable verbose mode - then you will see Apple's logo instead of logs while booting. To do it you have to remove `-v debug=0x100 keepsyms=1` from `boot-args` in your configuration file.
 
+### Optional steps
+13. Install [SMCAMDProcessor kext](https://github.com/trulyspinach/SMCAMDProcessor) for improved CPU power management. It's not installed by default because it may cause some issues (freezes, kernel panics, etc.). If you encounter no problems after installation, keep using it.
+
 ### Bootstrap
 In general, enabling Bootstrap is not required, but it will protect your OpenCore from being overriden. \
 Remember to do not enable Bootstrap on pendrive - do it only after copying OpenCore to your disk's EFI.
 
-13. Go to `Misc -> Boot -> LauncherOption` in your configuration file and set it to `Full`.
-14. Reboot your computer.
-15. Reboot PC again and go to your BIOS settings. In boot options you will see new boot entry named `OpenCore`. Set BIOS to boot from it, instead of your drive.
-16. It's done!
-
-## BIOS Settings
-
-| **Option**            | **Status**           |
-| --------------------- | -------------------- |
-| SATA Mode             | AHCI                 |
-| Above 4G Decoding     | Enabled <sup>1</sup> |
-| EHCI/XHCI Hand-off    | Enabled              |
-| SVM                   | Enabled              |
-| CSM                   | Disabled             |
-| Resizable BAR Support | Disabled             |
-| Secure Boot           | Disabled             |
-| Serial Port           | Disabled             |
-| Parallel Port         | Disabled             |
-
-<sup>1</sup> If you have this option in BIOS you must also remove `npci=0x2000` from `boot-args` in your configuration file.
-
-**Some of these options may not exist in your firmware, just try to match it as closely as possible.**
-
-**Before booting macOS remember to update BIOS to the latest version.**
+14. Go to `Misc -> Boot -> LauncherOption` in your configuration file and set it to `Full`.
+15. Reboot your computer.
+16. Reboot PC again and go to your BIOS settings. In boot options you will see new boot entry named `OpenCore`. Set BIOS to boot from it, instead of your drive.
 
 ## PAT Patch
 
