@@ -21,8 +21,11 @@
 - Monterey (12.x)
 - Big Sur (11.x)
 - Catalina (10.15.x)
-- Mojave (10.14.x)
-- High Sierra (10.13.x)
+- Mojave (10.14.x)*
+- High Sierra (10.13.x)*
+
+* To make older OS-X versions working, you need to enable one of default disabled patches,
+we will no longer provide support for this macos versions here, it's on your own!
 
 **Used OpenCore version**: 0.9.8
 
@@ -40,10 +43,10 @@ _Support for 15h (FX series), 16h (A series) and Threadripper CPUs is not covere
 | **Model**  | **Compatible?**               |
 | ---------- | ----------------------------- |
 | Integrated | No                            |
-| Nvidia     | Partially <sup>1</sup>        |
+| Nvidia     | No*       <sup>1</sup>        |
 | AMD        | Yes <sup>2</sup> <sup>3</sup> |
 
-<sup>1</sup> Support for Nvidia GPUs was dropped in Monterey Beta 7, the only way to get it back is using [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher). Kepler series under correct [PAT Patch](#PAT-Patch). Others require WebDrivers which work only in High Sierra or are not supported. More details on [Dortania](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/nvidia-gpu.html).
+<sup>1</sup> Nvidia graphics cards are NO LONGER officialy supported, to make Nvidia work, you will need old WebDrivers from OCLP, it's no longer reccomended, and may cause issues and instability of your Ryzentosh. More details on [Dortania](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/nvidia-gpu.html).
 
 <sup>2</sup> Some R7 and R9 GPUs require FakeID. More details [here](https://dortania.github.io/Getting-Started-With-ACPI/Universal/spoof.html)
 
