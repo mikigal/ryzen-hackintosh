@@ -49,7 +49,7 @@ _Support for 15h (FX series), 16h (A series) and Threadripper CPUs is not covere
 
 <sup>3</sup> Lexa series GPUs are not supported. Older than 7000 series are supported up to High Sierra (10.13), their support is not covered here.
 
-For **AMD Navi 10 Series GPUs (RX 5500, RX 5600, RX 5700)** you need to add `agdpmod=pikera` to `boot-args` to fix the black screen issue.
+For **AMD Navi 10 and 20 Series GPUs (RX 5000 and RX 6000)** you need to add `agdpmod=pikera` to `boot-args` to fix the black screen issue.
 
 [PAT Patch made by Shaneee](#PAT-Patch) is used by default. It improves GPU performance but it has a few caveats. Audio passed by HDMI or DisplayPort won't work or will be unstable. It also **may not** work with Nvidia GPUs.
 
@@ -84,6 +84,12 @@ To disable `SetupVirtualMap` simply go to `Booter -> Quirks -> SetupVirtualMap` 
 #### _PCI Express_
 If you have the `Above 4G Decoding` option in your BIOS settings, enable it and remove the `npci=0x2000` parameter from the `boot-args` (NVRAM section). 
 
+#### _Resizable BAR_
+If you have the `Resizable BAR` option in your BIOS settings and your GPU supports it, you can enable it for better GPU performance. Then, set `Booter -> Quirks -> ResizeAppleGpuBars` to `0`.
+
+#### _SecureBootModel_
+If you experience issues related to Secure Boot in the macOS installer, set `Misc -> Security -> SecureBootModel` to `Disabled`. After installation, you can set it to the value corresponding to the used SMBIOS. Look [here](https://dortania.github.io/OpenCore-Post-Install/universal/security/applesecureboot.html#securebootmodel) for more information.
+
 ### Audio
 
 Follow these steps if your audio chipset is different than the one specified in the [Specification](#Specification).
@@ -98,7 +104,6 @@ Follow these steps if your audio chipset is different than the one specified in 
 _Caveats_:
 
 - External (USB) audio cards should work out of the box.
-- Microphone input (3.5mm Jack) won't work properly. Use USB/Bluetooth microphones instead.
 - If you have CPU with integrated GPU (even if you don't use it) your audio may be broken or unstable. You can try using [SpeedKeeper](https://github.com/astrihale/speedkeeper) but it's not guaranteed to fix your problem. The best solution is using external (USB) audio card.
 
 ### Network
@@ -125,7 +130,6 @@ Rembember that AirDrop, Handoff, etc. works only on cards with Broadcom chip.
 | EHCI/XHCI Hand-off    | Enabled              |
 | SVM                   | Enabled              |
 | CSM                   | Disabled             |
-| Resizable BAR Support | Disabled             |
 | Secure Boot           | Disabled             |
 | Serial Port           | Disabled             |
 | Parallel Port         | Disabled             |
