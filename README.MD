@@ -20,11 +20,8 @@
 - Ventura (13.x)
 - Monterey (12.x)
 - Big Sur (11.x)
-- Catalina (10.15.x)
-- Mojave (10.14.x)
-- High Sierra (10.13.x)
 
-**Used OpenCore version**: 0.9.9
+**Used OpenCore version**: [0.9.8](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.9.8)
 
 ## Hardware Compatibility
 
@@ -37,26 +34,30 @@ _Support for 15h (FX series), 16h (A series) and Threadripper CPUs is not covere
 
 ### Graphical Processing Unit (GPU)
 
-| **Model**  | **Compatible?**               |
-| ---------- | ----------------------------- |
-| Integrated | No                            |
-| Nvidia     | Partially <sup>1</sup>        |
-| AMD        | Yes <sup>2</sup> <sup>3</sup> |
+| **Model**  | **Compatible?**                             |
+| ---------- | ------------------------------------------- |
+| Integrated | Yes* <sup>0</sup>                           |
+| Nvidia     | No*  <sup>1</sup>                           |
+| AMD        | Yes  <sup>2</sup> <sup>3</sup> <sup>4</sup> |
 
-<sup>1</sup> Support for Nvidia GPUs was dropped in Monterey Beta 7, the only way to get it back is using [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher). Kepler series under correct [PAT Patch](#PAT-Patch). Others require WebDrivers which work only in High Sierra or are not supported. More details on [Dortania](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/nvidia-gpu.html).
+<sup>0</sup> For VEGA iGPU's (up to Ryzen 5xxx series) use [NootedRed](https://github.com/ChefKissInc/NootedRed) and remove WhatEverGreen.kext.
+
+<sup>1</sup> Support for Nvidia GPUs up to GTX 10xx was dropped in Monterey Beta 7, you can still use it with some patches, but support for this is not covered here.
 
 <sup>2</sup> Some R7 and R9 GPUs require FakeID. More details [here](https://dortania.github.io/Getting-Started-With-ACPI/Universal/spoof.html)
 
 <sup>3</sup> Lexa series GPUs are not supported. Older than 7000 series are supported up to High Sierra (10.13), their support is not covered here.
 
-For **AMD Navi 10 and 20 Series GPUs (RX 5000 and RX 6000)** you need to add `agdpmod=pikera` to `boot-args` to fix the black screen issue.
+<sup>3</sup> For unsupported RDNA 2 GPU's (Navi 21, 22, 23) use [NootRX](https://github.com/ChefKissInc/NootRX) and remove WhatEverGreen.kext.
+
+For **AMD Navi 10 Series GPUs (RX 5500, RX 5600, RX 5700)** you need to add `agdpmod=pikera` to `boot-args` to fix the black screen issue.
 
 [PAT Patch made by Shaneee](#PAT-Patch) is used by default. It improves GPU performance but it has a few caveats. Audio passed by HDMI or DisplayPort won't work or will be unstable. It also **may not** work with Nvidia GPUs.
 
 If you want to control monitor's brightness or HDMI/DP audio volume you need to use [MonitorControl](https://github.com/MonitorControl/MonitorControl) for that.
 
 ### Laptops
-All laptops with AMD CPUs are not supported due to integrated GPUs incompatbility.
+All laptops with AMD CPUs are not supported due to some modifications, try on your own.
 
 ### Motherboards
 
@@ -84,12 +85,6 @@ To disable `SetupVirtualMap` simply go to `Booter -> Quirks -> SetupVirtualMap` 
 #### _PCI Express_
 If you have the `Above 4G Decoding` option in your BIOS settings, enable it and remove the `npci=0x2000` parameter from the `boot-args` (NVRAM section). 
 
-#### _Resizable BAR_
-If you have the `Resizable BAR` option in your BIOS settings and your GPU supports it, you can enable it for better GPU performance. Then, set `Booter -> Quirks -> ResizeAppleGpuBars` to `0`.
-
-#### _SecureBootModel_
-If you experience issues related to Secure Boot in the macOS installer, set `Misc -> Security -> SecureBootModel` to `Disabled`. After installation, you can set it to the value corresponding to the used SMBIOS. Look [here](https://dortania.github.io/OpenCore-Post-Install/universal/security/applesecureboot.html#securebootmodel) for more information.
-
 ### Audio
 
 Follow these steps if your audio chipset is different than the one specified in the [Specification](#Specification).
@@ -104,13 +99,12 @@ Follow these steps if your audio chipset is different than the one specified in 
 _Caveats_:
 
 - External (USB) audio cards should work out of the box.
+- Microphone input (3.5mm Jack) won't work properly. Use USB/Bluetooth microphones instead.
 - If you have CPU with integrated GPU (even if you don't use it) your audio may be broken or unstable. You can try using [SpeedKeeper](https://github.com/astrihale/speedkeeper) but it's not guaranteed to fix your problem. The best solution is using external (USB) audio card.
 
 ### Network
 
 If you experience any issues with your network connection, then your best bet would be to install a different kext, preferably from [here](https://dortania.github.io/OpenCore-Install-Guide/ktext.html#ethernet).
-
-If you use High Sierra and Realtek 8111 Ethernet Card then you should use [older version of kext](https://github.com/Mieze/RTL8111_driver_for_OS_X/releases/tag/v2.2.2).
 
 If you have issues with network card on Monterey or newer try adding `e1000=0` to `boots-args`.
 
@@ -130,6 +124,7 @@ Rembember that AirDrop, Handoff, etc. works only on cards with Broadcom chip.
 | EHCI/XHCI Hand-off    | Enabled              |
 | SVM                   | Enabled              |
 | CSM                   | Disabled             |
+| Resizable BAR Support | Disabled             |
 | Secure Boot           | Disabled             |
 | Serial Port           | Disabled             |
 | Parallel Port         | Disabled             |
@@ -188,17 +183,14 @@ Rembember that AirDrop, Handoff, etc. works only on cards with Broadcom chip.
 
 | **GPU Series**       | **Model**               |
 | -------------------- | ----------------------- |
-| AMD Navi Series      | iMacPro1,1 <sup>1</sup> |
-| AMD Vega Series      | iMacPro1,1 <sup>1</sup> |
-| AMD Polaris Series   | iMacPro1,1 <sup>1</sup> |
+| AMD Navi Series      | iMacPro1,1 or MacPro7,1 |
+| AMD Vega Series      | iMacPro1,1 or MacPro7,1 |
+| AMD Polaris Series   | iMacPro1,1 or MacPro7,1 |
 | AMD Radeon R5/R7/R9  | MacPro6,1               |
 | AMD HD 8000 Series   | MacPro6,1               |
 | AMD HD 7000 Series   | MacPro6,1               |
-| Nvidia Kepler Series | MacPro7,1 <sup>2</sup>  |
+| Nvidia Kepler Series | MacPro7,1               |
 
-<sup>1</sup> For Catalina and newer you can also use `MacPro7,1` if you have some issues (e. g. unfixable DRMs).
-
-<sup>2</sup> For Catalina and older use `iMac14,2`.
 
 ### Configuration
 
@@ -245,12 +237,19 @@ There's also `intel_fast_memset` instruction which, obviously, doesn't exist on 
 If you have problems while running script from file, try to copy and paste it's code to Terminal.
 
 ## DRMs support
-DRMs are fixed by default only for Big Sur and newer versions. For older versions you have to:
- 1. Remove `unfairgva=1` from `boot-args` in your configuration file.
- 2. Go [here](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.Chart.md) to find correct value for your system.
- 3. Add parameter from _Mode_ to `boot-args` in your configuration file.
-    - If parameter from chart does not work try `shikigva=80` or `shikigva=16` - it's common to work even when chart says something another.
- 4. Test DRMs with Netflix in Safari or Apple TV+.
+
+To Have DRM working propertly on Big Sur and never, you need to:
+
+WhatEverGreen users:
+ - Add `unfairgva=1` to `boot-args` in your configuration file.
+
+NooterRed users (Experimental):
+ - Add `-nredvcn revblock=media` to `boot-args` in your configuration file.
+
+If this causes problems for you, you need to remove these arguments and use browsers with Software DRM.
+
+NootRX users:
+ - DRM should work Out-of-the-box.
 
 ## Sleep
 Firstly, check if your sleep works out of the box. If it works, you can skip reading this section.
@@ -267,20 +266,21 @@ If USB fixes does not help, probably something another is broken. You can read m
 
 - Make sure you have `SVM` enabled in your BIOS settings.
 
-| **Software**      | **Compatibility**                                                                                              |
-| ----------------- | -------------------------------------------------------------------------------------------------------------- |
-| Parallels Desktop | Up to 13.1 unless AppleHV is used.<sup>1</sup> <sup>2</sup> <sup>3</sup>                                       |
-| VirtualBox        | Drastically decreased performance.                                                                             |
-| VMWare Fusion 10  | Only Catalina and older, for Catalina with [this patch](https://posts.boy.sh/vmware-fusion-catalina).          |
-| Docker            | Only [Docker in VirtualBox](https://github.com/sergeycherepanov/homebrew-docker-virtualbox) or Docker Toolbox. |
-| Android Emulator  | Only [Android-x86](https://www.android-x86.org/) with compatible VM software.                                  |
-| iOS Emulator      | Works out of the box.                                                                                          |
+| **Software**      | **Compatibility**                                                                                                     |
+| ----------------- | --------------------------------------------------------------------------------------------------------------------- |
+| Parallels Desktop | Up to 13.1 unless AppleHV is used.<sup>1</sup> <sup>2</sup> <sup>3</sup>                                              |
+| VirtualBox        | Up to Virtualbox 6.1. <sup>4</sup>                                                                                     |
+| Docker            | Only [Docker in VirtualBox](https://github.com/sergeycherepanov/homebrew-docker-virtualbox) or Docker Toolbox.        |
+| Android Emulator  | Only [Android-x86](https://www.android-x86.org/) or [NOX Player](https://www.bignox.com) with compatible VM software. |
+| iOS Emulator      | Works out of the box.                                                                                                 |
 
-<sup>1</sup> Parallels will not work by default on Big Sur and newer, you need to use `SYSTEM_VERSION_COMPAT=1` environment variable.
+<sup>1</sup> You need to use `SYSTEM_VERSION_COMPAT=1` environment variable, it works up to Monterey.
 
 <sup>2</sup> Use [this](/Resources/Parallels%20Desktop%20Launcher.app.zip) launcher package to simplify the Parallels usage.
 
 <sup>3</sup> Only Windows 10 Anniversary Update (build 1607) or older systems work.
+
+<sup>4</sup> For Ventura and never, you need to [Disable SIP](https://dortania.github.io/OpenCore-Install-Guide/troubleshooting/extended/post-issues.html#disabling-sip) and use [AMFIPass.kext](https://community.macmeup.com/index.php?/files/file/23-amfipasskext/)
 
 ### Resource management
 
@@ -291,9 +291,9 @@ Use the following configuration for best results.
 - Parallels Desktop 13.1
 - 4 CPU cores
 - 4GB - 8GB RAM
-- 1GB VRAM
+- 1GB - 2GB VRAM
 - 3D Acceleration: DirectX 9
-- OS: Windows 7 (SP1, build 7601) with Aero theme disabled.
+- OS: Windows 8.1.
 
 ## Guides and troubleshooting
 
@@ -325,5 +325,6 @@ Please create an Issue on GitHub primarily for cases concerning more general pro
 - [Dortania](https://github.com/dortania) for OpenCore configuration guides
 - [AMD-OSX Community](https://amd-osx.com) for support while making my Hackintosh
 - [SocketByte](https://github.com/SocketByte) for README maintenance and being a great friend :)
+- [4aya](https://github.com/AGXCLIENTS) for README re-write.
 
 ![Screenshot](/screenshot.png?raw=true)
