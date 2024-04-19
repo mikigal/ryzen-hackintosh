@@ -21,7 +21,7 @@
 - Monterey (12.x)
 - Big Sur (11.x)
 
-**Used OpenCore version**: [0.9.8](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.9.8)
+**Used OpenCore version**: [0.9.9](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.9.9)
 
 ## Hardware Compatibility
 
@@ -37,18 +37,20 @@ _Support for 15h (FX series), 16h (A series) and Threadripper CPUs is not covere
 | **Model**  | **Compatible?**                             |
 | ---------- | ------------------------------------------- |
 | Integrated | Yes* <sup>0</sup>                           |
-| Nvidia     | No*  <sup>1</sup>                           |
+| Nvidia     | No*  <sup>1</sup> <sup>2</sup>              |
 | AMD        | Yes  <sup>2</sup> <sup>3</sup> <sup>4</sup> |
 
 <sup>0</sup> For VEGA iGPU's (up to Ryzen 5xxx series) use [NootedRed](https://github.com/ChefKissInc/NootedRed) and remove WhatEverGreen.kext.
 
-<sup>1</sup> Support for Nvidia GPUs up to GTX 10xx was dropped in Monterey Beta 7, you can still use it with some patches, but support for this is not covered here.
+<sup>1</sup> Support for Nvidia 10xx GPUs was dropped in Mojave. The only way to use these GPUs is by using High Sierra or older with WebDrivers.
 
-<sup>2</sup> Some R7 and R9 GPUs require FakeID. More details [here](https://dortania.github.io/Getting-Started-With-ACPI/Universal/spoof.html)
+<sup>2</sup> Support for Nvidia GPUs up to GTX 10xx was dropped in Monterey Beta 7, you can still use it with some patches, but support for this is not covered here.
 
-<sup>3</sup> Lexa series GPUs are not supported. Older than 7000 series are supported up to High Sierra (10.13), their support is not covered here.
+<sup>3</sup> Some R7 and R9 GPUs require FakeID. More details [here](https://dortania.github.io/Getting-Started-With-ACPI/Universal/spoof.html)
 
-<sup>3</sup> For unsupported RDNA 2 GPU's (Navi 21, 22, 23) use [NootRX](https://github.com/ChefKissInc/NootRX) and remove WhatEverGreen.kext.
+<sup>4</sup> Lexa series GPUs are not supported. Older than 7000 series are supported up to High Sierra (10.13), their support is not covered here.
+
+<sup>5</sup> For unsupported RDNA 2 GPU's (Navi 21, 22, 23) use [NootRX](https://github.com/ChefKissInc/NootRX) and remove WhatEverGreen.kext.
 
 For **AMD Navi 10 Series GPUs (RX 5500, RX 5600, RX 5700)** you need to add `agdpmod=pikera` to `boot-args` to fix the black screen issue.
 
@@ -57,7 +59,7 @@ For **AMD Navi 10 Series GPUs (RX 5500, RX 5600, RX 5700)** you need to add `agd
 If you want to control monitor's brightness or HDMI/DP audio volume you need to use [MonitorControl](https://github.com/MonitorControl/MonitorControl) for that.
 
 ### Laptops
-All laptops with AMD CPUs are not supported due to some modifications, try on your own.
+All laptops with AMD CPUs are not supported due to some required additional steps, try on your own.
 
 ### Motherboards
 
@@ -92,26 +94,23 @@ Follow these steps if your audio chipset is different than the one specified in 
 - Go [here](https://github.com/acidanthera/applealc/wiki/supported-codecs) to find your audio chipset codec. (Under _Codec_)
   - If you can't find your codec on the list, then you probably have to use [VoodooHDA](https://sourceforge.net/projects/voodoohda/). This repository does not cover or support the use of VoodooHDA.
 - Under _Revisions and layouts_ you'll see bunch of numbers and layout ids.
-- Find your `boot-args` settings and look for `alcid=11`.
+- Go to `NVRAM -> Add -> 7C436110... -> boot-args` in your config and add `alcid=_x_`.
 - Try every layout id (except _0x_ values) one by one until it works.
   - Example: `alcid=10` if `layout 10`
 
-_Caveats_:
-
-- External (USB) audio cards should work out of the box.
-- Microphone input (3.5mm Jack) won't work properly. Use USB/Bluetooth microphones instead.
-- If you have CPU with integrated GPU (even if you don't use it) your audio may be broken or unstable. You can try using [SpeedKeeper](https://github.com/astrihale/speedkeeper) but it's not guaranteed to fix your problem. The best solution is using external (USB) audio card.
+External (USB) audio cards should work out of the box.
 
 ### Network
 
-If you experience any issues with your network connection, then your best bet would be to install a different kext, preferably from [here](https://dortania.github.io/OpenCore-Install-Guide/ktext.html#ethernet).
+If you experience any issues with your network connection, then your best bet would be to install a different kext, preferably from [here](https://dortania.github.io/OpenCore-Install-Guide/ktext.html#ethernet). Remember to remove `RealtekRTL8111.kext` before adding another network kext.
 
 If you have issues with network card on Monterey or newer try adding `e1000=0` to `boots-args`.
 
-SmallTree kext does not work on Monterey for now. You can try [AppleIGB kext](https://cdn.discordapp.com/attachments/724618275971137568/879288441278435348/AppleIGB.kext.zip), it works on some systems. If it does not work you have to stay on Big Sur and wait for SmallTree's update.
-
 ### WiFi and Bluetooth
-Only Apple Airport and Fenvi cards work out of the box. [Here](https://dortania.github.io/Wireless-Buyers-Guide/) you can list of all supported cards and needed kexts for them.
+Only Apple Airport and Fenvi cards work out of the box. 
+For Intel cards you have to use [itlwm or AirportItlwm](https://github.com/OpenIntelWireless/itlwm).AirportItlwm partially supports Airport features but is less stable. For Bluetooth support you need [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware). Please read [guide](https://openintelwireless.github.io/) before installing these kexts as additional steps are required depending on macOS version.
+
+[Here](https://dortania.github.io/Wireless-Buyers-Guide/) you can check list of other supported cards and needed kexts for them.
 
 Rembember that AirDrop, Handoff, etc. works only on cards with Broadcom chip.
 
