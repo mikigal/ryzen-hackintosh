@@ -24,7 +24,7 @@
 - Mojave (10.14.x)
 - High Sierra (10.13.x)
 
-**Used OpenCore version**: 1.0.0
+**Used OpenCore version**: 1.0.1
 
 ## Hardware Compatibility
 
