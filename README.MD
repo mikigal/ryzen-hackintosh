@@ -16,6 +16,7 @@
 
 ## Software Compatibility
 
+- Sequoia (15.x)
 - Sonoma (14.x)
 - Ventura (13.x)
 - Monterey (12.x)
@@ -60,11 +61,15 @@ All laptops with AMD CPUs are not supported due to integrated GPUs incompatbilit
 
 ### Motherboards
 
-| **Chipset**                  | **Details**                                                         |
+| **Chipset/Socket**           | **Details**                                                         |
 | ---------------------------- | ------------------------------------------------------------------- |
 | B550, A520                   | Requires _SSDT-CPUR_ to boot. [Details here.](#SSDT-CPUR)           |
 | B550, A520, B450, X470, X570 | `SetupVirtualMap` has to be [disabled](#Disabling-SetupVirtualMap). |
+| Older than A520, B550, X570  | May require disabling `Disable 10 bit tags` patch                   |
+| AM5 with Thunderbolt/USB4    | It's complicated <sup>1</sup>                                       |
 | Other                        | Should be compatible out of the box.                                |
+
+<sup>1</sup> On AM5 motherboards with on-board Thunderbolt/USB4 macOS Ventura and newer may not enumerate devices on the PCI bus properly when on-board WiFi and on-board Thunderbolt are both enabled. Patch `Fix PCI bus enumeration on AM5` bypasses the problem. This patch is disabled by default.
 
 #### _SSDT-CPUR_
 
@@ -234,7 +239,7 @@ Remember to do not enable Bootstrap on pendrive - do it only after copying OpenC
 | HDMI/DP audio may not work    | HDMI/DP audio works      |
 | Enabled by default            | Disabled by default      |
 
-To switch to another patch look for `mtrr_update_action` in `config.plist`. Then set `Enabled` to `true` for the patch you want to use. Remember to set `Enabled` to `false` on the other PAT patch. Do not try to enable both at the same time, trust me, it won't work.
+To switch to another patch look for `fix PAT` in `config.plist`. There are two versions of these patches. macOS 15 (Sequoia) has it's own PAT patch. Then set `Enabled` to `true` for the patch you want to use for your macOS version. Remember to set `Enabled` to `false` on the other PAT patch. Do not try to enable both at the same time, trust me, it won't work.
 
 ## MKL and Intel Fast Memset Patch
 
