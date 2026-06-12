@@ -1,0 +1,90 @@
+Changelog
+---------
+
+Version 3.0.0 (2025-12-13)
+- Added support for AppleVTD under Tahoe.
+- Create random MAC as a fallback in case no fallback MAC is provided.
+- Modified receive buffer allocation to improve speed under low memory conditions.
+
+Version 2.5.0 (2025-02-11)
+- Added support for AppleVTD and restructured resource allocation.
+- Cleaned up source code.
+- Adopted MacKernelSDK.
+
+Version 2.4.2 (2021-04-23)
+- Reworked auto-negotiation to fix issue with 100 MBit/s switches.
+
+Version 2.4.0 (2021-02-03)
+- Supports jumbo frames up to 9k (only RTL8111E-VL and above)
+- Requires 10.14 or newer.
+
+Version 2.3.0 (2020-08-14)
+- Reworked medium section and EEE support to resolve problems with connection establishment and stability.
+- Added option to supply a fallback MAC.
+- Updated Linux sources to 8.047.04 and added support for new family members
+
+Version 2.2.2 (2018-01-21)
+- Force ASPM state to disabled/enabled according to the config parameter setting.
+- Requires 10.12 or newer.
+
+Version 2.2.1 (2016-03-12):
+- Updated underlying linux sources from Realtek to 8.041.00.
+- Added support for RTL8111H
+- Improved media selection (flow control and EEE can be switched via media selection).
+- Implemented Apple’s polled receive driver model (RXPOLL).
+
+Version 2.0.0 (2015-06-21):
+ - Uses Apple's private driver interface introduced with 10.8.
+ - Supports packet scheduling with QFQ.
+ - Please note that 2.0.0 is identical to 2.0.0d2. Only the version number has changed.
+
+Version 1.2.3 (2014-08-23):
+- Reworked TSO4 and added support for TSO6.
+
+Version 1.2.2 (2014-08-14):
+- ​Added an option to disable Active State Power Management (ASPM, default disabled) as ASPM seems to result in unstable operation of some chipsets.
+- Resolved a problem with Link Aggregation after reboot.
+- Added a workaround for the multicast filter bug of chipset 17 (RTL8111F) which prevented Bonjour from working properly.
+
+Version 1.2.0 (2014-04-24):
+- Updated underlying linux sources from Realtek to 8.037.00.
+- Improved interrupt mitigate to use a less aggressive value for 10/100 MBit connections.
+
+Version 1.1.3 (2013-11-29):
+- Improved transmit queue handling made it possible to reduce CPU load during packet transmission.
+- Improved deadlock detection logic in order to avoid false positives due to lost interrupts.
+
+Version 1.1.2 (2013-08-03):
+- Improved SMB performance in certain configurations.
+- Faster browsing of large shares.
+
+Version 1.1.1 (2013-06-29):
+- Remove ethernet CRC from received packets to fix rx checksum offload.
+
+Version 1.1.0 (2013-06-08):
+- Support for TCP/IPv6 and UDP/IPv6 checksum offload added (can be disabled in Info.plist).
+- Maximum size of the scatter-gather-list has been increased from 24 to 40 segments to resolve performance issues with TSO4 when offloading large packets which are highly fragmented.
+- TSO4 can be disabled in Info.plist without rebuild.
+- Statistics gathering has been improved to deliver more detailed information (resource shortages, transmitter resets, transmitter interrupt count).
+- The interrupt mitigate settings has been changed to improve performance with SMB and to reduce CPU load.
+- Configuration option added to allow for user defined interrupt mitigate settings without rebuild.
+
+Version 1.0.4 (2013-05-04):
+- Moved setLinkStatus(kIONetworkLinkValid) from start() to enable(). Cleaned up getDescCommand().
+
+Version 1.0.3 (2013-04-25):
+- The issue after a reboot from Windows has been eliminated.
+
+Version 1.0.2 (2013-04-22):
+- Added support for rx checksum offload of TCP and UDP over IPv6.
+
+Version 1.0.1 (2013-03-31):
+- Improved behavior when rx checksum offload isn't working properly.
+- Adds the chipset's model name to IORegistry so that it will show up in System Profiler.
+
+
+
+Source code can be found at
+---------------------------
+
+https://github.com/Mieze/RTL8111_driver_for_OS_X

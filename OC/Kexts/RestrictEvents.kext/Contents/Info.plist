@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>23G93</string>
+	<string>23H626</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -17,13 +17,13 @@
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.1.5</string>
+	<string>1.1.6</string>
 	<key>CFBundleSupportedPlatforms</key>
 	<array>
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1.1.5</string>
+	<string>1.1.6</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
@@ -31,15 +31,15 @@
 	<key>DTPlatformName</key>
 	<string>macosx</string>
 	<key>DTPlatformVersion</key>
-	<string>13.3</string>
+	<string>14.2</string>
 	<key>DTSDKBuild</key>
-	<string>22E245</string>
+	<string>23C53</string>
 	<key>DTSDKName</key>
-	<string>macosx13.3</string>
+	<string>macosx14.2</string>
 	<key>DTXcode</key>
-	<string>1431</string>
+	<string>1520</string>
 	<key>DTXcodeBuild</key>
-	<string>14E300c</string>
+	<string>15C500b</string>
 	<key>IOKitPersonalities</key>
 	<dict>
 		<key>as.vit9696.RestrictEfiCheck</key>

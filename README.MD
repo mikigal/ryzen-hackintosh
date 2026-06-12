@@ -16,6 +16,10 @@
 
 ## Software Compatibility
 
+> [!CAUTION]
+> macOS Golden Gate (27.x) and newer will NOT work, as Apple has dropped support for the x86 architecture. Sadly, there's nothing we can do about this. It was a great run, but the Hackintosh era has come to an end.
+
+- Tahoe (26.x)
 - Sequoia (15.x)
 - Sonoma (14.x)
 - Ventura (13.x)
@@ -25,7 +29,7 @@
 - Mojave (10.14.x)
 - High Sierra (10.13.x)
 
-**Used OpenCore version**: 1.0.4
+**Used OpenCore version**: 1.0.7
 
 ## Hardware Compatibility
 
