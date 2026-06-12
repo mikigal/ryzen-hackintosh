@@ -17,7 +17,7 @@
 ## Software Compatibility
 
 > [!CAUTION]
-> macOS Golden Gate (27.x) and newer will NOT work, as Apple has dropped support for the x86 architecture. Sadly, there's nothing we can do about this. It was a great run, but the Hackintosh era has come to an end.
+> macOS Golden Gate (27.x) and newer will NOT work, as Apple has dropped support for the x86 architecture. Other ARM-based CPUs are not supported either, due to Apple's custom M-series instructions. Sadly, there's nothing we can do about this. It was a great run, but the Hackintosh era has come to an end.
 
 - Tahoe (26.x)
 - Sequoia (15.x)
